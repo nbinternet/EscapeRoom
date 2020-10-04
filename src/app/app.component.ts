@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'The Escape Room';
+  title = 'How to escape from Zombie Glasgow!';
 }

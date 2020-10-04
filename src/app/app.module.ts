@@ -3,14 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { MaphilightModule } from 'ng-maphilight';
-import { AlhambraComponent } from './alhambra/alhambra.component';
-import { CentralglasgowComponent } from './centralglasgow/centralglasgow.component'
+import { AlhambraComponent } from './components/alhambra/alhambra.component';
+import { CentralglasgowComponent } from './components/centralglasgow/centralglasgow.component'
 import { RouterModule } from '@angular/router';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { SecrettunnelComponent } from './secrettunnel/secrettunnel.component';
-import { CentrallowlevelComponent } from './centrallowlevel/centrallowlevel.component';
-import { StenochundergroundComponent } from './stenochunderground/stenochunderground.component';
-import { StenochrouteComponent } from './stenochroute/stenochroute.component';
+import { SecrettunnelComponent } from './components/secrettunnel/secrettunnel.component';
+import { CentrallowlevelComponent } from './components/centrallowlevel/centrallowlevel.component';
+import { StenochundergroundComponent } from './components/stenochunderground/stenochunderground.component';
+import { StenochrouteComponent } from './components/stenochroute/stenochroute.component';
+import { HillheadmapComponent } from './components/hillheadmap/hillheadmap.component';
+import { HillheadtunnelComponent } from './components/hillheadtunnel/hillheadtunnel.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { StenochrouteComponent } from './stenochroute/stenochroute.component';
     SecrettunnelComponent,
     CentrallowlevelComponent,
     StenochundergroundComponent,
-    StenochrouteComponent
+    StenochrouteComponent,
+    HillheadmapComponent,
+    HillheadtunnelComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +35,8 @@ import { StenochrouteComponent } from './stenochroute/stenochroute.component';
       {path: 'centralGlasgow', component: CentralglasgowComponent},
       {path: 'secrettunnel', component: SecrettunnelComponent},
       {path: 'centrallowlevel', component: CentrallowlevelComponent},
+      {path: 'hillheadtunnel', component: HillheadtunnelComponent},
+      {path: 'hillheadmap', component: HillheadmapComponent},
       {path: 'stenochtunnel', component: StenochrouteComponent},
       {path: 'stenochunderground', component: StenochundergroundComponent},
       {path: '', redirectTo: '/centralGlasgow', pathMatch: 'full'},
