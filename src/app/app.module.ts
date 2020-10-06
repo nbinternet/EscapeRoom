@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { MaphilightModule } from 'ng-maphilight';
 import { AlhambraComponent } from './components/alhambra/alhambra.component';
 import { CentralglasgowComponent } from './components/centralglasgow/centralglasgow.component'
 import { RouterModule } from '@angular/router';
@@ -29,7 +28,6 @@ import { HillheadtunnelComponent } from './components/hillheadtunnel/hillheadtun
   ],
   imports: [
     BrowserModule,
-    MaphilightModule,
     RouterModule.forRoot([
       {path: 'alhambraHouse', component: AlhambraComponent},
       {path: 'centralGlasgow', component: CentralglasgowComponent},

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {LocationTrackerService} from "../../services/location-tracker.service";
 
 @Component({
   selector: 'app-centralglasgow',
@@ -6,30 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./centralglasgow.component.css']
 })
 export class CentralglasgowComponent implements OnInit {
-  config = {
-    fade: true,
-    alwaysOn: false,
-    neverOn: false,
+  locationTracker : LocationTrackerService;
 
-    // fill
-    fill: true,
-    fillColor: '#ffffff',
-    fillOpacity: 0.4,
-
-    // stroke
-    stroke: true,
-    strokeColor: '#4d0ec0',
-    strokeOpacity: 1,
-    strokeWidth: 1,
-
-    // shadow:
-    shadow: true,
-    shadowColor: '#000000',
-    shadowOpacity: 0.8,
-    shadowRadius: 10
+  constructor(private _locationTracker : LocationTrackerService) {
+    this.locationTracker = _locationTracker
   }
-
-  constructor() { }
 
   ngOnInit(): void {
   }

@@ -1,19 +1,25 @@
-<maphilight
-  id="glasgowCentralMap"
-  [config]="config"
->
-  <img src="../../../assets/CentralGlasgow.PNG" alt="Central Glasgow">
-  <map>
-    <area shape="poly" coords="414,196,403,237,461,251,471,208,471,209" alt="Alhambra House" title="Alhambra House" routerLink="/alhambraHouse" >
-    <area shape="poly" coords="467,237,524,245,516,279,567,288,563,301,502,290,507,255,465,248" alt="Secret Tunnel" title="Secret Tunnel" routerLink="/secrettunnel">
-    <area shape="poly" coords="573,265,656,272,663,355,561,341" alt="Glasgow Central - very low level" title="Glasgow Central - very low level" routerLink="/centrallowlevel">
-    <area shape="poly" coords="652,357,648,442,749,457,745,469,633,454,638,356" alt="Route to St Enoch Underground" title="Route to St Enoch Underground" routerLink="/stenochtunnel">
-    <area shape="poly" coords="752,434,786,439,781,493,740,492" alt="St Enoch Underground" title="St Enoch Underground" routerLink="/stenochunderground">
-    <area shape="poly" coords="767,424,854,0,867,0,776,428"  alt="To Hillhead Underground" title="To Hillhead Underground" routerLink="/hillheadtunnel" >
-  </map>
-</maphilight>
-
 <p>The year is 2020. The location Glasgow. It is not safe to wander the streets because of the Zombie outbreak. Nobody knows what is going on.</p>
 <p>You and your team are trapped in an office and need to solve various puzzles in order to escape..</p>
 <p>Will you be able to work together and solve the challenges before the 30 minute deadline expires?</p>
 <p>So far you have found only a 100 year old map of Glasgow to help you!</p>
+<p>Tracker: {{locationTracker.currentStatus.get('SecretTunnel')}}</p>
+
+<img src="../../../assets/CentralGlasgow.PNG" alt="Central Glasgow" usemap="#image-map">
+<map name="image-map">
+  <area shape="poly" coords="414,196,403,237,461,251,471,208,471,209" alt="Alhambra House" title="Alhambra House" routerLink="/alhambraHouse">
+<!--  <div *ngIf="locationTracker.currentStatus.get('SecretTunnel')">-->
+    <area shape="poly" coords="467,237,524,245,516,279,567,288,563,301,502,290,507,255,465,248" alt="Secret Tunnel" title="Secret Tunnel" routerLink="/secrettunnel">
+<!--  </div>-->
+<!--  <div *ngIf="locationTracker.currentStatus.get('GlasgowCentralLowLevel')">-->
+    <area shape="poly" coords="573,265,656,272,663,355,561,341" alt="Glasgow Central - very low level" title="Glasgow Central - very low level" routerLink="/centrallowlevel">
+<!--  </div>-->
+<!--  <div *ngIf="locationTracker.currentStatus.get('StEnochTunnel')">-->
+    <area shape="poly" coords="652,357,648,442,749,457,745,469,633,454,638,356" alt="Route to St Enoch Underground" title="Route to St Enoch Underground" routerLink="/stenochtunnel">
+<!--  </div>-->
+<!--  <div *ngIf="locationTracker.currentStatus.get('StEnochUnderground')">-->
+    <area shape="poly" coords="752,434,786,439,781,493,740,492" alt="St Enoch Underground" title="St Enoch Underground" routerLink="/stenochunderground">
+<!--  </div>-->
+<!--  <div *ngIf="locationTracker.currentStatus.get('HillheadTunnel')">-->
+    <area shape="poly" coords="767,424,854,0,867,0,776,428" alt="To Hillhead Underground" title="To Hillhead Underground" routerLink="/hillheadtunnel">
+<!--  </div>-->
+</map>
