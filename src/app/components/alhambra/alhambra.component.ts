@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {LocationTrackerService} from "../../services/location-tracker.service";
+import {locationNames} from "../../models/locationNames";
 
 @Component({
   selector: 'app-alhambra',
@@ -18,8 +19,8 @@ export class AlhambraComponent implements OnInit {
   }
 
   onSelect() {
-    console.info("onSelect " + this.locationTracker.currentStatus.get('SecretTunnel'));
-    this.locationTracker.currentStatus.set('SecretTunnel', true);
-    console.info("onSelect:after " + this.locationTracker.currentStatus.get('SecretTunnel'));
+    console.info("onSelect SecretTunnel " + this.locationTracker.currentStatus.get(locationNames.SecretTunnel));
+    this.locationTracker.currentStatus.set(locationNames.SecretTunnel, true);
+    console.info("onSelect:after SecretTunnel " + this.locationTracker.currentStatus.get(locationNames.SecretTunnel));
   }
 }

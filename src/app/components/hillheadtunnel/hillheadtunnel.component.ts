@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {locationNames} from "../../models/locationNames";
 
 @Component({
   selector: 'app-hillheadtunnel',
@@ -11,5 +12,4 @@ export class HillheadtunnelComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

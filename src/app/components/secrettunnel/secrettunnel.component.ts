@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {locationNames} from "../../models/locationNames";
+import {LocationTrackerService} from "../../services/location-tracker.service";
 
 @Component({
   selector: 'app-secrettunnel',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SecrettunnelComponent implements OnInit {
 
-  constructor() { }
+  locationTracker : LocationTrackerService;
+
+  constructor(private _locationTracker : LocationTrackerService) {
+    this.locationTracker = _locationTracker
+  }
 
   ngOnInit(): void {
   }
 
+  onSelect() {
+    this.locationTracker.currentStatus.set(locationNames.GlasgowCentralLowLevel, true);
+  }
 }

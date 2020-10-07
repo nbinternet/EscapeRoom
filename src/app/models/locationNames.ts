@@ -9,7 +9,7 @@ export enum locationNames {
   StEnochTunnel = 'StEnochTunnel',
   StEnochUnderground = 'StEnochUnderground',
   HillheadTunnel = 'HillheadTunnel',
-  spare1 = 'spare1',
+  BotanicGardens = 'BotanicGardens',
   spare2 = 'spare2'
 }
 
