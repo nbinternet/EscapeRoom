@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {LocationTrackerService} from "../../services/location-tracker.service";
 import {locationNames} from "../../models/locationNames";
 
@@ -8,10 +8,10 @@ import {locationNames} from "../../models/locationNames";
   styleUrls: ['./centrallowlevel.component.css']
 })
 export class CentrallowlevelComponent implements OnInit {
-  locationTracker : LocationTrackerService;
+  locationTracker: LocationTrackerService;
   config;
 
-  constructor(private _locationTracker : LocationTrackerService) {
+  constructor(private _locationTracker: LocationTrackerService) {
     this.locationTracker = _locationTracker
     this.config = _locationTracker.masterConfig;
   }

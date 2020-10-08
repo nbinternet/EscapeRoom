@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {LocationTrackerService} from "../../services/location-tracker.service";
 
 @Component({
@@ -7,10 +7,10 @@ import {LocationTrackerService} from "../../services/location-tracker.service";
   styleUrls: ['./hillheadmap.component.css']
 })
 export class HillheadmapComponent implements OnInit {
-  locationTracker : LocationTrackerService;
+  locationTracker: LocationTrackerService;
   config;
 
-  constructor(private _locationTracker : LocationTrackerService) {
+  constructor(private _locationTracker: LocationTrackerService) {
     this.locationTracker = _locationTracker
     this.config = _locationTracker.masterConfig;
   }

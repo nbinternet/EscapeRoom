@@ -41,11 +41,11 @@ export class LocationTrackerService {
 
     console.info("initilise")
     this.currentStatus.set(locationNames.SecretTunnel, false);
-    this.currentStatus.set(locationNames.GlasgowCentralLowLevel, false );
-    this.currentStatus.set(locationNames.StEnochTunnel, false );
-    this.currentStatus.set(locationNames.StEnochUnderground, false );
-    this.currentStatus.set(locationNames.HillheadTunnel, false );
-    this.currentStatus.set(locationNames.BotanicGardens, false );
-    this.currentStatus.set(locationNames.spare2, false );
+    this.currentStatus.set(locationNames.GlasgowCentralLowLevel, false);
+    this.currentStatus.set(locationNames.StEnochTunnel, false);
+    this.currentStatus.set(locationNames.StEnochUnderground, false);
+    this.currentStatus.set(locationNames.HillheadTunnel, false);
+    this.currentStatus.set(locationNames.BotanicGardens, false);
+    this.currentStatus.set(locationNames.spare2, false);
   }
 }
