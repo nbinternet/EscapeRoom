@@ -10,6 +10,30 @@ export class LocationTrackerService {
 
   public currentStatus = new Map();
 
+  public masterConfig = {
+    fade: true,
+    alwaysOn: false,
+    neverOn: false,
+
+    // fill
+    fill: true,
+    fillColor: '#ffffff',
+    fillOpacity: 0.7,
+
+    // stroke
+    stroke: true,
+    strokeColor: '#4d0ec0',
+    strokeOpacity: 1,
+    strokeWidth: 2,
+
+    // shadow:
+    shadow: true,
+    shadowColor: '#000000',
+    shadowOpacity: 0.8,
+    shadowRadius: 13
+  };
+
+
   constructor(@Optional() @SkipSelf() parent?: LocationTrackerService) {
     if (parent) {
       throw Error(`[GuardedSingletonService]: trying to create multiple instances, but this service should be a singleton.`);

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {locationNames} from "../../models/locationNames";
+import {LocationTrackerService} from "../../services/location-tracker.service";
 
 @Component({
   selector: 'app-hillheadtunnel',
@@ -7,8 +8,11 @@ import {locationNames} from "../../models/locationNames";
   styleUrls: ['./hillheadtunnel.component.css']
 })
 export class HillheadtunnelComponent implements OnInit {
+  config;
 
-  constructor() { }
+  constructor(private _locationTracker : LocationTrackerService) {
+    this.config = _locationTracker.masterConfig;
+  }
 
   ngOnInit(): void {
   }

@@ -1,9 +1,18 @@
-<img src="../../../assets/stenochunderground.png" alt="More Tunnel Darkness" height = "800" width="1200" usemap="#image-map">
+<div class="row">
+  <div class="column">
+    <maphilight
+      [config]="config"
+      id="stEnochUndergroundMap"
+    >
+      <img src="../../../assets/stenochunderground.png" alt="More Tunnel Darkness" height="800" width="1200" usemap="#image-map">
 
-<map name="image-map">
-    <area alt="Escape tunnel" title="Escape tunnel"  (click)="onSelect()"
-          coords="493,389,505,396,511,406,515,430,493,430" shape="poly" routerLink="/centralGlasgow">
-</map>
+      <map name="image-map">
+        <area alt="Escape tunnel" title="Escape tunnel" (click)="onSelect()"
+              coords="493,389,505,396,511,406,515,430,493,430" shape="poly" routerLink="/centralGlasgow">
+      </map>
+    </maphilight>
+  </div>
+</div>
 
 <a class="button hvr-grow hvr-icon-back" routerLink="/centralGlasgow">
   <i class="fa fa-chevron-circle-left hvr-icon"></i>Go back to map</a>

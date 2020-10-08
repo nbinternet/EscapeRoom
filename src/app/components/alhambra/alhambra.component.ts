@@ -8,19 +8,18 @@ import {locationNames} from "../../models/locationNames";
   styleUrls: ['./alhambra.component.css']
 })
 export class AlhambraComponent implements OnInit {
-
   locationTracker : LocationTrackerService;
+  config;
 
   constructor(private _locationTracker : LocationTrackerService) {
     this.locationTracker = _locationTracker
+    this.config = _locationTracker.masterConfig;
   }
 
   ngOnInit(): void {
   }
 
   onSelect() {
-    console.info("onSelect SecretTunnel " + this.locationTracker.currentStatus.get(locationNames.SecretTunnel));
     this.locationTracker.currentStatus.set(locationNames.SecretTunnel, true);
-    console.info("onSelect:after SecretTunnel " + this.locationTracker.currentStatus.get(locationNames.SecretTunnel));
   }
 }

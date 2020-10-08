@@ -28,6 +28,15 @@ p {
   padding:1%;
 }
 
+.row {
+  display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+}
+
 img {
   display: block;
   margin-left: auto;

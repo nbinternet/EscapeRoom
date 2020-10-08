@@ -10,7 +10,7 @@ For the ImageMap component. Install in the project root `/escaperoom`
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve --liveReload=false` for a dev server (for latest versions of `ng` remove `--liveReload` if error). Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 

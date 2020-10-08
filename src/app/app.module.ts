@@ -1,17 +1,18 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { AlhambraComponent } from './components/alhambra/alhambra.component';
-import { CentralglasgowComponent } from './components/centralglasgow/centralglasgow.component'
-import { RouterModule } from '@angular/router';
-import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { SecrettunnelComponent } from './components/secrettunnel/secrettunnel.component';
-import { CentrallowlevelComponent } from './components/centrallowlevel/centrallowlevel.component';
-import { StenochundergroundComponent } from './components/stenochunderground/stenochunderground.component';
-import { StenochrouteComponent } from './components/stenochroute/stenochroute.component';
-import { HillheadmapComponent } from './components/hillheadmap/hillheadmap.component';
-import { HillheadtunnelComponent } from './components/hillheadtunnel/hillheadtunnel.component';
+import {AppComponent} from './app.component';
+import {AlhambraComponent} from './components/alhambra/alhambra.component';
+import {CentralglasgowComponent} from './components/centralglasgow/centralglasgow.component'
+import {RouterModule} from '@angular/router';
+import {PagenotfoundComponent} from './pagenotfound/pagenotfound.component';
+import {SecrettunnelComponent} from './components/secrettunnel/secrettunnel.component';
+import {CentrallowlevelComponent} from './components/centrallowlevel/centrallowlevel.component';
+import {StenochundergroundComponent} from './components/stenochunderground/stenochunderground.component';
+import {StenochrouteComponent} from './components/stenochroute/stenochroute.component';
+import {HillheadmapComponent} from './components/hillheadmap/hillheadmap.component';
+import {HillheadtunnelComponent} from './components/hillheadtunnel/hillheadtunnel.component';
+import {MaphilightModule} from "ng-maphilight";
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { HillheadtunnelComponent } from './components/hillheadtunnel/hillheadtun
   ],
   imports: [
     BrowserModule,
+    MaphilightModule,
     RouterModule.forRoot([
       {path: 'alhambraHouse', component: AlhambraComponent},
       {path: 'centralGlasgow', component: CentralglasgowComponent},
@@ -45,4 +47,5 @@ import { HillheadtunnelComponent } from './components/hillheadtunnel/hillheadtun
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
