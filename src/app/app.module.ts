@@ -13,6 +13,12 @@ import {StenochrouteComponent} from './components/stenochroute/stenochroute.comp
 import {HillheadmapComponent} from './components/hillheadmap/hillheadmap.component';
 import {HillheadtunnelComponent} from './components/hillheadtunnel/hillheadtunnel.component';
 import {MaphilightModule} from "ng-maphilight";
+import { PuzzletaxiComponent } from './components/puzzletaxi/puzzletaxi.component';
+import { PuzzleapocalypticmapComponent } from './components/puzzleapocalypticmap/puzzleapocalypticmap.component';
+import { PuzzlednaComponent } from './components/puzzledna/puzzledna.component';
+import { PuzzleplantsComponent } from './components/puzzleplants/puzzleplants.component';
+import { PuzzlebustimetableComponent } from './components/puzzlebustimetable/puzzlebustimetable.component';
+import { PuzzlelocationsComponent } from './components/puzzlelocations/puzzlelocations.component';
 
 @NgModule({
   declarations: [
@@ -25,13 +31,20 @@ import {MaphilightModule} from "ng-maphilight";
     StenochundergroundComponent,
     StenochrouteComponent,
     HillheadmapComponent,
-    HillheadtunnelComponent
+    HillheadtunnelComponent,
+    PuzzletaxiComponent,
+    PuzzleapocalypticmapComponent,
+    PuzzlednaComponent,
+    PuzzleplantsComponent,
+    PuzzlebustimetableComponent,
+    PuzzlelocationsComponent
   ],
   imports: [
     BrowserModule,
     MaphilightModule,
     RouterModule.forRoot([
-      {path: 'alhambraHouse', component: AlhambraComponent},
+      {path: 'puzzletaxi', component: PuzzletaxiComponent},
+      {path: 'mainoffice', component: AlhambraComponent},
       {path: 'centralGlasgow', component: CentralglasgowComponent},
       {path: 'secrettunnel', component: SecrettunnelComponent},
       {path: 'centrallowlevel', component: CentrallowlevelComponent},

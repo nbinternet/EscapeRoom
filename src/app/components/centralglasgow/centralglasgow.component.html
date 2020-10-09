@@ -10,6 +10,10 @@
       <br/>
       <p>Is there maybe more on the map?</p>
     </div>
+    <div *ngIf="locationTracker.currentStatus.get('GlasgowCentralLowLevel')">
+      <br/>
+      <p>And now yet more on the map?</p>
+    </div>
   </div>
 
   <div class="column">
@@ -19,7 +23,7 @@
     >
       <img alt="Central Glasgow" src="../../../assets/CentralGlasgow.PNG" usemap="#image-map">
       <map name="image-map">
-        <area alt="Alhambra House" coords="414,196,403,237,461,251,471,208,471,209" routerLink="/alhambraHouse" shape="poly" title="Alhambra House">
+        <area alt="The Main Office" coords="414,196,403,237,461,251,471,208,471,209" routerLink="/puzzletaxi" shape="poly" title="The Main Office">
         <div *ngIf="locationTracker.currentStatus.get('SecretTunnel')">
           <area alt="Secret Tunnel" coords="467,237,524,245,516,279,567,288,563,301,502,290,507,255,465,248" routerLink="/secrettunnel" shape="poly" title="Secret Tunnel">
         </div>
