@@ -45,6 +45,13 @@ import {FormsModule} from "@angular/forms";
     MaphilightModule,
     RouterModule.forRoot([
       {path: 'puzzletaxi', component: PuzzletaxiComponent},
+      {path: 'puzzlemap', component: PuzzleapocalypticmapComponent},
+      {path: 'puzzledna', component: PuzzlednaComponent},
+      {path: 'puzzleplants', component: PuzzleplantsComponent},
+      {path: 'puzzlemap', component: PuzzleapocalypticmapComponent},
+      {path: 'puzzlemap', component: PuzzleapocalypticmapComponent},
+      {path: 'puzzlebus', component: PuzzlebustimetableComponent},
+      {path: 'puzzlelocaltions', component: PuzzlelocationsComponent},
       {path: 'mainoffice', component: AlhambraComponent},
       {path: 'centralGlasgow', component: CentralglasgowComponent},
       {path: 'secrettunnel', component: SecrettunnelComponent},
