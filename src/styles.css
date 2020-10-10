@@ -32,7 +32,6 @@ p {
 .row {
   display: flex;
 }
-
 /* Create two equal columns that sits next to each other */
 .column {
   flex: 50%;
@@ -42,4 +41,19 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.attribution {
+  font: 12px verdana, arial, helvetica, sans-serif;
+  color: darkgrey;
+}
+
+.attributionText {
+  font: 12px verdana, arial, helvetica, sans-serif;
+  color: lightgrey;
+}
+
+.attributionLink {
+  font: 12px verdana, arial, helvetica, sans-serif;
+  /*color: blue;*/
 }

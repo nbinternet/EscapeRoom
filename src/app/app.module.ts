@@ -13,12 +13,13 @@ import {StenochrouteComponent} from './components/stenochroute/stenochroute.comp
 import {HillheadmapComponent} from './components/hillheadmap/hillheadmap.component';
 import {HillheadtunnelComponent} from './components/hillheadtunnel/hillheadtunnel.component';
 import {MaphilightModule} from "ng-maphilight";
-import { PuzzletaxiComponent } from './components/puzzletaxi/puzzletaxi.component';
-import { PuzzleapocalypticmapComponent } from './components/puzzleapocalypticmap/puzzleapocalypticmap.component';
-import { PuzzlednaComponent } from './components/puzzledna/puzzledna.component';
-import { PuzzleplantsComponent } from './components/puzzleplants/puzzleplants.component';
-import { PuzzlebustimetableComponent } from './components/puzzlebustimetable/puzzlebustimetable.component';
-import { PuzzlelocationsComponent } from './components/puzzlelocations/puzzlelocations.component';
+import {PuzzletaxiComponent} from './components/puzzletaxi/puzzletaxi.component';
+import {PuzzleapocalypticmapComponent} from './components/puzzleapocalypticmap/puzzleapocalypticmap.component';
+import {PuzzlednaComponent} from './components/puzzledna/puzzledna.component';
+import {PuzzleplantsComponent} from './components/puzzleplants/puzzleplants.component';
+import {PuzzlebustimetableComponent} from './components/puzzlebustimetable/puzzlebustimetable.component';
+import {PuzzlelocationsComponent} from './components/puzzlelocations/puzzlelocations.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { PuzzlelocationsComponent } from './components/puzzlelocations/puzzleloc
       {path: '', redirectTo: '/centralGlasgow', pathMatch: 'full'},
       {path: '**', component: PagenotfoundComponent}
     ]),
+    FormsModule,
   ],
 
   providers: [],

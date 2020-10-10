@@ -3,16 +3,22 @@
     <p>Just when you thought that 2020 couldn't get any worse ...</p>
     <p>Zombies have taken over Glasgow!!! It is not safe to wander the streets.</p>
     <p>You and your team are trapped in an office and need to solve various puzzles in order to escape..</p>
+    <p>You retreat from the zombies down to the basement of a large office.</p>
     <p>Will you be able to work together and solve the challenges before the 30 minute deadline expires?</p>
     <p>So far you have found only a 100 year old map of Glasgow to help you!</p>
+    <p>Mabye something on the map will identify which office you are in?</p>
     <!--<p>Tracker: {{locationTracker.currentStatus.get('SecretTunnel')}}</p>-->
     <div *ngIf="locationTracker.currentStatus.get('SecretTunnel')">
       <br/>
-      <p>Is there maybe more on the map?</p>
+      <p>Is there maybe more to find on the map?</p>
     </div>
     <div *ngIf="locationTracker.currentStatus.get('GlasgowCentralLowLevel')">
       <br/>
-      <p>And now yet more on the map?</p>
+      <p>And now yet more to find on the map?</p>
+    </div>
+    <div *ngIf="locationTracker.currentStatus.get('StEnochTunnel')">
+      <br/>
+      <p>Keep looking on the map?</p>
     </div>
   </div>
 
@@ -22,6 +28,8 @@
       id="centralMap"
     >
       <img alt="Central Glasgow" src="../../../assets/CentralGlasgow.PNG" usemap="#image-map">
+      <div class="attribution">Map Attribution: <span class="attributionText">Reproduced with the permission of the </span>
+        <a class="attributionLink" href="https://maps.nls.uk/view/103656952">'National Library of Scotland'</a></div>
       <map name="image-map">
         <area alt="The Main Office" coords="414,196,403,237,461,251,471,208,471,209" routerLink="/puzzletaxi" shape="poly" title="The Main Office">
         <div *ngIf="locationTracker.currentStatus.get('SecretTunnel')">
