@@ -26,18 +26,21 @@
     </div>
 
     <div class="rightAnswer" *ngIf="correctAnswer">
-      <p>You got the right answer and the door clicks open!</p>
+      <i class="fa fa-check"></i>
+      You got the right answer and the door clicks open!
       <Button class="button hvr-grow hvr-icon-back" routerLink="/MainOffice">
         Go to sub basement
       </Button>
     </div>
 
     <div class="wrongAnswer" *ngIf="incorrectCount > 0">
-      <p>That is not the right answer!</p>
+      <i class="fa fa-times-circle"></i>
+      That is not the right answer!
     </div>
 
     <div class="hint" *ngIf="showHint">
-      <p>Hint!</p>
+      <i class="fa fa-info-circle"></i>
+      Hint!
       <p>Maybe Google Maps could help?</p>
     </div>
 

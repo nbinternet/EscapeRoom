@@ -6,10 +6,10 @@
     <br/>
     <p>From here, there appears to be two options:</p>
     <br/>
-    <ul>
-      <li>(a) take the next tunnel south</li>
-      <li>(b) wait for a bus.</li>
-    </ul>
+    <ol class="alpha">
+      <li>take the next tunnel south</li>
+      <li>wait for a bus.</li>
+    </ol>
     <br/>
 
     <p>Unfortunately, the tunnel entrance is secured with a four digit code lock.</p>
@@ -17,7 +17,7 @@
       study the vandalised timetable while you consider your options.</p>
     <p>You notice that the time of the next bus has been obscured.</p>
     <br/>
-    <ul>
+    <ul class="nomark">
       <li>1601 Glasgow Necropolis</li>
       <li>1602 Trongate</li>
       <li>1604 Glasgow Green</li>
@@ -41,18 +41,21 @@
     <br/>
 
     <div class="rightAnswer" *ngIf="correctAnswer">
-      <p>You got the right answer and now you !</p>
+      <i class="fa fa-check"></i>
+      You got the right answer and now you TBD!
       <Button class="button hvr-grow hvr-icon-back" routerLink="/centrallowlevel">
         Go to TBD
       </Button>
     </div>
 
     <div class="wrongAnswer" *ngIf="incorrectCount > 0">
-      <p>That is not the right answer!</p>
+      <i class="fa fa-times-circle"></i>
+      That is not the right answer!
     </div>
 
     <div class="hint" *ngIf="showHint">
-      <p>Hint!</p>
+      <i class="fa fa-info-circle"></i>
+      Hint!
     </div>
 
   </div>

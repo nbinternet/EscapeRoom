@@ -23,6 +23,7 @@ import {FormsModule} from "@angular/forms";
 import {BotanicgardensComponent} from './components/botanicgardens/botanicgardens.component';
 import {BotanicstationComponent} from './components/botanicstation/botanicstation.component';
 import {ParktunnelComponent} from './components/parktunnel/parktunnel.component';
+import {CountdownModule} from "ngx-countdown";
 
 @NgModule({
   declarations: [
@@ -73,10 +74,12 @@ import {ParktunnelComponent} from './components/parktunnel/parktunnel.component'
       {path: '**', component: PagenotfoundComponent}
     ]),
     FormsModule,
+    CountdownModule
   ],
 
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule {
 }

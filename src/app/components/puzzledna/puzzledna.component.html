@@ -30,18 +30,21 @@
     </div>
     <br/>
     <div class="rightAnswer" *ngIf="correctAnswer">
-      <p class="success-msg">You got the right answer and now you have to get to the Botanic gardens!</p>
+      <i class="fa fa-check"></i>
+      You got the right answer and now you have to get to the Botanic gardens!
       <Button class="button hvr-grow hvr-icon-back" (click)="onSelect()" routerLink="/HillheadMap">
         Go to Botanic gardens
       </Button>
     </div>
 
     <div class="wrongAnswer" *ngIf="incorrectCount > 0">
-      <p>That is not the right answer!</p>
+      <i class="fa fa-times-circle"></i>
+      That is not the right answer!
     </div>
 
     <div class="hint" *ngIf="showHint">
-      <p class="info-msg">Hint!</p>
+      <i class="fa fa-info-circle"></i>
+      Hint!
       <p>Use the wiki, Luke!</p>
     </div>
 

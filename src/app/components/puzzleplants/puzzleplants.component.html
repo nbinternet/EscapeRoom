@@ -30,18 +30,21 @@
     </div>
 
     <div class="rightAnswer" *ngIf="correctAnswer">
-      <p>You got the right answer and now you have to find the way to the disused Botanic low level station!</p>
+      <i class="fa fa-check"></i>
+      You got the right answer and now you have to find the way to the disused Botanic low level station!
       <Button class="button hvr-grow hvr-icon-back" routerLink="/BotanicStation">
         Go to Botanic low level station
       </Button>
     </div>
 
     <div class="wrongAnswer" *ngIf="incorrectCount > 0">
-      <p>That is not the right answer!</p>
+      <i class="fa fa-times-circle"></i>
+      That is not the right answer!
     </div>
 
     <div class="hint" *ngIf="showHint">
-      <p>Hint!</p>
+      <i class="fa fa-info-circle"></i>
+      Hint!
       <p>Dandelion wine and Samphire Gin</p>
     </div>
 

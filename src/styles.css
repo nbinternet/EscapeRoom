@@ -87,3 +87,11 @@ img {
   color: #D8000C;
   background-color: #FFBABA;
 }
+
+ul.nomark {
+  list-style-type: none;
+}
+
+ol.alpha {
+  list-style-type: upper-alpha;
+}

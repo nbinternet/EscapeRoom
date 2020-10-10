@@ -4,9 +4,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Dependencies
 
-For the ImageMap component. Install in the project root `/escaperoom`
+For the required additional components. Install in the project root `/escaperoom`
 
 `npm install --save-dev ng-maphilight`
+
+`npm install --save-dev ngx-countdown`
 
 ## Development server
 
@@ -55,6 +57,10 @@ Go to the project directory and launch the server.
 The `ng serve` command launches the server, watches your files, and rebuilds the app as you make changes to those files.
 
 Using the `--open` (or just `-o`) option will automatically open your browser on `http://localhost:4200/`.
+
+Note as this project uses a singleton service to store and maintain state you should also
+include the flag `--liveReload=false` so that the server does not reload ay pages and reinitialise
+any services.
 
 ### Upgrading Angular
 

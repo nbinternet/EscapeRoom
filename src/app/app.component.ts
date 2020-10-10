@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {ViewChild} from "@angular/core";
+import {CountdownComponent} from "ngx-countdown";
 
 @Component({
   selector: 'app-root',
@@ -8,4 +10,13 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'Can you escape from Zombie Glasgow!';
+
+  @ViewChild('cd', {static: false}) private countdown: CountdownComponent;
+
+  constructor() {
+  }
+
+  handleEvent(event) {
+
+  }
 }

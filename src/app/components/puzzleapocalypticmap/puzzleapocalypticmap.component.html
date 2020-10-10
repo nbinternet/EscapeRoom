@@ -42,19 +42,22 @@
     <br/>
 
     <div class="rightAnswer" *ngIf="correctAnswer">
-      <p>You got the right answer and now you have to find the route to St Enoch's Subway so you can get to that safe Subway station!</p>
+      <i class="fa fa-check"></i>
+      You got the right answer and now you have to find the route to St Enoch's Subway so you can get to that safe Subway station!
       <Button class="button hvr-grow hvr-icon-back" routerLink="/centrallowlevel">
         Go to Glasgow Central secret platform
       </Button>
     </div>
 
     <div class="wrongAnswer" *ngIf="incorrectCount > 0">
-      <p>That is not the right answer!</p>
+      <i class="fa fa-times-circle"></i>
+      That is not the right answer!
     </div>
 
     <div class="hint" *ngIf="showHint">
-      <p>Hint!</p>
-      <p>It's a Subway station! There is only so many!</p>
+      <i class="fa fa-info-circle"></i>
+      Hint!
+      <p>It's a Subway station! There are only so many!</p>
     </div>
 
   </div>
