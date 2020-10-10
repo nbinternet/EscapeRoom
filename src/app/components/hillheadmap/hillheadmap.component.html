@@ -4,18 +4,28 @@
   <div class="column">
     <maphilight
       [config]="config"
-      id="secretTunnelMap"
+      id="hillheadMap"
     >
       <img src="../../../assets/Botanic&Uni.PNG" alt="Around Hillhead Underground" usemap="#image-map">
+      <div class="attribution">Map Attribution: <span class="attributionText">Reproduced with the permission of the </span>
+        <a class="attributionLink" target="_blank" href="https://maps.nls.uk/view/103656952">'National Library of Scotland'</a>
+      </div>
 
       <map name="image-map">
-        <area alt="The Gardens" title="The Gardens"
-              coords="165,325,195,273,219,241,250,219,277,199,207,154,163,127,241,80,297,113,349,127,388,158,365,191,327,190,291,205,265,219,242,235,219,260,175,322" shape="poly">
+        <area alt="Hillhead Underground station" title="" coords="163,328,193,317,199,336,167,348" shape="poly" routerLink="/puzzledna">
+        <div *ngIf="locationTracker.currentStatus.get('BotanicGardens')">
+          <area alt="The Botanic Gardens" title="The Botanic Gardens"
+                coords="165,325,195,273,219,241,250,219,277,199,207,154,163,127,241,80,297,113,349,127,388,158,365,191,327,190,291,205,265,219,242,235,219,260,175,322" shape="poly">
+        </div>
+        <div *ngIf="locationTracker.currentStatus.get('BotanicStation')">
+          <area alt="" title="The Botanic garden railway tunnel"
+                coords="272,168,251,183,273,216,281,208,342,255,471,328,496,367,506,412,504,455,490,500,501,504,513,456,514,412,510,376,497,343,481,320,436,296,327,227,294,203,297,195" shape="poly">
+        </div>
       </map>
     </maphilight>
   </div>
 </div>
 
-<Button class="button hvr-grow hvr-icon-back" routerLink="/centralGlasgow">
-  <i class="fa fa-chevron-circle-left hvr-icon"></i>Go back to map
-</Button>
+<!--<Button class="button hvr-grow hvr-icon-back" routerLink="/centralGlasgow">-->
+<!--  <i class="fa fa-chevron-circle-left hvr-icon"></i>Go back to map-->
+<!--</Button>-->

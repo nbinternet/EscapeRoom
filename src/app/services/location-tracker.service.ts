@@ -46,6 +46,7 @@ export class LocationTrackerService {
     this.currentStatus.set(locationNames.StEnochUnderground, false);
     this.currentStatus.set(locationNames.HillheadTunnel, false);
     this.currentStatus.set(locationNames.BotanicGardens, false);
-    this.currentStatus.set(locationNames.spare2, false);
+    this.currentStatus.set(locationNames.BotanicStation, false);
+    this.currentStatus.set(locationNames.ParkTunnel, false);
   }
 }

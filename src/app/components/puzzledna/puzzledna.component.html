@@ -2,8 +2,8 @@
 
 <div class="row">
   <div class="column">
-    <p>You arrive safely at Hillhead station.</p>
-    <p>Painted on the wall, someone has left you an indirect clue to your next location</p>
+    <p>After following the subway tunnel, you arrive safely at Hillhead station.</p>
+    <p>Painted on the wall of the station, someone has left you an indirect clue to your next location to go to</p>
 
     <p>
       N U C L E U S N<br/>
@@ -30,8 +30,8 @@
     </div>
 
     <div *ngIf="correctAnswer">
-      <p>You got the right answer and now you have to find old station to get to the next destination!</p>
-      <Button class="button hvr-grow hvr-icon-back" routerLink="/centrallowlevel">
+      <p>You got the right answer and now you have to get to the Botanic gardens!</p>
+      <Button class="button hvr-grow hvr-icon-back" (click)="onSelect()" routerLink="/botanicgardens">
         Go to Botanic low level station
       </Button>
     </div>
@@ -47,7 +47,9 @@
   </div>
   <div class="column">
     <img src="../../../assets/wordsearch.png" alt="">
-    <div class="attribution">Image Attribution: <span class="attributionText">TBD</span></div>
+    <div class="attribution">Reference:
+      <a class="attributionLink" target="_blank" href="https://en.wikipedia.org/wiki/DNA">https://en.wikipedia.org/wiki/DNA</a>
+    </div>
   </div>
 </div>
 

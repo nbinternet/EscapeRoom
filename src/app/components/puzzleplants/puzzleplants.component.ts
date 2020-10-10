@@ -19,7 +19,7 @@ export class PuzzleplantsComponent implements OnInit {
 
   update(value: string) {
     this.answer = value;
-    if (this.answer.trim() == "1729") {
+    if (this.answer.trim() == "02") {
       this.correctAnswer = true;
       this.incorrectCount = 0;
       this.showHint = false;
