@@ -20,6 +20,9 @@ import {PuzzleplantsComponent} from './components/puzzleplants/puzzleplants.comp
 import {PuzzlebustimetableComponent} from './components/puzzlebustimetable/puzzlebustimetable.component';
 import {PuzzlelocationsComponent} from './components/puzzlelocations/puzzlelocations.component';
 import {FormsModule} from "@angular/forms";
+import {BotanicgardensComponent} from './components/botanicgardens/botanicgardens.component';
+import {BotanicstationComponent} from './components/botanicstation/botanicstation.component';
+import {ParktunnelComponent} from './components/parktunnel/parktunnel.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,10 @@ import {FormsModule} from "@angular/forms";
     PuzzlednaComponent,
     PuzzleplantsComponent,
     PuzzlebustimetableComponent,
-    PuzzlelocationsComponent
+    PuzzlelocationsComponent,
+    BotanicgardensComponent,
+    BotanicstationComponent,
+    ParktunnelComponent
   ],
   imports: [
     BrowserModule,
@@ -52,14 +58,17 @@ import {FormsModule} from "@angular/forms";
       {path: 'puzzlemap', component: PuzzleapocalypticmapComponent},
       {path: 'puzzlebus', component: PuzzlebustimetableComponent},
       {path: 'puzzlelocaltions', component: PuzzlelocationsComponent},
-      {path: 'mainoffice', component: AlhambraComponent},
+      {path: 'MainOffice', component: AlhambraComponent},
       {path: 'centralGlasgow', component: CentralglasgowComponent},
       {path: 'secrettunnel', component: SecrettunnelComponent},
       {path: 'centrallowlevel', component: CentrallowlevelComponent},
       {path: 'hillheadtunnel', component: HillheadtunnelComponent},
-      {path: 'hillheadmap', component: HillheadmapComponent},
+      {path: 'HillheadMap', component: HillheadmapComponent},
       {path: 'stenochtunnel', component: StenochrouteComponent},
       {path: 'stenochunderground', component: StenochundergroundComponent},
+      {path: 'BotanicGardens', component: BotanicgardensComponent},
+      {path: 'BotanicStation', component: BotanicstationComponent},
+      {path: 'ParkTunnel', component: ParktunnelComponent},
       {path: '', redirectTo: '/centralGlasgow', pathMatch: 'full'},
       {path: '**', component: PagenotfoundComponent}
     ]),

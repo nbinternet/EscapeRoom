@@ -1,13 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
-/* You can add global styles to this file, and also import other style files */
+
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+
 html, body {
-  height:97%;
-  width:98%;
-  color:whitesmoke;
-  background-color:darkgray;
-  margin:1%;
-  padding:0;
-  font:16px verdana, arial, helvetica, sans-serif;
+  height: 97%;
+  width: 98%;
+  color: whitesmoke;
+  background-color: darkgray;
+  margin: 1%;
+  padding: 0;
+  font: 16px verdana, arial, helvetica, sans-serif;
 }
 h2 {
   /*font:bold 12px/14px verdana, arial, helvetica, sans-serif;*/
