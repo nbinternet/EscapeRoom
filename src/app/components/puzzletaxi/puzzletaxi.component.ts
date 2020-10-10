@@ -29,6 +29,7 @@ export class PuzzletaxiComponent implements OnInit {
 
     if (this.incorrectCount > 3) {
       this.showHint = true;
+      this.incorrectCount = 0;
     }
   }
 }

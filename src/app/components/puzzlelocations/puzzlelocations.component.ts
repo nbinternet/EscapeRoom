@@ -27,8 +27,9 @@ export class PuzzlelocationsComponent implements OnInit {
       this.incorrectCount++;
     }
 
-    if (this.incorrectCount > 3) {
+    if (this.incorrectCount > 1) {
       this.showHint = true;
+      this.incorrectCount = 0;
     }
   }
 }

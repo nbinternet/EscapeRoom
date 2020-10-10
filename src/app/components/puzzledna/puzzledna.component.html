@@ -3,9 +3,9 @@
 <div class="row">
   <div class="column">
     <p>After following the subway tunnel, you arrive safely at Hillhead station.</p>
-    <p>Painted on the wall of the station, someone has left you an indirect clue to your next location to go to</p>
-
-    <p>
+    <p>Painted on the wall of the station, someone has left you an indirect clue to your next location to go to:</p>
+    <br/>
+    <p class="monospaced">
       N U C L E U S N<br/>
       X J Q P T A Z P<br/>
       C C E P N D H R<br/>
@@ -16,11 +16,11 @@
       O J V R Z E B N<br/>
       W P R S U G A R<br/>
     </p>
-
+    <br/>
     <p>[1] Find six words, horizontally or vertically, which are closely related to DNA.</p>
     <p>[2] Take the first letter of each word and rearrange them to form a new six letter word.</p>
     <br/>
-
+    <br/>
     <div>
       <label>What is the new six letter word? Type your answer and hit Enter.
         <input #box
@@ -28,11 +28,11 @@
                (blur)="update(box.value)">
       </label>
     </div>
-
-    <div *ngIf="correctAnswer">
-      <p>You got the right answer and now you have to get to the Botanic gardens!</p>
-      <Button class="button hvr-grow hvr-icon-back" (click)="onSelect()" routerLink="/botanicgardens">
-        Go to Botanic low level station
+    <br/>
+    <div class="rightAnswer" *ngIf="correctAnswer">
+      <p class="success-msg">You got the right answer and now you have to get to the Botanic gardens!</p>
+      <Button class="button hvr-grow hvr-icon-back" (click)="onSelect()" routerLink="/BotanicGardens">
+        Go to Botanic gardens
       </Button>
     </div>
 
@@ -41,7 +41,8 @@
     </div>
 
     <div class="hint" *ngIf="showHint">
-      <p>Hint!</p>
+      <p class="info-msg">Hint!</p>
+      <p>Use the wiki, Luke!</p>
     </div>
 
   </div>

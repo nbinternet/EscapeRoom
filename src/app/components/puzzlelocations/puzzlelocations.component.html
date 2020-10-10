@@ -25,7 +25,7 @@
       </label>
     </div>
 
-    <div *ngIf="correctAnswer">
+    <div class="rightAnswer" *ngIf="correctAnswer">
       <p>You got the right answer and the door clicks open!</p>
       <Button class="button hvr-grow hvr-icon-back" routerLink="/mainoffice">
         Go to sub basement
@@ -38,6 +38,7 @@
 
     <div class="hint" *ngIf="showHint">
       <p>Hint!</p>
+      <p>Maybe Google Maps could help?</p>
     </div>
 
   </div>

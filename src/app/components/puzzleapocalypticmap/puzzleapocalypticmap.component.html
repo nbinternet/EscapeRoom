@@ -4,10 +4,12 @@
   <div class="column">
     <p>You suddenly emerge through a hole in the wall onto a station platform.</p>
     <p>You realise you are under Glasgow Central but now platform you have ever seen.</p>
+    <br/>
     <p>However, it looks like someone has left some kind of message - pinned at eye level where you can't miss it is a subway map .. a rather apocalyptic one.</p>
+    <br/>
     <p>As you study the map you wonder whether what looks like graffiti might actually contain a hidden message.</p>
     <p>Examining the map, you notice that some letters have been added and some scored out to give:</p>
-
+    <br/>
     <ul>
       <li>St. Enoch</li>
       <li>Bridge Street (changed to "Braaaiins Street")</li>
@@ -26,11 +28,10 @@
       <li>Buchanan Street</li>
       <li>Inner Circle (changed to "Dinner Circle")</li>
     </ul>
-
-    <p>Taking the 23 added letters, then removing 9 of the deleted letters, can you rearrange the 14 remaining letters to find the safe subway station?</p>
-
     <br/>
-
+    <p>Taking the 23 added letters, then removing 9 of the deleted letters, can you rearrange the 14 remaining letters to find the safe subway station?</p>
+    <br/>
+    <br/>
     <div>
       <label>But what is the safe underground station? Type your answer and hit Enter.
         <input #box
@@ -38,8 +39,9 @@
                (blur)="update(box.value)">
       </label>
     </div>
+    <br/>
 
-    <div *ngIf="correctAnswer">
+    <div class="rightAnswer" *ngIf="correctAnswer">
       <p>You got the right answer and now you have to find the route to St Enoch's Subway so you can get to that safe Subway station!</p>
       <Button class="button hvr-grow hvr-icon-back" routerLink="/centrallowlevel">
         Go to Glasgow Central secret platform
@@ -52,6 +54,7 @@
 
     <div class="hint" *ngIf="showHint">
       <p>Hint!</p>
+      <p>It's a Subway station! There is only so many!</p>
     </div>
 
   </div>

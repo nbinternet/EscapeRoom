@@ -32,8 +32,9 @@ export class PuzzlednaComponent implements OnInit {
       this.incorrectCount++;
     }
 
-    if (this.incorrectCount > 3) {
+    if (this.incorrectCount > 2) {
       this.showHint = true;
+      this.incorrectCount = 0;
     }
   }
 

@@ -3,18 +3,20 @@
 <div class="row">
   <div class="column">
     <p>You follow the disused railway tunnel from the old Botanic Gardens Station to Kelvingrove Park.</p>
-
+    <br/>
     <p>From here, there appears to be two options:</p>
+    <br/>
     <ul>
       <li>(a) take the next tunnel south</li>
       <li>(b) wait for a bus.</li>
     </ul>
+    <br/>
 
-    <p>Unfortunately, the tunnel entrance is secured with a four digit code.</p>
+    <p>Unfortunately, the tunnel entrance is secured with a four digit code lock.</p>
     <p>The prospect of taking the 666A bus fills you with dread but you still
       study the vandalised timetable while you consider your options.</p>
     <p>You notice that the time of the next bus has been obscured.</p>
-
+    <br/>
     <ul>
       <li>1601 Glasgow Necropolis</li>
       <li>1602 Trongate</li>
@@ -25,11 +27,10 @@
       <li>1633 Charing Cross</li>
       <li>xxxx Eldon Street, opp. Park</li>
     </ul>
-
+    <br/>
     <p>There is something strange about these bus times.</p>
     <p>Surely the four digit security code wouldn't be the time of the next bus?</p>
     <br/>
-
     <div>
       <label>What is the 4 digit security code? Type your answer and hit Enter.
         <input #box
@@ -37,8 +38,9 @@
                (blur)="update(box.value)">
       </label>
     </div>
+    <br/>
 
-    <div *ngIf="correctAnswer">
+    <div class="rightAnswer" *ngIf="correctAnswer">
       <p>You got the right answer and now you !</p>
       <Button class="button hvr-grow hvr-icon-back" routerLink="/centrallowlevel">
         Go to TBD
