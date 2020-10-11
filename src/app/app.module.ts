@@ -24,6 +24,7 @@ import {BotanicgardensComponent} from './components/botanicgardens/botanicgarden
 import {BotanicstationComponent} from './components/botanicstation/botanicstation.component';
 import {ParktunnelComponent} from './components/parktunnel/parktunnel.component';
 import {CountdownModule} from "ngx-countdown";
+import {LandingpageComponent} from './components/landingpage/landingpage.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import {CountdownModule} from "ngx-countdown";
     PuzzlelocationsComponent,
     BotanicgardensComponent,
     BotanicstationComponent,
-    ParktunnelComponent
+    ParktunnelComponent,
+    LandingpageComponent
   ],
   imports: [
     BrowserModule,
@@ -70,7 +72,8 @@ import {CountdownModule} from "ngx-countdown";
       {path: 'BotanicGardens', component: BotanicgardensComponent},
       {path: 'BotanicStation', component: BotanicstationComponent},
       {path: 'ParkTunnel', component: ParktunnelComponent},
-      {path: '', redirectTo: '/centralGlasgow', pathMatch: 'full'},
+      {path: 'LandingPage', component: LandingpageComponent},
+      {path: '', redirectTo: '/LandingPage', pathMatch: 'full'},
       {path: '**', component: PagenotfoundComponent}
     ]),
     FormsModule,

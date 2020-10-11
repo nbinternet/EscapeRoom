@@ -1,7 +1,7 @@
 <div>
   <h1>
     {{title}} : TimeLeft :
-    <countdown #cd [config]="{leftTime: 1800, notify: [ 300 ], format: 'm:ss'}" (event)="handleEvent($event)"></countdown>
+    <countdown #cd [config]="{demand: true, leftTime: 1800, notify: [ 300 ], format: 'm:ss'}" (event)="handleEvent($event)"></countdown>
   </h1>
 
   <div id="content">

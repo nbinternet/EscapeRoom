@@ -1,0 +1,49 @@
+<div class="centerAll">
+  <p>Just when you thought that 2020 couldn't get any worse ...</p>
+  <br/>
+  <p>Zombies have taken over Glasgow!!! It is not safe to wander the streets.</p>
+  <br/>
+  <p>You and your team's challenge is to escape from the zombies and discover the cure of the mysterious affliction sweeping through Glasgow!</p>
+  <br/>
+  <p>You will have thirty minutes to accomplish this task, with a countdown shown at the top of the page.</p>
+  <br/>
+  <br/>
+  <br/>
+  <div>
+    <label>Please enter your chosen teams name and hit Enter.
+      <input #team class="teamName"
+             (keyup.enter)="teamUpdate(team.value)"
+             (blur)="teamUpdate(team.value)">
+    </label>
+  </div>
+  <br/>
+  <br/>
+  <br/>
+
+  <p>The game will begin once you have entered the correct Pin and hit enter.</p>
+  <br/>
+  <div>
+    <label>Please enter The Pin number you have been given and hit Enter.
+      <input #pin
+             (keyup.enter)="pinUpdate(pin.value)"
+             (blur)="pinUpdate(pin.value)">
+    </label>
+  </div>
+  <br/>
+  <br/>
+  <div class="rightAnswer" *ngIf="correctAnswer">
+    <i class="fa fa-check"></i>
+    <Button class="button hvr-grow hvr-icon-back" (click)="onStart()" routerLink="/centralGlasgow">
+      Please enter the game
+    </Button>
+  </div>
+
+  <div class="wrongAnswer" *ngIf="incorrectCount > 0">
+    <i class="fa fa-times-circle"></i>
+    That is not the right pin number!
+  </div>
+
+  <br/>
+  <br/>
+  <br/>
+</div>

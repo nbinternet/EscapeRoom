@@ -59,7 +59,7 @@ The `ng serve` command launches the server, watches your files, and rebuilds the
 Using the `--open` (or just `-o`) option will automatically open your browser on `http://localhost:4200/`.
 
 Note as this project uses a singleton service to store and maintain state you should also
-include the flag `--liveReload=false` so that the server does not reload ay pages and reinitialise
+include the flag `--liveReload=false` so that the server does not reload any pages and reinitialise
 any services.
 
 ### Upgrading Angular
