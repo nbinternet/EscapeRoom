@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {locationNames} from "../../models/locationNames";
 import {LocationTrackerService} from "../../services/location-tracker.service";
+import {TeamDetailsService} from "../../services/team-details.service";
 
 @Component({
   selector: 'app-puzzledna',
@@ -12,11 +13,12 @@ export class PuzzlednaComponent implements OnInit {
   correctAnswer: boolean = false;
   showHint: boolean = false;
   incorrectCount: number = 0;
-
   locationTracker: LocationTrackerService;
+  teamDetailsService: TeamDetailsService;
 
-  constructor(private _locationTracker: LocationTrackerService) {
+  constructor(private _locationTracker: LocationTrackerService, private _teamDetailsService: TeamDetailsService) {
     this.locationTracker = _locationTracker
+    this.teamDetailsService = _teamDetailsService;
   }
 
   ngOnInit(): void {

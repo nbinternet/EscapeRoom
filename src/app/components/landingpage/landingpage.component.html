@@ -3,7 +3,11 @@
   <br/>
   <p>Zombies have taken over Glasgow!!! It is not safe to wander the streets.</p>
   <br/>
-  <p>You and your team's challenge is to escape from the zombies and discover the cure of the mysterious affliction sweeping through Glasgow!</p>
+  <p>You and your team are trapped in an office and need to solve various puzzles in order to escape..</p>
+  <br/>
+  <p>Will you be able to work together and solve the challenges before the 30 minute deadline expires?</p>
+  <br/>
+  <p>You and your team's challenge is to escape from the zombies and discover the cure of the mysterious zombie affliction sweeping through Glasgow!</p>
   <br/>
   <p>You will have thirty minutes to accomplish this task, with a countdown shown at the top of the page.</p>
   <br/>
@@ -19,12 +23,8 @@
   </div>
   <br/>
   <br/>
-  <br/>
-
-  <p>The game will begin once you have entered the correct Pin and hit enter.</p>
-  <br/>
   <div>
-    <label>Please enter The Pin number you have been given and hit Enter.
+    <label>Please enter the Pin number you have been given and hit Enter.
       <input #pin
              (keyup.enter)="pinUpdate(pin.value)"
              (blur)="pinUpdate(pin.value)">
@@ -33,6 +33,7 @@
   <br/>
   <br/>
   <div class="rightAnswer" *ngIf="correctAnswer">
+    <p>The game timer counter will begin once you have selected the button below.</p>
     <i class="fa fa-check"></i>
     <Button class="button hvr-grow hvr-icon-back" (click)="onStart()" routerLink="/centralGlasgow">
       Please enter the game

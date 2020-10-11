@@ -1,1 +1,23 @@
-<p>parktunnel works!</p>
+<div class="row">
+  <div class="column">
+    <p>Into the Kelvingrove Park tunnel towards the river Clyde!</p>
+    <p>All you need to do now is follow the tunnel down to get to your next location.</p>
+  </div>
+  <div class="column">
+    <maphilight
+      [config]="config"
+      id="ParkTunnel"
+    >
+      <img src="../../../assets/parktunnel.png" alt="Park Tunnel" usemap="#image-map">
+      <div class="attribution">Image Attribution: <span class="attributionText">Reproduced with thanks (© Brian Skillen) </span>
+        <a class="attributionLink" target="_blank" href="http://kdsa33.blogspot.com/2017/01/brian-skillenthe-clyde-harbour-trust.html">
+          'Article - Brian Skillen: The Clyde Harbour Tunnel'</a>
+      </div>
+
+      <map name="image-map">
+        <area alt="The tunnel to next location" title="The tunnel to next location" routerLink="/puzzlelocation"
+              coords="381,335,419,367" shape="rect">
+      </map>
+    </maphilight>
+  </div>
+</div>

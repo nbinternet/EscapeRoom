@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {TeamDetailsService} from "../../services/team-details.service";
 
 @Component({
   selector: 'app-puzzlplants',
@@ -10,8 +11,10 @@ export class PuzzleplantsComponent implements OnInit {
   correctAnswer: boolean = false;
   showHint: boolean = false;
   incorrectCount: number = 0;
+  teamDetailsService: TeamDetailsService;
 
-  constructor() {
+  constructor(private _teamDetailsService: TeamDetailsService) {
+    this.teamDetailsService = _teamDetailsService;
   }
 
   ngOnInit(): void {

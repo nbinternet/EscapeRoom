@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { PuzzlebustimetableComponent } from './puzzlebustimetable.component';
+import {PuzzlebustimetableComponent} from './puzzlebustimetable.component';
 
 describe('PuzzlbustimetableComponent', () => {
   let component: PuzzlebustimetableComponent;

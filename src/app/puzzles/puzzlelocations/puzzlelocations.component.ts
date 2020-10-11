@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {TeamDetailsService} from "../../services/team-details.service";
 
 @Component({
   selector: 'app-puzzlelocations',
@@ -10,8 +11,10 @@ export class PuzzlelocationsComponent implements OnInit {
   correctAnswer: boolean = false;
   showHint: boolean = false;
   incorrectCount: number = 0;
+  teamDetailsService: TeamDetailsService;
 
-  constructor() {
+  constructor(private _teamDetailsService: TeamDetailsService) {
+    this.teamDetailsService = _teamDetailsService;
   }
 
   ngOnInit(): void {
@@ -19,7 +22,7 @@ export class PuzzlelocationsComponent implements OnInit {
 
   update(value: string) {
     this.answer = value;
-    if (this.answer.trim() == "1729") {
+    if (this.answer.trim().toLowerCase() == "science centre") {
       this.correctAnswer = true;
       this.incorrectCount = 0;
       this.showHint = false;

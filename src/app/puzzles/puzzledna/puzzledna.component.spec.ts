@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { PuzzlednaComponent } from './puzzledna.component';
+import {PuzzlednaComponent} from './puzzledna.component';
 
 describe('PuzzlednaComponent', () => {
   let component: PuzzlednaComponent;

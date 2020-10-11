@@ -5,6 +5,8 @@ import {Subject} from "rxjs";
   providedIn: 'root'
 })
 export class TimerControlService {
+  public DO_START: string = "START";
+  public DO_END: string = "END";
 
   // Observable string sources
   private timerController = new Subject<string>();
@@ -16,7 +18,7 @@ export class TimerControlService {
   }
 
   // Service message commands
-  announceStart(startText: string) {
+  announcement(startText: string) {
     this.timerController.next(startText);
   }
 }

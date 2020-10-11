@@ -1,4 +1,4 @@
-<h2>You are in the basement of your office!</h2>
+<h2>You are in the basement of your teams office!</h2>
 
 <div class="row">
   <div class="column">
@@ -10,7 +10,7 @@
     <p>Could it be that the second taxicab number is the pincode?</p>
 
     <div>
-      <label>But what is the second taxicab number? Type your answer and hit Enter.
+      <label>But what is the second taxicab number? Type the answer and hit Enter.
         <input #box
                (keyup.enter)="update(box.value)"
                (blur)="update(box.value)">
@@ -19,7 +19,7 @@
 
     <div class="rightAnswer" *ngIf="correctAnswer">
       <i class="fa fa-check"></i>
-      You got the right answer and the door clicks open!
+      '{{teamDetailsService.teamName}}' have got the right answer and the door clicks open!
       <Button class="button hvr-grow hvr-icon-back" routerLink="/MainOffice">
         Go to sub basement
       </Button>

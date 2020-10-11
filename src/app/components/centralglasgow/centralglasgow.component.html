@@ -1,11 +1,9 @@
 <div class="row">
   <div class="column">
-    <p>You and your team are trapped in an office and need to solve various puzzles in order to escape..</p>
-    <p>You retreat from the zombies down to the basement of a large office.</p>
-    <p>Will you be able to work together and solve the challenges before the 30 minute deadline expires?</p>
-    <p>So far you have found only a 100 year old map of Glasgow to help you!</p>
+    <p>You retreat from the zombies into the first office you come to and down to the basement.</p>
+    <p>So far all you have found to help you on the stairs down is a 100 year old map of Glasgow!</p>
     <p>Maybe something on the map will identify which office you are in?</p>
-    <!--<p>Tracker: {{locationTracker.currentStatus.get('SecretTunnel')}}</p>-->
+
     <div *ngIf="locationTracker.currentStatus.get('SecretTunnel')">
       <br/>
       <p>Maybe there is now more to find on the map?</p>
@@ -16,11 +14,11 @@
     </div>
     <div *ngIf="locationTracker.currentStatus.get('StEnochTunnel')">
       <br/>
-      <p>Keep looking on the map?</p>
+      <p>Keep looking around the map?</p>
     </div>
     <div *ngIf="locationTracker.currentStatus.get('StEnochUnderground')">
       <br/>
-      <p>Again have a look on the map?</p>
+      <p>Again have a look around the map?</p>
     </div>
     <div *ngIf="locationTracker.currentStatus.get('HillheadTunnel')">
       <br/>

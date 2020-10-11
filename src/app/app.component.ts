@@ -18,7 +18,11 @@ export class AppComponent implements OnInit {
   constructor(private timerService: TimerControlService) {
     timerService.announcement$.subscribe(
       announcment => {
-        this.countdown.begin();
+        if (announcment == timerService.DO_START) {
+          this.countdown.begin();
+        } else if (announcment == timerService.DO_END) {
+          this.countdown.stop();
+        }
       });
   }
 

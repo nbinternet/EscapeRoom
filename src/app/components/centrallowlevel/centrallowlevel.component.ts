@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {LocationTrackerService} from "../../services/location-tracker.service";
 import {locationNames} from "../../models/locationNames";
+import {TeamDetailsService} from "../../services/team-details.service";
 
 @Component({
   selector: 'app-centrallowlevel',
@@ -10,8 +11,10 @@ import {locationNames} from "../../models/locationNames";
 export class CentrallowlevelComponent implements OnInit {
   locationTracker: LocationTrackerService;
   config;
+  teamDetailsService: TeamDetailsService;
 
-  constructor(private _locationTracker: LocationTrackerService) {
+  constructor(private _locationTracker: LocationTrackerService, private _teamDetailsService: TeamDetailsService) {
+    this.teamDetailsService = _teamDetailsService;
     this.locationTracker = _locationTracker
     this.config = _locationTracker.masterConfig;
   }

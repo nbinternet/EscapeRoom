@@ -41,6 +41,6 @@ export class LandingpageComponent implements OnInit {
   }
 
   private startCounter() {
-    this.timerControlService.announceStart("now");
+    this.timerControlService.announcement(this.timerControlService.DO_START);
   }
 }

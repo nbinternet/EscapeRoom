@@ -1,17 +1,20 @@
 import {Component, OnInit} from '@angular/core';
+import {TeamDetailsService} from "../../services/team-details.service";
 
 @Component({
-  selector: 'app-puzzletaxi',
-  templateUrl: './puzzletaxi.component.html',
-  styleUrls: ['./puzzletaxi.component.css']
+  selector: 'app-puzzlbustimetable',
+  templateUrl: './puzzlebustimetable.component.html',
+  styleUrls: ['./puzzlebustimetable.component.css']
 })
-export class PuzzletaxiComponent implements OnInit {
+export class PuzzlebustimetableComponent implements OnInit {
   answer: string;
   correctAnswer: boolean = false;
   showHint: boolean = false;
   incorrectCount: number = 0;
+  teamDetailsService: TeamDetailsService;
 
-  constructor() {
+  constructor(private _teamDetailsService: TeamDetailsService) {
+    this.teamDetailsService = _teamDetailsService;
   }
 
   ngOnInit(): void {
@@ -19,7 +22,7 @@ export class PuzzletaxiComponent implements OnInit {
 
   update(value: string) {
     this.answer = value;
-    if (this.answer.trim() == "1729") {
+    if (this.answer.trim() == "1654") {
       this.correctAnswer = true;
       this.incorrectCount = 0;
       this.showHint = false;

@@ -1,10 +1,12 @@
-<h2>Botanic Gardens</h2>
-
 <div class="row">
   <div class="column">
-    <p>You emerge from the station to find yourself in a dense undergrowth of plants and fungi.</p>
+    <p>Your team emerge from the station to find yourself in a dense undergrowth of plants and fungi.</p>
     <p>They appear to have escaped from the Botanic Gardens glass houses and are in the process of colonising what little remains of Byres Road.</p>
-    <p>The whole area is overgrown but at least the Plants are keeping the Zombies away. Before proceeding, you need to collect five edible plants from the following list:</p>
+    <p>The whole area is overgrown but at least the Plants are keeping the Zombies away.</p>
+    <p>{{teamDetailsService.teamName}} work your way up the overgrown Byres Road and through the gates and into the Botanic Gardens</p>
+    <p>Looking around you can see that the Road is patrolled by the fearsome Botanic Grden Squirrels!</p>
+    <br/>
+    <p>Before proceeding, your team need to collect five edible plants from the following list:</p>
 
     <ul>
       <li>[0] Amethyst Deceiver</li>
@@ -22,7 +24,7 @@
     <br/>
 
     <div>
-      <label>Which numbers are human edible plants and fungi? Type your answer and hit Enter.
+      <label>Which numbers are human edible plants and fungi? Type the answer here and hit Enter.
         <input #box
                (keyup.enter)="update(box.value)"
                (blur)="update(box.value)">
@@ -31,7 +33,7 @@
 
     <div class="rightAnswer" *ngIf="correctAnswer">
       <i class="fa fa-check"></i>
-      You got the right answer and now you have to find the way to the disused Botanic Gardens low level station!
+      This is the right answer and now you have to find the way to the disused Botanic Gardens low level station!
       <Button class="button hvr-grow hvr-icon-back" routerLink="/BotanicGardens">
         Go into the Botanic Gardens
       </Button>
