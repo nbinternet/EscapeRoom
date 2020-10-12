@@ -1,23 +1,28 @@
 <div class="row">
   <div class="column">
-    <p>Your team captain takes out an old map of Glasgow.</p>
-    <p>Can you identify where you are on the map?</p>
-
+    <div *ngIf="!locationTracker.currentStatus.get('SecretTunnel')">
+      <p>Your team lead takes out an old map of Glasgow.</p>
+      <p>Can you identify where you are on the map?</p>
+    </div>
     <div *ngIf="locationTracker.currentStatus.get('SecretTunnel')">
-      <br/>
-      <p>Can you work out where you need to go next?</p>
+      <p>You have found the following:</p>
+      <p>The Main Office</p>
     </div>
     <div *ngIf="locationTracker.currentStatus.get('GlasgowCentralLowLevel')">
-      <p></p>
+      <p>Secret Tunnel</p>
     </div>
     <div *ngIf="locationTracker.currentStatus.get('StEnochTunnel')">
-      <p></p>
+      <p>Glasgow Central - very low level</p>
     </div>
     <div *ngIf="locationTracker.currentStatus.get('StEnochUnderground')">
-      <p></p>
+      <p>Route to St Enoch Underground</p>
     </div>
     <div *ngIf="locationTracker.currentStatus.get('HillheadTunnel')">
-      <p></p>
+      <p>St Enoch Underground</p>
+    </div>
+    <div *ngIf="locationTracker.currentStatus.get('SecretTunnel')">
+      <br/>
+      <p>Can you find your next destination?</p>
     </div>
   </div>
 
