@@ -2,6 +2,7 @@
 
 <div class="row">
   <div class="column">
+    <countdown [config]="config" (event)="handleEvent($event)"></countdown>
     <p>After following the subway tunnel, you arrive safely at Hillhead station.</p>
     <p>Painted on the wall of the station, someone has left you an indirect clue to your next location to go to:</p>
     <br/>

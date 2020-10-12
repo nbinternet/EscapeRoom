@@ -2,6 +2,7 @@
 
 <div class="row">
   <div class="column">
+    <countdown [config]="config" (event)="handleEvent($event)"></countdown>
     <p>You suddenly emerge through a hole in the wall onto a station platform.</p>
     <p>You realise you are under Glasgow Central.</p>
     <br/>
@@ -62,7 +63,7 @@
   </div>
   <div class="column">
     <img src="../../../assets/subwayMap.png" alt="Down into the sub-basement">
-    <div class="attribution">Image Attribution: <span class="attributionText">Map produced courtesy of Rowan</span></div>
+    <div class="attribution">Image Attribution: <span class="attributionText">Map produced courtesy of Web Team</span></div>
   </div>
 </div>
 
