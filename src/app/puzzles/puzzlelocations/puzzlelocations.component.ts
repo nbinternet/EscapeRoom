@@ -22,7 +22,7 @@ export class PuzzlelocationsComponent implements OnInit {
 
   update(value: string) {
     this.answer = value;
-    if (this.answer.trim().toLowerCase() == "science centre") {
+    if (/^.*science\s*centre.*$/.test(this.answer.toLowerCase())) {
       this.correctAnswer = true;
       this.incorrectCount = 0;
       this.showHint = false;

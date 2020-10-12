@@ -22,7 +22,7 @@ export class PuzzleplantsComponent implements OnInit {
 
   update(value: string) {
     this.answer = value;
-    if (/^(?=.*0)(?=.*2)(?=.*6)(?=.*7)(?=.*9).*$/.test(this.answer)) {
+    if (/^(?=.*0)(?=.*2)(?=.*6)(?=.*7)(?=.*9)(?!.*1)(?!.*3)(?!.*4)(?!.*5)(?!.*8).*$/.test(this.answer)) {
       this.correctAnswer = true;
       this.incorrectCount = 0;
       this.showHint = false;
