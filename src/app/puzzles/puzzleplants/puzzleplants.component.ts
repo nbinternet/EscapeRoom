@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {TeamDetailsService} from "../../services/team-details.service";
+import {CountdownEvent} from "ngx-countdown";
 
 @Component({
   selector: 'app-puzzlplants',
@@ -12,6 +13,12 @@ export class PuzzleplantsComponent implements OnInit {
   showHint: boolean = false;
   incorrectCount: number = 0;
   teamDetailsService: TeamDetailsService;
+  incorrect: boolean = false;
+  config =
+    {
+      leftTime: 240,
+      format: ''
+    };
 
   constructor(private _teamDetailsService: TeamDetailsService) {
     this.teamDetailsService = _teamDetailsService;
@@ -22,7 +29,7 @@ export class PuzzleplantsComponent implements OnInit {
 
   update(value: string) {
     this.answer = value;
-    if (/^(?=.*0)(?=.*2)(?=.*6)(?=.*7)(?=.*9).*$/.test(this.answer)) {
+    if (/^(?=.*0)(?=.*2)(?=.*6)(?=.*7)(?=.*9)(?!.*1)(?!.*3)(?!.*4)(?!.*5)(?!.*8).*$/.test(this.answer)) {
       this.correctAnswer = true;
       this.incorrectCount = 0;
       this.showHint = false;
@@ -32,6 +39,13 @@ export class PuzzleplantsComponent implements OnInit {
 
     if (this.incorrectCount > 3) {
       this.showHint = true;
+    }
+  }
+
+  handleEvent(event: CountdownEvent) {
+    if (event.action == "done") {
+      this.showHint = true;
+      this.incorrect = false;
     }
   }
 }
