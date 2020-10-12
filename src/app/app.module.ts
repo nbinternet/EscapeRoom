@@ -13,13 +13,21 @@ import {StenochrouteComponent} from './components/stenochroute/stenochroute.comp
 import {HillheadmapComponent} from './components/hillheadmap/hillheadmap.component';
 import {HillheadtunnelComponent} from './components/hillheadtunnel/hillheadtunnel.component';
 import {MaphilightModule} from "ng-maphilight";
-import {PuzzletaxiComponent} from './components/puzzletaxi/puzzletaxi.component';
-import {PuzzleapocalypticmapComponent} from './components/puzzleapocalypticmap/puzzleapocalypticmap.component';
-import {PuzzlednaComponent} from './components/puzzledna/puzzledna.component';
-import {PuzzleplantsComponent} from './components/puzzleplants/puzzleplants.component';
-import {PuzzlebustimetableComponent} from './components/puzzlebustimetable/puzzlebustimetable.component';
-import {PuzzlelocationsComponent} from './components/puzzlelocations/puzzlelocations.component';
+import {PuzzletaxiComponent} from './puzzles/puzzletaxi/puzzletaxi.component';
+import {PuzzleapocalypticmapComponent} from './puzzles/puzzleapocalypticmap/puzzleapocalypticmap.component';
+import {PuzzlednaComponent} from './puzzles/puzzledna/puzzledna.component';
+import {PuzzleplantsComponent} from './puzzles/puzzleplants/puzzleplants.component';
+import {PuzzlebustimetableComponent} from './puzzles/puzzlebustimetable/puzzlebustimetable.component';
+import {PuzzlelocationsComponent} from './puzzles/puzzlelocations/puzzlelocations.component';
 import {FormsModule} from "@angular/forms";
+import {BotanicgardensComponent} from './components/botanicgardens/botanicgardens.component';
+import {BotanicstationComponent} from './components/botanicstation/botanicstation.component';
+import {ParktunnelComponent} from './components/parktunnel/parktunnel.component';
+import {CountdownModule} from "ngx-countdown";
+import {LandingpageComponent} from './components/landingpage/landingpage.component';
+import {SciencecenterComponent} from './components/sciencecenter/sciencecenter.component';
+import {PuzzlescienceComponent} from './puzzles/puzzlescience/puzzlescience.component';
+import {EndingComponent} from './components/ending/ending.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +46,14 @@ import {FormsModule} from "@angular/forms";
     PuzzlednaComponent,
     PuzzleplantsComponent,
     PuzzlebustimetableComponent,
-    PuzzlelocationsComponent
+    PuzzlelocationsComponent,
+    BotanicgardensComponent,
+    BotanicstationComponent,
+    ParktunnelComponent,
+    LandingpageComponent,
+    SciencecenterComponent,
+    PuzzlescienceComponent,
+    EndingComponent
   ],
   imports: [
     BrowserModule,
@@ -51,23 +66,34 @@ import {FormsModule} from "@angular/forms";
       {path: 'puzzlemap', component: PuzzleapocalypticmapComponent},
       {path: 'puzzlemap', component: PuzzleapocalypticmapComponent},
       {path: 'puzzlebus', component: PuzzlebustimetableComponent},
-      {path: 'puzzlelocaltions', component: PuzzlelocationsComponent},
-      {path: 'mainoffice', component: AlhambraComponent},
+      {path: 'puzzlelocation', component: PuzzlelocationsComponent},
+      {path: 'puzzlescience', component: PuzzlescienceComponent},
+
+      {path: 'MainOffice', component: AlhambraComponent},
       {path: 'centralGlasgow', component: CentralglasgowComponent},
       {path: 'secrettunnel', component: SecrettunnelComponent},
       {path: 'centrallowlevel', component: CentrallowlevelComponent},
       {path: 'hillheadtunnel', component: HillheadtunnelComponent},
-      {path: 'hillheadmap', component: HillheadmapComponent},
+      {path: 'HillheadMap', component: HillheadmapComponent},
       {path: 'stenochtunnel', component: StenochrouteComponent},
+      {path: 'ScienceCentre', component: SciencecenterComponent},
       {path: 'stenochunderground', component: StenochundergroundComponent},
-      {path: '', redirectTo: '/centralGlasgow', pathMatch: 'full'},
+      {path: 'BotanicGardens', component: BotanicgardensComponent},
+      {path: 'BotanicStation', component: BotanicstationComponent},
+      {path: 'ParkTunnel', component: ParktunnelComponent},
+
+      {path: 'LandingPage', component: LandingpageComponent},
+      {path: 'Ending', component: EndingComponent},
+      {path: '', redirectTo: '/LandingPage', pathMatch: 'full'},
       {path: '**', component: PagenotfoundComponent}
     ]),
     FormsModule,
+    CountdownModule
   ],
 
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule {
 }

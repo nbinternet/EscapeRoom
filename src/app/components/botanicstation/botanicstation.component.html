@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="column">
+    <p>Finally the lost disused Botanic Gardens low level station!</p>
+    <p>All you need to do now is follow the tunnel down to get to your next location.</p>
+  </div>
+  <div class="column">
+    <maphilight
+      [config]="config"
+      id="botanicStation"
+    >
+      <img src="../../../assets/botanicstation.png" alt="Botanic Gardens low level station" usemap="#image-map">
+
+      <map name="image-map">
+        <area alt="The tunnel to next location" title="The tunnel to next location" routerLink="/puzzlebus"
+              coords="350,217,379,242" shape="rect">
+      </map>
+    </maphilight>
+  </div>
+</div>

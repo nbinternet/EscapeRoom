@@ -1,0 +1,71 @@
+<h2>You are in Glasgow Central - Very Low Level</h2>
+
+<div class="row">
+  <div class="column">
+    <p>You suddenly emerge through a hole in the wall onto a station platform.</p>
+    <p>You realise you are under Glasgow Central.</p>
+    <br/>
+    <p>However, it looks like someone has left some kind of message - pinned at eye level where you can't miss it, is a subway map ... a rather apocalyptic one.</p>
+    <br/>
+    <p>As you look at it you wonder whether what looks like graffiti might actually contain a hidden message.</p>
+    <p>Examining the map, you notice that some letters have been added and some scored out to give:</p>
+    <ul>
+      <li>St. Enoch</li>
+      <li>Bridge Street (changed to "Braaaiins Street")</li>
+      <li>West Street (changed to "Infest Street")</li>
+      <li>Shields Road</li>
+      <li>Kinning Park (changed to "Killing Park")</li>
+      <li>Cessnock (changed to "Cesshock")</li>
+      <li>Ibrox (changed to "Diebrox")</li>
+      <li>Govan (changed to "Gorevan")</li>
+      <li>Partick (changed to "Panick")</li>
+      <li>Kevinhall (changed to "Kevinhell")</li>
+      <li>Hillhead</li>
+      <li>Kelvinbridge</li>
+      <li>St. George's Cross</li>
+      <li>Cowcaddens (changed to "HowSadEnds")</li>
+      <li>Buchanan Street</li>
+      <li>Inner Circle (changed to "Dinner Circle")</li>
+    </ul>
+    <br/>
+    <p>Taking the 23 added letters, then removing 9 of the deleted letters, can you rfind the hidden message by rearranging the remaining letters?</p>
+    <p>Perhaps it gives you an idea where to go next?</p>
+    <br/>
+    <div>
+      <label>But what is the location to go next? Type your answer and hit Enter.
+        <input #box
+               (keyup.enter)="update(box.value)"
+               (blur)="update(box.value)">
+      </label>
+    </div>
+    <br/>
+
+    <div class="rightAnswer" *ngIf="correctAnswer">
+      <i class="fa fa-check"></i>
+      You got the right answer and now you have to find the route to St Enoch's Subway so you can get to that safe Subway station!
+      <Button class="button hvr-grow hvr-icon-back" routerLink="/centrallowlevel">
+        Go to Glasgow Central secret platform
+      </Button>
+    </div>
+
+    <div class="wrongAnswer" *ngIf="incorrectCount > 0">
+      <i class="fa fa-times-circle"></i>
+      That is not the right answer!
+    </div>
+
+    <div class="hint" *ngIf="showHint">
+      <i class="fa fa-info-circle"></i>
+      Hint!
+      <p>It's a Subway station! There are only so many!</p>
+    </div>
+
+  </div>
+  <div class="column">
+    <img src="../../../assets/subwayMap.png" alt="Down into the sub-basement">
+    <div class="attribution">Image Attribution: <span class="attributionText">Map produced courtesy of Rowan</span></div>
+  </div>
+</div>
+
+<!--<Button class="button hvr-grow hvr-icon-back" routerLink="/centralGlasgow">-->
+<!--  <i class="fa fa-chevron-circle-left hvr-icon"></i>Go back to Glasgow Central map-->
+<!--</Button>-->

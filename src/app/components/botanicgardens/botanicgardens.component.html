@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="column">
+    <p>The overgrown Botanic gardens are stretched out in from of you.</p>
+    <p>Somewhere out there is the entrance to the old disused Botanic Gardens low level station.</p>
+    <p>Can you find it.</p>
+  </div>
+  <div class="column">
+    <maphilight
+      [config]="config"
+      id="BotanicGardensImage">
+      <img src="../../../assets/TheLostGardens.png" alt="Overgrown Botanic Gardens" usemap="#image-map">
+      <div class="attribution">Image Attribution:
+        <a class="attributionlink" target="_blank" href="https://en.wikipedia.org/wiki/Lost_Gardens_of_Heligan#/media/File:TheLostGardensOfHeligan-Jungle.jpg">
+          https://en.wikipedia.org/wiki/Lost_Gardens_of_Heligan#/media/File:TheLostGardensOfHeligan-Jungle.jpg</a>
+      </div>
+
+      <map name="image-map">
+        <area alt="Entrance to Botanic Gardens Station" title="Entrance to Botanic Gardens Station"
+              coords="442,391,447,407,438,422,443,432,469,433,489,426,478,409,459,391" shape="poly" routerLink="/BotanicStation">
+      </map>
+    </maphilight>
+  </div>
+</div>

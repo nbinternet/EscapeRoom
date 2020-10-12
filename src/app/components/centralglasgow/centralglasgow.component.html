@@ -1,24 +1,28 @@
 <div class="row">
   <div class="column">
-    <p>Just when you thought that 2020 couldn't get any worse ...</p>
-    <p>Zombies have taken over Glasgow!!! It is not safe to wander the streets.</p>
-    <p>You and your team are trapped in an office and need to solve various puzzles in order to escape..</p>
-    <p>You retreat from the zombies down to the basement of a large office.</p>
-    <p>Will you be able to work together and solve the challenges before the 30 minute deadline expires?</p>
-    <p>So far you have found only a 100 year old map of Glasgow to help you!</p>
-    <p>Mabye something on the map will identify which office you are in?</p>
-    <!--<p>Tracker: {{locationTracker.currentStatus.get('SecretTunnel')}}</p>-->
+    <p>You retreat from the zombies into the first office you come to and down to the basement.</p>
+    <p>So far all you have found to help you on the stairs down is a 100 year old map of Glasgow!</p>
+    <p>Maybe something on the map will identify which office you are in?</p>
+
     <div *ngIf="locationTracker.currentStatus.get('SecretTunnel')">
       <br/>
-      <p>Is there maybe more to find on the map?</p>
+      <p>Maybe there is now more to find on the map?</p>
     </div>
     <div *ngIf="locationTracker.currentStatus.get('GlasgowCentralLowLevel')">
       <br/>
-      <p>And now yet more to find on the map?</p>
+      <p>Possibly yet more to find on the map?</p>
     </div>
     <div *ngIf="locationTracker.currentStatus.get('StEnochTunnel')">
       <br/>
-      <p>Keep looking on the map?</p>
+      <p>Keep looking around the map?</p>
+    </div>
+    <div *ngIf="locationTracker.currentStatus.get('StEnochUnderground')">
+      <br/>
+      <p>Again have a look around the map?</p>
+    </div>
+    <div *ngIf="locationTracker.currentStatus.get('HillheadTunnel')">
+      <br/>
+      <p>Once again check the map?</p>
     </div>
   </div>
 
@@ -29,7 +33,8 @@
     >
       <img alt="Central Glasgow" src="../../../assets/CentralGlasgow.PNG" usemap="#image-map">
       <div class="attribution">Map Attribution: <span class="attributionText">Reproduced with the permission of the </span>
-        <a class="attributionLink" href="https://maps.nls.uk/view/103656952">'National Library of Scotland'</a></div>
+        <a class="attributionLink" target="_blank" href="https://maps.nls.uk/view/103656952">'National Library of Scotland'</a>
+      </div>
       <map name="image-map">
         <area alt="The Main Office" coords="414,196,403,237,461,251,471,208,471,209" routerLink="/puzzletaxi" shape="poly" title="The Main Office">
         <div *ngIf="locationTracker.currentStatus.get('SecretTunnel')">

@@ -1,0 +1,62 @@
+<h2>Hillhead Subway Station.</h2>
+
+<div class="row">
+  <div class="column">
+    <p>After following the subway tunnel, you arrive safely at Hillhead station.</p>
+    <p>Painted on the wall of the station, someone has left you an indirect clue to your next location to go to:</p>
+    <br/>
+    <p class="monospaced">
+      N U C L E U S N<br/>
+      X J Q P T A Z P<br/>
+      C C E P N D H R<br/>
+      Q S M V R E S O<br/>
+      P B G F D N M T<br/>
+      H R L I P I D E<br/>
+      T H Y M I N E I<br/>
+      O J V R Z E B N<br/>
+      W P R S U G A R<br/>
+    </p>
+    <br/>
+    <p>[1] Find six words, horizontally or vertically, which are closely related to DNA.</p>
+    <p>[2] Take the first letter of each word and rearrange them to form a new six letter word.</p>
+    <br/>
+    <br/>
+    <div>
+      <label>What is the new six letter word? Type your answer and hit Enter.
+        <input #box
+               (keyup.enter)="update(box.value)"
+               (blur)="update(box.value)">
+      </label>
+    </div>
+    <br/>
+    <div class="rightAnswer" *ngIf="correctAnswer">
+      <i class="fa fa-check"></i>
+      You got the right answer and now you have to get to the Botanic gardens!
+      <Button class="button hvr-grow hvr-icon-back" (click)="onSelect()" routerLink="/HillheadMap">
+        Go to Botanic gardens
+      </Button>
+    </div>
+
+    <div class="wrongAnswer" *ngIf="incorrectCount > 0">
+      <i class="fa fa-times-circle"></i>
+      That is not the right answer!
+    </div>
+
+    <div class="hint" *ngIf="showHint">
+      <i class="fa fa-info-circle"></i>
+      Hint!
+      <p>Use the wiki, Luke!</p>
+    </div>
+
+  </div>
+  <div class="column">
+    <img src="../../../assets/wordsearch.png" alt="">
+    <div class="attribution">Reference:
+      <a class="attributionLink" target="_blank" href="https://en.wikipedia.org/wiki/DNA">https://en.wikipedia.org/wiki/DNA</a>
+    </div>
+  </div>
+</div>
+
+<!--<Button class="button hvr-grow hvr-icon-back" routerLink="/centralGlasgow">-->
+<!--  <i class="fa fa-chevron-circle-left hvr-icon"></i>Go back to Glasgow Central map-->
+<!--</Button>-->

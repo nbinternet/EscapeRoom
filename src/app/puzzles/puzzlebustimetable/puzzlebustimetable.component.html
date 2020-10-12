@@ -1,0 +1,70 @@
+<h2>Tunnel</h2>
+
+<div class="row">
+  <div class="column">
+    <p>You follow the disused railway tunnel from the old Botanic Gardens Station to Kelvingrove Park.</p>
+    <br/>
+    <p>From here, there appears to be two options:</p>
+    <ol class="alpha">
+      <li>take the next tunnel south</li>
+      <li>wait for a bus.</li>
+    </ol>
+    <br/>
+
+    <p>Unfortunately, the tunnel entrance is secured with a four digit code lock.</p>
+    <p>You see a timetable for the 666a bus lying on the ground but it has been scribbled on one corner.</p>
+    <p>The prospect of taking the 666A bus fills you with dread but you still
+      study the vandalised timetable while you consider your options.</p>
+    <p>You notice that the time of the next bus has been obscured.</p>
+    <br/>
+    <ul class="nomark">
+      <li>1601 Glasgow Necropolis</li>
+      <li>1602 Trongate</li>
+      <li>1604 Glasgow Green</li>
+      <li>1607 Clyde Street, opp. Suspension Bridge</li>
+      <li>1612 Oswald Street</li>
+      <li>1620 Hope Street</li>
+      <li>1633 Charing Cross</li>
+      <li>xxxx Eldon Street, opp. Park</li>
+    </ul>
+    <br/>
+    <p>There is something strange about these bus times.</p>
+    <p>Surely the four digit security code wouldn't be the time of the next bus?</p>
+    <br/>
+    <div>
+      <label>What is the 4 digit security code? Type your answer and hit Enter.
+        <input #box
+               (keyup.enter)="update(box.value)"
+               (blur)="update(box.value)">
+      </label>
+    </div>
+    <br/>
+
+    <div class="rightAnswer" *ngIf="correctAnswer">
+      <i class="fa fa-check"></i>
+      You got the right answer and the gate clicks open!
+      <Button class="button hvr-grow hvr-icon-back" routerLink="/ParkTunnel">
+        Go into the tunnel
+      </Button>
+    </div>
+
+    <div class="wrongAnswer" *ngIf="incorrectCount > 0">
+      <i class="fa fa-times-circle"></i>
+      That is not the right answer!
+    </div>
+
+    <div class="hint" *ngIf="showHint">
+      <i class="fa fa-info-circle"></i>
+      Hint!
+    </div>
+
+  </div>
+  <div class="column">
+    <img src="../../../assets/numberlock.png" alt="Number lock on the Kelvingrove park tunnel gates">
+    <div class="attribution">Image Attribution: <span class="attributionText">Photos produced courtesy of Rowan</span></div>
+  </div>
+</div>
+
+<!--<Button class="button hvr-grow hvr-icon-back" routerLink="/centralGlasgow">-->
+<!--  <i class="fa fa-chevron-circle-left hvr-icon"></i>Go back to Glasgow Central map-->
+<!--</Button>-->

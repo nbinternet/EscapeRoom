@@ -36,16 +36,17 @@ export class LocationTrackerService {
 
   constructor(@Optional() @SkipSelf() parent?: LocationTrackerService) {
     if (parent) {
-      throw Error(`[GuardedSingletonService]: trying to create multiple instances, but this service should be a singleton.`);
+      throw Error(`[GuardedSingletonService]: trying to create multiple instances of LocationTrackerService, but this service should be a singleton.`);
     }
 
-    console.info("initilise")
+    console.info("initilise LocationTrackerService")
     this.currentStatus.set(locationNames.SecretTunnel, false);
     this.currentStatus.set(locationNames.GlasgowCentralLowLevel, false);
     this.currentStatus.set(locationNames.StEnochTunnel, false);
     this.currentStatus.set(locationNames.StEnochUnderground, false);
     this.currentStatus.set(locationNames.HillheadTunnel, false);
     this.currentStatus.set(locationNames.BotanicGardens, false);
-    this.currentStatus.set(locationNames.spare2, false);
+    this.currentStatus.set(locationNames.BotanicStation, false);
+    this.currentStatus.set(locationNames.ParkTunnel, false);
   }
 }

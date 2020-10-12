@@ -1,0 +1,67 @@
+<h2>You are in the first floor of The Glasgow Science Centre</h2>
+
+<div class="row">
+  <div class="column">
+    <p>You arrive at Glasgow Science Center. It is mostly in darkness except for a faint green light on the first floor.</p>
+
+    <p>You follow the light and find yourself in what appear to be a small lab. In one corner is a computer keyboard attached to a monitor.</p>
+    <p>In the middle of the room is a lab table covered in beakers, test tubes, and various other scientific paraphernalia.</p>
+    <p>On a blackboard, in scrawled handwriting, it says:</p>
+
+    <h4>Antidote:</h4>
+    <ul class="nomark">
+      <li>Amethyst Deceiver</li>
+      <li>Dandelion</li>
+      <li>XXX XXX</li>
+      <li>Morel</li>
+      <li>Red Clover</li>
+      <li>Samphire</li>
+    </ul>
+    <br/>
+
+    <p>The bad news: one of the ingredients is completely illegible</p>
+    <p>The good news: someone appears to have left a message on the computer monitor</p>
+    <p>More bad news: the message reads 563233435865433836582846547</p>
+    <p>Even more bad news: the only keys which appear to work are the keys 0,1,2,3,4,5,6,7,8,9</p>
+    <p>The good news: someone has circled the keys 2 W S X Perhaps it is a clue?</p>
+
+    <br/>
+    <div>
+      <label>Can you decipher the message and find the missing ingredient? Type your answer and hit Enter.
+        <input #box
+               (keyup.enter)="update(box.value)"
+               (blur)="update(box.value)">
+      </label>
+    </div>
+    <br/>
+    <div class="rightAnswer" *ngIf="correctAnswer">
+      <i class="fa fa-check"></i>
+      My Goodness '{{teamDetailsService.teamName}}' have got the right answer!
+      <Button class="button hvr-grow hvr-icon-back" routerLink="/Ending">
+        Go on to save Glasgow!!
+      </Button>
+    </div>
+
+    <div class="wrongAnswer" *ngIf="incorrectCount > 0">
+      <i class="fa fa-times-circle"></i>
+      That is not the right answer!
+    </div>
+
+    <div class="hint" *ngIf="showHint">
+      <i class="fa fa-info-circle"></i>
+      Hint!
+      <p>Is there any Ginger to drink in this place!</p>
+    </div>
+
+  </div>
+  <div class="column">
+    <img src="../../../assets/labpuzzle.png" alt="broken keyboard">
+    <div class="attribution">Reference:
+      <a class="attributionLink" target="_blank" href="https://commons.wikimedia.org/wiki/File:Broken_keyboard.jpg">https://commons.wikimedia.org/wiki/File:Broken_keyboard.jpg</a>
+    </div>
+  </div>
+</div>
+
+<!--<Button class="button hvr-grow hvr-icon-back" routerLink="/centralGlasgow">-->
+<!--  <i class="fa fa-chevron-circle-left hvr-icon"></i>Go back to Glasgow Central map-->
+<!--</Button>-->
