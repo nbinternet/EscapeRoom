@@ -1,21 +1,30 @@
 <div class="centerAll">
-  <p>Just when you thought that 2020 couldn't get any worse ...</p>
-  <br/>
-  <p>Zombies have taken over Glasgow!!! It is not safe to wander the streets.</p>
-  <br/>
-  <p>You and your team are trapped in an office and need to solve various puzzles in order to escape..</p>
-  <br/>
-  <p>Will you be able to work together and solve the challenges before the 30 minute deadline expires?</p>
-  <br/>
-  <p>You and your team's challenge is to escape from the zombies and discover the cure of the mysterious zombie affliction sweeping through Glasgow!</p>
-  <br/>
-  <p>You will have thirty minutes to accomplish this task, with a countdown shown at the top of the page.</p>
-  <br/>
-  <p>Please don't used the back button on the browser as this application does not remember the pages it came from.</p>
-  <br/>
+
+  <div>
+  Just when you thought that 2020 couldn't get any worse ...
+  </div>
   <br/>
   <div>
-    <label>Please enter your chosen teams name and hit Enter.
+  Zombies have taken over Glasgow!!! It is not safe to wander the streets.<br/>
+  You and your team are trapped in an office and need to solve various challenges in order to escape.<br/>
+  You have thirty minutes to solve all the challenges. A countdown timer is shown at the top of the page.
+  </div>
+  <br/>
+  <div>
+  Please DO NOT<br/>
+  Use the back button in your browser<br/>
+  Reload the website (this will send you back to the start)<br/>
+  Reverse engineer the website for solutions (this will disqualify your team)
+  </div>
+  <br/>
+  <div>
+  Please DO<br/>
+  Work together as a team<br/>
+  Use any online resources that will help to solve the challenges
+  </div>
+  <br/>
+  <div>
+    <label>Please enter your team name:
       <input #team class="teamName"
              (keyup.enter)="teamUpdate(team.value)"
              (blur)="teamUpdate(team.value)">
@@ -24,7 +33,7 @@
   <br/>
   <br/>
   <div>
-    <label>Please enter the Pin number you have been given and hit Enter.
+    <label>Please ask your Room Guide for your access code:
       <input #pin
              (keyup.enter)="pinUpdate(pin.value)"
              (blur)="pinUpdate(pin.value)">
@@ -33,7 +42,7 @@
   <br/>
   <br/>
   <div class="rightAnswer" *ngIf="correctAnswer">
-    <p>The game timer counter will begin once you have selected the button below.</p>
+    <p>The game timer will start once you click the button below.</p>
     <i class="fa fa-check"></i>
     <Button class="button hvr-grow hvr-icon-back" (click)="onStart()" routerLink="/centralGlasgow">
       Please enter the game
@@ -42,7 +51,7 @@
 
   <div class="wrongAnswer" *ngIf="incorrectCount > 0">
     <i class="fa fa-times-circle"></i>
-    That is not the right pin number!
+    That is not the correct access code!
   </div>
 
   <br/>
