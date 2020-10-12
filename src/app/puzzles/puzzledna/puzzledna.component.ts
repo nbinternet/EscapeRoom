@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {locationNames} from "../../models/locationNames";
 import {LocationTrackerService} from "../../services/location-tracker.service";
 import {TeamDetailsService} from "../../services/team-details.service";
+import {CountdownEvent} from "ngx-countdown";
 
 @Component({
   selector: 'app-puzzledna',
@@ -15,6 +16,12 @@ export class PuzzlednaComponent implements OnInit {
   incorrectCount: number = 0;
   locationTracker: LocationTrackerService;
   teamDetailsService: TeamDetailsService;
+  incorrect: boolean = false;
+  config =
+    {
+      leftTime: 240,
+      format: ''
+    };
 
   constructor(private _locationTracker: LocationTrackerService, private _teamDetailsService: TeamDetailsService) {
     this.locationTracker = _locationTracker
@@ -42,5 +49,12 @@ export class PuzzlednaComponent implements OnInit {
 
   onSelect() {
     this.locationTracker.currentStatus.set(locationNames.BotanicGardens, true);
+  }
+
+  handleEvent(event: CountdownEvent) {
+    if (event.action == "done") {
+      this.showHint = true;
+      this.incorrect = false;
+    }
   }
 }
