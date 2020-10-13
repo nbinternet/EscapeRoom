@@ -1,6 +1,13 @@
 <div class="row">
   <div class="column">
-    <p>Extra descriptive text to be defined.</p>
+    <div *ngIf="!locationTracker.currentStatus.get('BotanicGardens')">
+      <p>Your team lead takes out another old map.</p>
+      <p>Can you identify where you are on this map?</p>
+    </div>
+    <div *ngIf="locationTracker.currentStatus.get('BotanicGardens')">
+      <p>You have solved the DNA puzzle.</p>
+      <p>But where are you likely to find some Plants?</p>
+    </div>
   </div>
   <div class="column">
     <maphilight
