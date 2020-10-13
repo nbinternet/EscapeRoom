@@ -11,7 +11,6 @@ export class PuzzlescienceComponent implements OnInit {
   answer: string;
   correctAnswer: boolean = false;
   showHint: boolean = false;
-  incorrectCount: number = 0;
   teamDetailsService: TeamDetailsService;
   incorrect: boolean = false;
   config =
@@ -31,14 +30,10 @@ export class PuzzlescienceComponent implements OnInit {
     this.answer = value;
     if (this.answer.trim().toLowerCase() == "irn bru") {
       this.correctAnswer = true;
-      this.incorrectCount = 0;
+      this.incorrect = false;
       this.showHint = false;
     } else {
-      this.incorrectCount++;
-    }
-
-    if (this.incorrectCount > 3) {
-      this.showHint = true;
+      this.incorrect = true;
     }
   }
 

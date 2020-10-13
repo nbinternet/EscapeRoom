@@ -11,7 +11,6 @@ export class PuzzleplantsComponent implements OnInit {
   answer: string;
   correctAnswer: boolean = false;
   showHint: boolean = false;
-  incorrectCount: number = 0;
   teamDetailsService: TeamDetailsService;
   incorrect: boolean = false;
   config =
@@ -31,14 +30,10 @@ export class PuzzleplantsComponent implements OnInit {
     this.answer = value;
     if (/^(?=.*0)(?=.*2)(?=.*6)(?=.*7)(?=.*9)(?!.*1)(?!.*3)(?!.*4)(?!.*5)(?!.*8).*$/.test(this.answer)) {
       this.correctAnswer = true;
-      this.incorrectCount = 0;
+      this.incorrect = false;
       this.showHint = false;
     } else {
-      this.incorrectCount++;
-    }
-
-    if (this.incorrectCount > 3) {
-      this.showHint = true;
+      this.incorrect = true;
     }
   }
 

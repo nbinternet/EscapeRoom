@@ -13,7 +13,6 @@ export class PuzzlednaComponent implements OnInit {
   answer: string;
   correctAnswer: boolean = false;
   showHint: boolean = false;
-  incorrectCount: number = 0;
   locationTracker: LocationTrackerService;
   teamDetailsService: TeamDetailsService;
   incorrect: boolean = false;
@@ -35,15 +34,10 @@ export class PuzzlednaComponent implements OnInit {
     this.answer = value;
     if (this.answer.trim().toLowerCase() == "plants") {
       this.correctAnswer = true;
-      this.incorrectCount = 0;
       this.showHint = false;
+      this.incorrect = false;
     } else {
-      this.incorrectCount++;
-    }
-
-    if (this.incorrectCount > 2) {
-      this.showHint = true;
-      this.incorrectCount = 0;
+      this.incorrect = true;
     }
   }
 
