@@ -1,23 +1,20 @@
 <h2>You are on the banks of the Clyde at the Rotunda!</h2>
-
+<br/>
 <div class="row">
   <div class="column">
     <countdown [config]="config" (event)="handleEvent($event)"></countdown>
     <p>After a long time wandering through dark, damp tunnels, you eventually emerge by the river at the Glasgow Rotunda.</p>
-    <p>Fortunately, there doesn't appear to be any Zombies around.</p>
+    <p>Fortunately, there are no Zombies around.</p>
     <p>Unfortunately, you're not sure where to go next.</p>
 
-    <p>You brave the Glasgow drizzle to explore outside the Rotunda and eventually notice numbers painted on the wall:</p>
+    <p>You brave the Glasgow drizzle to explore outside the Rotunda and notice some numbers painted on the wall:</p>
 
     <p class="monospaced">
-      36.995884, -85.911921<br/>
-      57.273628, -6.215502<br/>
-      48.930045, 8.862919<br/>
-      34.152041, -85.678853<br/>
+      +36.9959, -85.9119<br/>
+      +57.2736, -6.2155<br/>
+      +52.6366, +5.8271<br/>
+      +34.1520, -85.6788<br/>
     </p>
-
-    <p>Looking more closely, you see that someone has scratched the following words very faintly underneath:</p>
-    <p>town island river city</p>
 
     <div>
       <label>But where to go next? Type your answer and hit Enter.
@@ -43,7 +40,7 @@
     <div class="hint" *ngIf="showHint">
       <i class="fa fa-info-circle"></i>
       Hint!
-      <p>Maybe Google Maps could help?</p>
+      <p>Try saying the 4 locations out loud. Online Maps may prove helpful.</p>
     </div>
 
   </div>

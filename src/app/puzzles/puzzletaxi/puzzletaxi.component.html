@@ -1,18 +1,15 @@
-<h2>You are in the basement of your teams office!</h2>
+<h2>You are trapped in the office basement!</h2>
 
 <div class="row">
   <div class="column">
     <countdown [config]="config" (event)="handleEvent($event)"></countdown>
     <br/>
-    <p>The stairs upward lead to certain death with the zombies.</p>
     <p>The walls are covered in Mathematical formula.</p>
-    <p>There is a picture on the wall under which someone has written "Take the second taxicab"</p>
-    <p>There is a single door in the wall with keypad access and you don't know where it leads </p>
+    <p>There is a picture on the wall under which someone has written "Enter the second taxicab"</p>
+    <p>There is only one safe exit which requires a 4 digit access code.</p>
     <br/>
-    <p>Could it be that the second taxicab number is the pincode?</p>
-
     <div>
-      <label>But what is the second taxicab number? Type the answer and hit Enter.
+      <label>Enter the 4 digit access code:
         <input #box
                (keyup.enter)="update(box.value)"
                (blur)="update(box.value)">
@@ -27,7 +24,7 @@
       </Button>
     </div>
 
-    <div class="wrongAnswer" *ngIf="incorrect">
+    <div class="wrongAnswer" *ngIf="incorrectCount > 0">
       <i class="fa fa-times-circle"></i>
       That is not the right answer!
     </div>
@@ -43,7 +40,7 @@
   </div>
   <div class="column">
     <img src="../../../assets/taxicab.png" alt="Down into the sub-basement">
-    <div class="attribution">Image Attribution: <span class="attributionText">Photograph of taxicab courtesy of Build team</span></div>
+    <div class="attribution">Image Attribution: <span class="attributionText">Photograph courtesy of the development team</span></div>
   </div>
 </div>
 
