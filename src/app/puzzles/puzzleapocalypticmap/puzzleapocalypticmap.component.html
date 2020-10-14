@@ -1,14 +1,13 @@
 <h2>You are in Glasgow Central - Very Low Level</h2>
-
+<br/>
 <div class="row">
   <div class="column">
-    <p>You suddenly emerge through a hole in the wall onto a station platform.</p>
-    <p>You realise you are under Glasgow Central.</p>
+    <countdown [config]="config" (event)="handleEvent($event)"></countdown>
+    <p>The tunnel emerges onto an old station platform.</p>
+    <p>A nearby sign says: Glasgow Central - low level tours</p>
     <br/>
-    <p>However, it looks like someone has left some kind of message - pinned at eye level where you can't miss it, is a subway map ... a rather apocalyptic one.</p>
-    <br/>
-    <p>As you look at it you wonder whether what looks like graffiti might actually contain a hidden message.</p>
-    <p>Examining the map, you notice that some letters have been added and some scored out to give:</p>
+    <p>On the wall, someone has stuck a large subway map ... a rather apocalyptic one!!!</p>
+    <p>Examining the map closely, you notice that 23 letters have been added and 14 scored out:</p>
     <ul>
       <li>St. Enoch</li>
       <li>Bridge Street (changed to "Braaaiins Street")</li>
@@ -28,11 +27,10 @@
       <li>Inner Circle (changed to "Dinner Circle")</li>
     </ul>
     <br/>
-    <p>Taking the 23 added letters, then removing 9 of the deleted letters, can you rfind the hidden message by rearranging the remaining letters?</p>
-    <p>Perhaps it gives you an idea where to go next?</p>
+    <p>Can you extract the 14 letter hidden message?</p>
     <br/>
     <div>
-      <label>But what is the location to go next? Type your answer and hit Enter.
+      <label>Which location is safe? Type your answer and hit Enter.
         <input #box
                (keyup.enter)="update(box.value)"
                (blur)="update(box.value)">
@@ -48,7 +46,7 @@
       </Button>
     </div>
 
-    <div class="wrongAnswer" *ngIf="incorrectCount > 0">
+    <div class="wrongAnswer" *ngIf="incorrect">
       <i class="fa fa-times-circle"></i>
       That is not the right answer!
     </div>
@@ -62,7 +60,7 @@
   </div>
   <div class="column">
     <img src="../../../assets/subwayMap.png" alt="Down into the sub-basement">
-    <div class="attribution">Image Attribution: <span class="attributionText">Map produced courtesy of Rowan</span></div>
+    <div class="attribution">Image Attribution: <span class="attributionText">Image courtesy of the development team</span></div>
   </div>
 </div>
 

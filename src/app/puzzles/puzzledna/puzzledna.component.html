@@ -1,9 +1,10 @@
 <h2>Hillhead Subway Station.</h2>
-
+<br/>
 <div class="row">
   <div class="column">
-    <p>After following the subway tunnel, you arrive safely at Hillhead station.</p>
-    <p>Painted on the wall of the station, someone has left you an indirect clue to your next location to go to:</p>
+    <countdown [config]="config" (event)="handleEvent($event)"></countdown>
+    <p>Emerging from the subway tunnel, you arrive safely at Hillhead.</p>
+    <p>Painted on the station wall, someone has left an indirect clue to your next destination:</p>
     <br/>
     <p class="monospaced">
       N U C L E U S N<br/>
@@ -37,7 +38,7 @@
       </Button>
     </div>
 
-    <div class="wrongAnswer" *ngIf="incorrectCount > 0">
+    <div class="wrongAnswer" *ngIf="incorrect">
       <i class="fa fa-times-circle"></i>
       That is not the right answer!
     </div>
