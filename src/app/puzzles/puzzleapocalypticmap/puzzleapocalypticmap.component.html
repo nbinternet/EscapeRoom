@@ -3,6 +3,19 @@
 <div class="row">
   <div class="column">
     <countdown [config]="config" (event)="handleEvent($event)"></countdown>
+    <div class="hint" *ngIf="showHint1">
+      <i class="fa fa-info-circle"></i>
+      Hint!
+      <img src="../../../assets/subwaymaphint.png" alt="Hint keys">
+      <div class="attribution">Image Attribution: <span class="attributionText">Photograph courtesy of the development team</span></div>
+    </div>
+
+    <div class="hint" *ngIf="showHint2">
+      <i class="fa fa-info-circle"></i>
+      Hint!
+      <p>It's a single word Subway station! There are only so many! Try them all</p>
+    </div>
+
     <p>The tunnel emerges onto an old station platform.</p>
     <p>A nearby sign says: Glasgow Central - low level tours</p>
     <br/>
@@ -49,19 +62,6 @@
     <div class="wrongAnswer" *ngIf="incorrect">
       <i class="fa fa-times-circle"></i>
       That is not the right answer!
-    </div>
-
-    <div class="hint" *ngIf="showHint1">
-      <i class="fa fa-info-circle"></i>
-      Hint!
-      <img src="../../../assets/subwaymaphint.png" alt="Hint keys">
-      <div class="attribution">Image Attribution: <span class="attributionText">Photograph courtesy of the development team</span></div>
-    </div>
-
-    <div class="hint" *ngIf="showHint2">
-      <i class="fa fa-info-circle"></i>
-      Hint!
-      <p>It's a single word Subway station! There are only so many! Try them all</p>
     </div>
 
   </div>

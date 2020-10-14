@@ -16,7 +16,7 @@ export class PuzzleapocalypticmapComponent implements OnInit {
   incorrect: boolean = false;
   config =
     {
-      notify: [60],
+      notify: [120],
       leftTime: 240,
       format: ''
     };

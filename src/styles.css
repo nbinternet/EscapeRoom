@@ -95,3 +95,23 @@ ul.nomark {
 ol.alpha {
   list-style-type: upper-alpha;
 }
+
+/* unvisited link */
+a:link {
+  color: hotpink;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+/* mouse over link */
+a:hover {
+  color: blue;
+}
+
+/* selected link */
+a:active {
+  color: green;
+}
