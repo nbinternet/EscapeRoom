@@ -27,7 +27,8 @@
     <label>Please enter your team name:
       <input #team class="teamName"
              (keyup.enter)="teamUpdate(team.value)"
-             (blur)="teamUpdate(team.value)">
+             (blur)="teamUpdate(team.value)"
+             autofocus>
     </label>
   </div>
   <br/>

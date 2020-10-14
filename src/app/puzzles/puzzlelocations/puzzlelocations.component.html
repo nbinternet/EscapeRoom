@@ -3,6 +3,18 @@
 <div class="row">
   <div class="column">
     <countdown [config]="config" (event)="handleEvent($event)"></countdown>
+    <div class="hint" *ngIf="showHint1">
+      <i class="fa fa-info-circle"></i>
+      Hint!
+      <p>Make sure you get all the locations. Online Maps may prove helpful.</p>
+    </div>
+
+    <div class="hint" *ngIf="showHint2">
+      <i class="fa fa-info-circle"></i>
+      Hint!
+      <p>Try saying the 4 locations out loud and run the names together.</p>
+    </div>
+
     <p>After a long time wandering through dark, damp tunnels, you eventually emerge by the river at the Glasgow Rotunda.</p>
     <p>Fortunately, there are no Zombies around.</p>
     <p>Unfortunately, you're not sure where to go next.</p>
@@ -41,12 +53,6 @@
     <div class="wrongAnswer" *ngIf="incorrect">
       <i class="fa fa-times-circle"></i>
       That is not the right answer!
-    </div>
-
-    <div class="hint" *ngIf="showHint">
-      <i class="fa fa-info-circle"></i>
-      Hint!
-      <p>Try saying the 4 locations out loud. Online Maps may prove helpful.</p>
     </div>
 
   </div>

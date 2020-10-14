@@ -3,6 +3,12 @@
 <div class="row">
   <div class="column">
     <countdown [config]="config" (event)="handleEvent($event)"></countdown>
+    <div class="hint" *ngIf="showHint">
+      <i class="fa fa-info-circle"></i>
+      Hint!
+      <p>Use the wiki, Luke!</p>
+    </div>
+
     <p>Emerging from the subway tunnel, you arrive safely at Hillhead.</p>
     <p>Painted on the station wall, someone has left an indirect clue to your next destination:</p>
     <br/>
@@ -41,12 +47,6 @@
     <div class="wrongAnswer" *ngIf="incorrect">
       <i class="fa fa-times-circle"></i>
       That is not the right answer!
-    </div>
-
-    <div class="hint" *ngIf="showHint">
-      <i class="fa fa-info-circle"></i>
-      Hint!
-      <p>Use the wiki, Luke!</p>
     </div>
 
   </div>

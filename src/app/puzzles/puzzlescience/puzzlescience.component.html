@@ -3,6 +3,12 @@
 <div class="row">
   <div class="column">
     <countdown [config]="config" (event)="handleEvent($event)"></countdown>
+    <div class="hint" *ngIf="showHint2">
+      <i class="fa fa-info-circle"></i>
+      Hint!
+      <p>Is there any Ginger to drink in this place?</p>
+    </div>
+
     <p>You arrive at Glasgow Science Center. It is mostly in darkness except for a faint green light on the first floor.</p>
 
     <p>You follow the light and find yourself in a small lab. In one corner is a computer keyboard attached to a monitor.</p>
@@ -46,12 +52,6 @@
     <div class="wrongAnswer" *ngIf="incorrect">
       <i class="fa fa-times-circle"></i>
       That is not the right answer!
-    </div>
-
-    <div class="hint" *ngIf="showHint">
-      <i class="fa fa-info-circle"></i>
-      Hint!
-      <p>Is there any Ginger to drink in this place?</p>
     </div>
 
   </div>

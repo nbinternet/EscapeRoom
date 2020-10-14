@@ -3,6 +3,14 @@
 <div class="row">
   <div class="column">
     <countdown [config]="config" (event)="handleEvent($event)"></countdown>
+    <div class="hint" *ngIf="showHint">
+      <i class="fa fa-info-circle"></i>
+      Hint!
+      <img src="../../../assets/ramanujan.png" alt="Srinivasa Ramanujan">
+      <div class="attribution">Image Attribution:
+        <a class="attributionLink" target="_blank" href="https://en.wikipedia.org/wiki/Taxicab_number#/media/File:Srinivasa_Ramanujan_-_OPC_-_2.jpg">Wikipedia</a></div>
+    </div>
+
     <br/>
     <p>The walls are covered in Mathematical formula.</p>
     <p>There is a picture on the wall under which someone has written "Enter the second taxicab"</p>
@@ -27,14 +35,6 @@
     <div class="wrongAnswer" *ngIf="incorrect">
       <i class="fa fa-times-circle"></i>
       That is not the right answer!
-    </div>
-
-    <div class="hint" *ngIf="showHint">
-      <i class="fa fa-info-circle"></i>
-      Hint!
-      <img src="../../../assets/ramanujan.png" alt="Srinivasa Ramanujan">
-      <div class="attribution">Image Attribution:
-        <a class="attributionLink" target="_blank" href="https://en.wikipedia.org/wiki/Taxicab_number#/media/File:Srinivasa_Ramanujan_-_OPC_-_2.jpg">Wikipedia</a></div>
     </div>
 
   </div>

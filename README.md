@@ -10,6 +10,8 @@ For the required additional components. Install in the project root `/escaperoom
 
 `npm install --save-dev ngx-countdown`
 
+`npm install --save-dev emailjs-com`
+
 ## Development server
 
 Run `ng serve --liveReload=false` for a dev server (for latest versions of `ng` remove `--liveReload` if error). Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

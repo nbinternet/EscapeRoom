@@ -3,20 +3,24 @@
 <div class="row">
   <div class="column">
     <countdown [config]="config" (event)="handleEvent($event)"></countdown>
+    <div class="hint" *ngIf="showHint">
+      <i class="fa fa-info-circle"></i>
+      Hint!
+      <p>Does anything look familiar about the time taken between stops?</p>
+    </div>
+
     <p>You follow the tunnel to Kelvingrove Park.</p>
-    <br/>
-    <p>From here, there are two options:</p>
-    <ol class="alpha">
-      <li>follow the next tunnel south</li>
-      <li>wait for a bus</li>
-    </ol>
-    <br/>
+    <!--    <p>From here, there are two options:</p>-->
+    <!--    <ol class="alpha">-->
+    <!--      <li>follow the next tunnel south</li>-->
+    <!--      <li>wait for a bus</li>-->
+    <!--    </ol>-->
+    <!--    <br/>-->
 
     <p>Unfortunately, the tunnel entrance is secured with a four digit code.</p>
     <br/>
     <p>You notice a bus timetable on the ground. It's for the 666A bus!!!</p>
     <p>You examine the timetable. The time of the next bus has been deliberately obscured.</p>
-    <br/>
     <ul class="nomark">
       <li>1601 Glasgow Necropolis</li>
       <li>1602 Trongate</li>
@@ -50,12 +54,6 @@
     <div class="wrongAnswer" *ngIf="incorrect">
       <i class="fa fa-times-circle"></i>
       That is not the right answer!
-    </div>
-
-    <div class="hint" *ngIf="showHint">
-      <i class="fa fa-info-circle"></i>
-      Hint!
-      <p>Does anything look familiar about the time taken between stops?</p>
     </div>
 
   </div>

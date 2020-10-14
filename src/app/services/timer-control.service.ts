@@ -25,4 +25,8 @@ export class TimerControlService {
   update(millis: number) {
     this.timeInMillis = millis;
   }
+
+  getTimeLeft(): number {
+    return this.timeInMillis;
+  }
 }
