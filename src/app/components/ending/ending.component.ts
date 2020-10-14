@@ -29,16 +29,6 @@ export class EndingComponent implements OnInit {
     this.timerControlService.announcement(this.timerControlService.DO_END);
   }
 
-  // public sendEmail(e: Event) {
-  //   e.preventDefault();
-  //   emailjs.sendForm('service_19cgk0s', 'template_zo2ucpe', e.target as HTMLFormElement)
-  //     .then((result: EmailJSResponseStatus) => {
-  //       console.log(result.text);
-  //     }, (error) => {
-  //       console.log(error.text);
-  //     });
-  // }
-
   calcTime(): string {
     var millis: number = this.timerControlService.getTimeLeft()
     var minutes: number = Math.floor(millis / 60000);
@@ -48,9 +38,9 @@ export class EndingComponent implements OnInit {
 
   public sendAnEmail() {
     var templateParams = {
-      name: 'Simon',
-      notes: 'this.teamDetailsService.teamName',
-      timeLeft: this.timerControlService.getTimeLeft()
+      from_name: this.teamDetailsService.teamName,
+      message: 'Team ' + this.teamDetailsService.teamName + 'Escaped, with ' + this.calcTime() + ' left\n' +
+        ' timeLeft: ' + this.timerControlService.getTimeLeft()
     };
 
     emailjs.send('service_19cgk0s', 'template_zo2ucpe', templateParams)
@@ -60,5 +50,4 @@ export class EndingComponent implements OnInit {
         console.log('FAILED...', error);
       });
   }
-
 }
