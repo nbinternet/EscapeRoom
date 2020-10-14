@@ -15,7 +15,7 @@ export class PuzzletaxiComponent implements OnInit {
   incorrect: boolean = false;
   config =
     {
-      leftTime: 240,
+      leftTime: 60,
       format: ''
     };
 

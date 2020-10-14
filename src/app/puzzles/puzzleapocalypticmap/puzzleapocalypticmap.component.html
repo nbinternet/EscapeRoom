@@ -51,10 +51,17 @@
       That is not the right answer!
     </div>
 
-    <div class="hint" *ngIf="showHint">
+    <div class="hint" *ngIf="showHint1">
       <i class="fa fa-info-circle"></i>
       Hint!
-      <p>It's a Subway station! There are only so many!</p>
+      <img src="../../../assets/subwaymaphint.png" alt="Hint keys">
+      <div class="attribution">Image Attribution: <span class="attributionText">Photograph courtesy of the development team</span></div>
+    </div>
+
+    <div class="hint" *ngIf="showHint2">
+      <i class="fa fa-info-circle"></i>
+      Hint!
+      <p>It's a single word Subway station! There are only so many! Try them all</p>
     </div>
 
   </div>

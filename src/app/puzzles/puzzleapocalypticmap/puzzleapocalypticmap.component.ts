@@ -10,11 +10,13 @@ import {CountdownEvent} from "ngx-countdown";
 export class PuzzleapocalypticmapComponent implements OnInit {
   answer: string;
   correctAnswer: boolean = false;
-  showHint: boolean = false;
+  showHint1: boolean = false;
+  showHint2: boolean = false;
   teamDetailsService: TeamDetailsService;
   incorrect: boolean = false;
   config =
     {
+      notify: [60],
       leftTime: 240,
       format: ''
     };
@@ -31,15 +33,23 @@ export class PuzzleapocalypticmapComponent implements OnInit {
     if (this.answer.trim().toLowerCase() == "hillhead") {
       this.correctAnswer = true;
       this.incorrect = false;
-      this.showHint = false;
+      this.showHint1 = false;
+      this.showHint2 = false;
     } else {
       this.incorrect = true;
     }
   }
 
   handleEvent(event: CountdownEvent) {
+    if (event.action == "notify") {
+      this.showHint1 = true;
+      this.showHint2 = false;
+      this.incorrect = false;
+    }
+
     if (event.action == "done") {
-      this.showHint = true;
+      this.showHint1 = false;
+      this.showHint2 = true;
       this.incorrect = false;
     }
   }
