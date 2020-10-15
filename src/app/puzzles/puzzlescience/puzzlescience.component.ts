@@ -16,7 +16,8 @@ export class PuzzlescienceComponent implements OnInit {
   incorrect: boolean = false;
   config =
     {
-      leftTime: 240,
+      notify: [60],     // 1 min
+      leftTime: 180,    // 3 mins
       format: ''
     };
 

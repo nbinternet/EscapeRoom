@@ -15,7 +15,7 @@ export class PuzzlebustimetableComponent implements OnInit {
   incorrect: boolean = false;
   config =
     {
-      leftTime: 240,
+      leftTime: 180,    // 3 mins
       format: ''
     };
 

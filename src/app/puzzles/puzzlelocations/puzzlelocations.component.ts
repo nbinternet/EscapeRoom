@@ -16,8 +16,8 @@ export class PuzzlelocationsComponent implements OnInit {
   incorrect: boolean = false;
   config =
     {
-      notify: [180],      // 2 mins
-      leftTime: 240,      // 4 mins
+      notify: [60],      // 1 min
+      leftTime: 180,      // 3 mins
       format: ''
     };
 
