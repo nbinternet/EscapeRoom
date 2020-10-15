@@ -3,12 +3,30 @@
 <div class="row">
   <div class="column">
     <countdown [config]="config" (event)="handleEvent($event)"></countdown>
-    <div class="hint" *ngIf="showHint2">
+
+    <div class="hint" *ngIf="showHint1">
       <i class="fa fa-info-circle"></i>
-      Hint!
-      <p>Is there any Ginger to drink in this place?</p>
+      <h4>Hint!</h4>
+      <p class="monospaced">
+        2 4 7 9<br/>
+        W R U O<br/>
+        OR OR OR OR<br/>
+        S F J L<br/>
+        OR OR OR OR<br/>
+        X V M .<br/>
+      </p>
     </div>
 
+    <div class="hint" *ngIf="showHint2">
+      <i class="fa fa-info-circle"></i>
+      <h4>Hint!</h4>
+      <p class="monospaced">
+        5 6 3 2 3 3 4 3 5 8 6 5 4 3 3 8 3 6 5 8 2 8 4 6 5 4 7<br/>
+        h e t i g r n s<br/>
+      </p>
+    </div>
+
+    <!--    <p>Is there any Ginger to drink in this place?</p>-->
     <p>You arrive at Glasgow Science Center. It is mostly in darkness except for a faint green light on the first floor.</p>
 
     <p>You follow the light and find yourself in a small lab. In one corner is a computer keyboard attached to a monitor.</p>
