@@ -1,12 +1,18 @@
 <div class="row">
   <div class="column">
     <countdown [config]="config" (event)="handleEvent($event)"></countdown>
+    <div class="hint" *ngIf="showHint">
+      <i class="fa fa-info-circle"></i>
+      Hint!
+      <p>Wikipedia use, you must!</p>
+    </div>
+
     <p>'{{teamDetailsService.teamName}}', you emerge from Hillhead station to find yourself in a dense undergrowth of plants and fungi.</p>
     <p>They appear to have escaped from the Botanic Gardens and are in the process of colonising Byres Road.</p>
     <p>The whole area is overgrown but at least the Plants are keeping the Zombies away.</p>
     <br/>
     <p>Before proceeding, your team need to collect five edible plants from the following list:</p>
-    <ul>
+    <ul class="nomark">
       <li>[0] Amethyst Deceiver</li>
       <li>[1] Bog Rosemary</li>
       <li>[2] Dandelion</li>
@@ -38,12 +44,6 @@
     <div class="wrongAnswer" *ngIf="incorrect">
       <i class="fa fa-times-circle"></i>
       That is not the right answer!
-    </div>
-
-    <div class="hint" *ngIf="showHint">
-      <i class="fa fa-info-circle"></i>
-      Hint!
-      <p>Dandelion wine and Samphire Gin</p>
     </div>
 
   </div>

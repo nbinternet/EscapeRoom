@@ -27,7 +27,8 @@
     <label>Please enter your team name:
       <input #team class="teamName"
              (keyup.enter)="teamUpdate(team.value)"
-             (blur)="teamUpdate(team.value)">
+             (blur)="teamUpdate(team.value)"
+             autofocus>
     </label>
   </div>
   <br/>
@@ -55,6 +56,7 @@
   </div>
 
   <br/>
-  <br/>
-  <br/>
+  <div>
+  Disclaimer: Enter entirely at your own risk. The development team accept no liability for any damage, death or undeath. May contain Zombies.
+  </div>
 </div>

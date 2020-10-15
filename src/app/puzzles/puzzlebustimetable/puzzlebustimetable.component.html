@@ -3,20 +3,17 @@
 <div class="row">
   <div class="column">
     <countdown [config]="config" (event)="handleEvent($event)"></countdown>
-    <p>You follow the tunnel to Kelvingrove Park.</p>
-    <br/>
-    <p>From here, there are two options:</p>
-    <ol class="alpha">
-      <li>follow the next tunnel south</li>
-      <li>wait for a bus</li>
-    </ol>
-    <br/>
+    <div class="hint" *ngIf="showHint">
+      <i class="fa fa-info-circle"></i>
+      Hint!
+      <p>Does anything look familiar about the time taken between stops?</p>
+    </div>
 
-    <p>Unfortunately, the tunnel entrance is secured with a four digit code.</p>
+    <p>You follow the tunnel to Kelvingrove Park.</p>
+    <p>Unfortunately, the next tunnel entrance is secured with a four digit code.</p>
     <br/>
     <p>You notice a bus timetable on the ground. It's for the 666A bus!!!</p>
     <p>You examine the timetable. The time of the next bus has been deliberately obscured.</p>
-    <br/>
     <ul class="nomark">
       <li>1601 Glasgow Necropolis</li>
       <li>1602 Trongate</li>
@@ -31,7 +28,7 @@
     <p>There is something strange about these bus times. A clue?</p>
     <br/>
     <div>
-      <label>What is the 4 digit security code? Type your answer and hit Enter.
+      <label>What is the 4 digit code? Type your answer and hit Enter.
         <input #box
                (keyup.enter)="update(box.value)"
                (blur)="update(box.value)">
@@ -50,12 +47,6 @@
     <div class="wrongAnswer" *ngIf="incorrect">
       <i class="fa fa-times-circle"></i>
       That is not the right answer!
-    </div>
-
-    <div class="hint" *ngIf="showHint">
-      <i class="fa fa-info-circle"></i>
-      Hint!
-      <p>Does anything look familiar about the time taken between stops?</p>
     </div>
 
   </div>

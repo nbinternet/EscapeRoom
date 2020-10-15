@@ -3,6 +3,28 @@
 <div class="row">
   <div class="column">
     <countdown [config]="config" (event)="handleEvent($event)"></countdown>
+
+    <div class="hint" *ngIf="showHint1">
+      <i class="fa fa-info-circle"></i>
+      <h4>Hint!</h4>
+      <img src="../../../assets/sciencehint1.png" alt="A sciencey, keyboardy type hint!">
+      <div class="attribution">Image Attribution: <span class="attributionText">Photograph courtesy of the development team</span></div>
+    </div>
+
+    <div class="hint" *ngIf="showHint2">
+      <i class="fa fa-info-circle"></i>
+      <h4>Hint!</h4>
+      <img src="../../../assets/sciencehint2.png" alt="Another sciencey, keyboardy type hint!">
+      <div class="attribution">Image Attribution: <span class="attributionText">Photograph courtesy of the development team</span></div>
+      <p class="monospaced">
+        563 233435 INGREDIENT 82 846 547<br/>
+        TYE WEERET IYTREEIEYT IW IRY TRU<br/>
+        GHD SDDFDG KHGFDDKDHG KS KFH GFJ<br/>
+        BNC XCCVCB ,NBVCC,CNB ,X ,VN BVM<br/>
+      </p>
+    </div>
+
+    <!--    <p>Is there any Ginger to drink in this place?</p>-->
     <p>You arrive at Glasgow Science Center. It is mostly in darkness except for a faint green light on the first floor.</p>
 
     <p>You follow the light and find yourself in a small lab. In one corner is a computer keyboard attached to a monitor.</p>
@@ -12,11 +34,13 @@
     <h4>Antidote:</h4>
     <ul class="nomark">
       <li>Amethyst Deceiver</li>
+      <li>Caramel Wafer</li>
       <li>Dandelion</li>
       <li>XXX XXX</li>
       <li>Morel</li>
       <li>Red Clover</li>
       <li>Samphire</li>
+      <li>Vinegar</li>
     </ul>
     <br/>
 
@@ -46,12 +70,6 @@
     <div class="wrongAnswer" *ngIf="incorrect">
       <i class="fa fa-times-circle"></i>
       That is not the right answer!
-    </div>
-
-    <div class="hint" *ngIf="showHint">
-      <i class="fa fa-info-circle"></i>
-      Hint!
-      <p>Is there any Ginger to drink in this place?</p>
     </div>
 
   </div>

@@ -3,11 +3,23 @@
 <div class="row">
   <div class="column">
     <countdown [config]="config" (event)="handleEvent($event)"></countdown>
-    <p>After a long time wandering through dark, damp tunnels, you eventually emerge by the river at the Glasgow Rotunda.</p>
-    <p>Fortunately, there are no Zombies around.</p>
+    <div class="hint" *ngIf="showHint1">
+      <i class="fa fa-info-circle"></i>
+      Hint!
+      <p>Make sure you get all the locations. Online Maps may prove helpful.</p>
+    </div>
+
+    <div class="hint" *ngIf="showHint2">
+      <i class="fa fa-info-circle"></i>
+      Hint!
+      <p>Try saying the 4 locations out loud, one after the other.</p>
+    </div>
+
+    <p>After a long time wandering through dark, damp tunnels, you emerge at the Glasgow Rotunda.</p>
+    <p>Fortunately, you don't see any Zombies.</p>
     <p>Unfortunately, you're not sure where to go next.</p>
 
-    <p>You brave the Glasgow drizzle to explore outside the Rotunda and notice some numbers painted on the wall:</p>
+    <p>You brave the Glasgow drizzle and notice some numbers painted on the wall:</p>
 
     <p class="monospaced">
       36.9959°N 85.9119°W <br/>
@@ -21,6 +33,9 @@
       +34.1520, -85.6788<br/>
       -->
     </p>
+
+    <p>Looking closely, someone has scratched the following underneath:</p>
+    <p>town island village city</p>
 
     <div>
       <label>But where to go next? Type your answer and hit Enter.
@@ -41,12 +56,6 @@
     <div class="wrongAnswer" *ngIf="incorrect">
       <i class="fa fa-times-circle"></i>
       That is not the right answer!
-    </div>
-
-    <div class="hint" *ngIf="showHint">
-      <i class="fa fa-info-circle"></i>
-      Hint!
-      <p>Try saying the 4 locations out loud. Online Maps may prove helpful.</p>
     </div>
 
   </div>

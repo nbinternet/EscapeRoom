@@ -18,7 +18,7 @@ export class PuzzlednaComponent implements OnInit {
   incorrect: boolean = false;
   config =
     {
-      leftTime: 240,
+      leftTime: 240,      // 4 mins
       format: ''
     };
 
