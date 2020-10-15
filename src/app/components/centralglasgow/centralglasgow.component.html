@@ -1,8 +1,8 @@
 <div class="row">
   <div class="column">
     <div *ngIf="!locationTracker.currentStatus.get('SecretTunnel')">
-      <p>Your team lead takes out an old map of Glasgow.</p>
-      <p>Can you identify where you are on the map?</p>
+      <p>You are in an office.</p>
+      <p>Can you find your location on the map?</p>
     </div>
     <div *ngIf="locationTracker.currentStatus.get('SecretTunnel')">
       <p>So far, you have visited:</p>
