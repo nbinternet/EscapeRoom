@@ -22,7 +22,7 @@ export class EndingComponent implements OnInit {
 
   ngOnInit(): void {
     this.endCounter();
-    this.sendAnEmail();
+    //this.sendAnEmail();
   }
 
   private endCounter() {

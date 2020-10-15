@@ -17,7 +17,7 @@ export class PuzzleapocalypticmapComponent implements OnInit {
   config =
     {
       // notify: [180],
-      leftTime: 360,    // 6 mins
+      leftTime: 300,    // 5 mins
       format: ''
     };
 
