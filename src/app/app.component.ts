@@ -76,6 +76,6 @@ export class AppComponent implements OnInit {
 
   private static changeElement(id): void {
     var el = document.getElementById(id);
-    el.style.backgroundColor = "#590039";
+    el.style.backgroundColor = "#660000";
   }
 }
