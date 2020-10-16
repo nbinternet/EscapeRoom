@@ -1,8 +1,12 @@
 <div>
-  <h1>
-    {{title}} : TimeLeft :
-    <countdown #cd [config]="{demand: true, leftTime: 1800, notify: [ 300 ], format: 'm:ss'}" (event)="handleEvent($event)"></countdown>
+  <h1 style="float:left; display: block; margin-left: auto;  margin-right: auto; width: 50%;">
+    <img style="float:left;" src="../assets/title1.PNG" title="{{title}}" alt="{{title}}">
+    <span style="float:left; margin: 20px 0 0 0;"> : Timer : </span>
+    <countdown style="float:left; margin: 20px 0 0 0;" #cd [config]="{demand: true, leftTime: 1800, notify: [ 300 ], format: 'm:ss'}" (event)="handleEvent($event)"></countdown>
   </h1>
+  <div style="clear: left;">
+
+  </div>
 
   <div id="content">
     <router-outlet></router-outlet>

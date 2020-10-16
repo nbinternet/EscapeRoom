@@ -12,7 +12,7 @@ import {CountdownEvent} from "ngx-countdown";
 })
 
 export class AppComponent implements OnInit {
-  title = 'Can you escape from Zombie Glasgow!';
+  title = 'Can you escape from Zombie Glasgow?';
   private timerService: TimerControlService;
 
   @ViewChild('cd', {static: false}) private countdown: CountdownComponent;

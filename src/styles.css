@@ -7,7 +7,7 @@ html, body {
   width: 98%;
   color: whitesmoke;
   background-color: darkgray;
-  margin: 1%;
+  /*margin: 1%;*/
   padding: 0;
   font: 16px verdana, arial, helvetica, sans-serif;
 }
