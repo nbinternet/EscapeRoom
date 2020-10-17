@@ -13,12 +13,13 @@ import {CountdownEvent} from "ngx-countdown";
 
 export class AppComponent implements OnInit {
   asset = '../assets/title1.PNG';
+  timerAsset = '../assets/timer1.png';
   title = 'Can you escape from Zombie Glasgow?';
   private timerService: TimerControlService;
   config = {
     demand: true,
-    leftTime: 20,      // 1800,
-    notify: [10],     // 300
+    leftTime: 1800,      // 1800,
+    notify: [300],     // 300
     format: 'm:ss'
   }
   extraDetail = '';
@@ -29,10 +30,10 @@ export class AppComponent implements OnInit {
     this.timerService = _timerService;
 
     this.timerService.announcement$.subscribe(
-      announcment => {
-        if (announcment == this.timerService.DO_START) {
+      announcement => {
+        if (announcement == this.timerService.DO_START) {
           this.countdown.begin();
-        } else if (announcment == this.timerService.DO_END) {
+        } else if (announcement == this.timerService.DO_END) {
           this.countdown.stop();
         }
       });
@@ -40,12 +41,15 @@ export class AppComponent implements OnInit {
     switch (AppComponent.getRndInteger(0, 2)) {
       case 0 :
         this.asset = '../assets/title1.PNG';
+        this.timerAsset = '../assets/timer1.png';
         break;
       case 1 :
         this.asset = '../assets/title2.PNG';
+        this.timerAsset = '../assets/timer2.png';
         break;
       case 2 :
         this.asset = '../assets/title3.PNG';
+        this.timerAsset = '../assets/timer3.png';
         break;
     }
   }
@@ -64,8 +68,9 @@ export class AppComponent implements OnInit {
 
     if (event.action == "done") {
       AppComponent.changeElement("mainBody");
-      AppComponent.changeElement("mainhtml");
+      AppComponent.changeElement("mainHtml");
       this.asset = '../assets/title4.png';
+      this.timerAsset = '../assets/timer4.png';
       this.extraDetail = '';
     }
 
@@ -75,7 +80,7 @@ export class AppComponent implements OnInit {
   }
 
   private static changeElement(id): void {
-    var el = document.getElementById(id);
+    let el = document.getElementById(id);
     el.style.backgroundColor = "#660000";
   }
 }

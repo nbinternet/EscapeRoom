@@ -1,9 +1,9 @@
 <div>
   <h1>
     <img style="float:left;" src="{{asset}}" title="{{title}}" alt="{{title}}">
-    <span style="float:left; margin: 20px 20px 0 0 ;">  : Timer : </span>
+    <img style="float:left;" src="{{timerAsset}}" title="Timer" alt="Timer">
     <countdown style="float:left; margin: 20px 20px 0 0;" #cd [config]="config" (event)="handleEvent($event)"></countdown>
-    <span style="float:left; margin: 20px 20px 0 0; color: Red">{{extraDetail}}</span>
+    <span style="float:left; margin: 20px 40px 0 0; color: Red">{{extraDetail}}</span>
   </h1>
   <div style="clear: left;"></div>
 
