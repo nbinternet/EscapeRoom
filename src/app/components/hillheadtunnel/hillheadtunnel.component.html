@@ -8,9 +8,13 @@
   <div class="column">
     <maphilight
       [config]="config"
-      id="secretTunnelMap"
+      id="hillheadTunnelMap"
     >
       <img src="../../../assets/hillheadtunnel.png" alt="Tunnel off to Hillhead" height="800" width="1200" usemap="#image-map">
+      <div class="attribution">Image Attribution: <span class="attributionText">Reproduced with thanks (© James Cridland/Flickr) </span>
+        <a class="attributionLink" target="_blank" href="https://theculturetrip.com/europe/united-kingdom/scotland/articles/the-untold-story-behind-glasgows-secret-tunnel-network/">
+          'Article - The untold story behind Glasgows secret tunnel network'</a>
+      </div>
 
       <map name="image-map">
         <area shape="poly" alt="To Hillhead station" title="To Hillhead station" coords="114,374,121,476,168,512,297,505,258,492,199,476,166,456" routerLink="/HillheadMap">
@@ -18,7 +22,3 @@
     </maphilight>
   </div>
 </div>
-
-<!--<Button class="button hvr-grow hvr-icon-forward" routerLink="/centralGlasgow">-->
-<!--  <i class="fa fa-chevron-circle-right hvr-icon"></i>Go back to map-->
-<!--</Button>-->
