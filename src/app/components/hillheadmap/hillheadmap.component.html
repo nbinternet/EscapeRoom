@@ -30,8 +30,10 @@
           <area alt="The Botanic garden railway tunnel" title="The Botanic garden railway tunnel"
                 coords="272,168,251,183,273,216,281,208,342,255,471,328,496,367,506,412,504,455,490,500,501,504,513,456,514,412,510,376,497,343,481,320,436,296,327,227,294,203,297,195" shape="poly">
         </div>
-        <area alt="The Kelvingrove park tunnel" title="The Kelvingrove park tunnel"
-              coords="495,489,477,536,460,587,448,635,443,673,431,733,442,733,449,695,458,643,465,604,478,554,493,520,504,494" shape="poly" routerLink="/puzzlelocation">
+        <div *ngIf="locationTracker.currentStatus.get('ParkTunnel')">
+          <area alt="The Kelvingrove park tunnel" title="The Kelvingrove park tunnel"
+                coords="495,489,477,536,460,587,448,635,443,673,431,733,442,733,449,695,458,643,465,604,478,554,493,520,504,494" shape="poly" routerLink="/puzzlelocation">
+        </div>
       </map>
     </maphilight>
   </div>
