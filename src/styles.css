@@ -2,35 +2,19 @@
 
 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
 
-html, body {
-  height: 97%;
-  width: 98%;
-  color: whitesmoke;
-  background-color: darkgray;
-  padding-left: 1%;
-  padding-right: 1%;
-  margin: 0;
-  font: 16px verdana, arial, helvetica, sans-serif;
-}
+
 h2 {
   /*font:bold 12px/14px verdana, arial, helvetica, sans-serif;*/
+  font-family: Verdana, Arial, Helvetica, sans-serif;
   margin:0 0 0 0;
   padding:0;
 }
 
 p {
   /*font:12px verdana, arial, helvetica, sans-serif;*/
+  font-family: Verdana, Arial, Helvetica, sans-serif;
   margin:0 0 10px 0;
   padding:0;
-}
-
-/* All the content boxes belong to the content class. */
-#content {
-  width:97%;
-  height:96%;
-  border:1px solid black;
-  background-color: darkslategray;
-  padding: 1%;
 }
 
 .row {
@@ -43,6 +27,9 @@ p {
   padding-right: 1%;
 }
 
+.description {
+  font: medium, Verdana, Arial, Helvetica, sans-serif;
+}
 .pad-textarea {
   padding-bottom: 1%;
 }
@@ -61,11 +48,6 @@ p {
 .attributionText {
   font: 12px verdana, arial, helvetica, sans-serif;
   color: grey;
-}
-
-.attributionLink {
-  font: 12px verdana, arial, helvetica, sans-serif;
-  /*color: blue;*/
 }
 
 .rightAnswer,
@@ -122,4 +104,35 @@ a:hover {
 /* selected link */
 a:active {
   color: green;
+}
+
+a:darkBG {
+  color: aquamarine;
+}
+
+.puzzlebox {
+  border-width: 1px;
+  border-color: silver;
+  border-style: solid;
+  padding: 8px;
+}
+
+.fancyTitle {
+  font-family: cursive;
+  color: lightgoldenrodyellow;
+}
+
+.form-control {
+  color: white!important;
+}
+
+.comment {
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(75,75,75);
+}
+
+.code {
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
 }

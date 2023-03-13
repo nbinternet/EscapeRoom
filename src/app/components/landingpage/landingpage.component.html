@@ -1,62 +1,35 @@
-<div class="centerAll">
+<div class="landing">
+  <div>
+  Thanks you for taking up the Incident.<br/>
+  Hackers have taken over the Glasgow Tower!<br/><br/>
 
-  <div>
-  Just when you thought that 2020 couldn't get any worse ...
-  </div>
-  <br/>
-  <div>
-  Zombies have taken over Glasgow!!! It is not safe to wander the streets.<br/>
-  You and your team are trapped in an office and need to solve various challenges in order to escape.<br/>
-  You have thirty minutes to solve all the challenges. A countdown timer is shown at the top of the page.
-  </div>
-  <br/>
-  <div>
-  Please DO NOT<br/>
-  Use the back button in your browser<br/>
-  Reload the website (this will send you back to the start)<br/>
-  Reverse engineer the website for solutions (this will disqualify your team)
-  </div>
-  <br/>
-  <div>
-  Please DO<br/>
-  Work together as a team<br/>
-  Use any online resources that will help to solve the challenges
-  </div>
-  <br/>
-  <div>
-    <label>Please enter your team name:
-      <input #team class="teamName"
-             (keyup.enter)="teamUpdate(team.value)"
-             (blur)="teamUpdate(team.value)"
-             autofocus>
-    </label>
-  </div>
-  <br/>
-  <br/>
-  <div>
-    <label>Please ask your Room Guide for your access code:
-      <input #pin
-             (keyup.enter)="pinUpdate(pin.value)"
-             (blur)="pinUpdate(pin.value)">
-    </label>
-  </div>
-  <br/>
-  <br/>
-  <div class="rightAnswer" *ngIf="correctAnswer">
-    <p>The game timer will start once you click the button below.</p>
-    <i class="fa fa-check"></i>
-    <Button class="button hvr-grow hvr-icon-back" (click)="onStart()" routerLink="/centralGlasgow">
-      Please enter the game
-    </Button>
-  </div>
+  Your job is to restore system operations and save the people stuck at the top of the lift<br/>
 
-  <div class="wrongAnswer" *ngIf="incorrectCount > 0">
-    <i class="fa fa-times-circle"></i>
-    That is not the correct access code!
-  </div>
+  Don't forget we might need a Route Cause Analysis (RCA) on how these breaches happened, so think about how we could protect the Tower better in the furtre while fixing these issues.<br/><br/> 
 
+  </div>
+  <h3>Rules for Cyber Ops</h3>
+  <div>
+  DO NOT use the back button in your browser<br/>
+  DO NOT reload the web page<br/>
+  DO NOT revers engineer the website for solutions (this will disqualify your team)
+  </div>
   <br/>
   <div>
-  Disclaimer: Enter entirely at your own risk. The development team accept no liability for any damage, death or undeath. May contain Zombies.
+    DO work together as a team<br/>
+    DO user the Defenders Handbook to help you<br/>
   </div>
+  <br/>
+  <div class="landing__form-group">
+      <label>Please enter yiour team name:</label>
+      <input 
+        #team
+        class="landing__form-input"
+        (keyup.enter)="start(team.value)"
+        autofocus
+        >
+    <button class="btn btn-outline-light btn-sm landing__form-button" (click)="start(team.value)">
+      Join the Incident
+    </button>
+    </div>  
 </div>

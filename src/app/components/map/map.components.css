@@ -1,0 +1,9 @@
+.towermap {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.towermap__success-banner {
+    max-width: 80%;
+    margin: auto;
+}

@@ -1,87 +1,74 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
-
-import {AppComponent} from './app.component';
-import {AlhambraComponent} from './components/alhambra/alhambra.component';
-import {CentralglasgowComponent} from './components/centralglasgow/centralglasgow.component'
-import {RouterModule} from '@angular/router';
-import {PagenotfoundComponent} from './pagenotfound/pagenotfound.component';
-import {SecrettunnelComponent} from './components/secrettunnel/secrettunnel.component';
-import {CentrallowlevelComponent} from './components/centrallowlevel/centrallowlevel.component';
-import {StenochundergroundComponent} from './components/stenochunderground/stenochunderground.component';
-import {StenochrouteComponent} from './components/stenochroute/stenochroute.component';
-import {HillheadmapComponent} from './components/hillheadmap/hillheadmap.component';
-import {HillheadtunnelComponent} from './components/hillheadtunnel/hillheadtunnel.component';
-import {MaphilightModule} from "ng-maphilight";
-import {PuzzletaxiComponent} from './puzzles/puzzletaxi/puzzletaxi.component';
-import {PuzzleapocalypticmapComponent} from './puzzles/puzzleapocalypticmap/puzzleapocalypticmap.component';
-import {PuzzlednaComponent} from './puzzles/puzzledna/puzzledna.component';
-import {PuzzleplantsComponent} from './puzzles/puzzleplants/puzzleplants.component';
-import {PuzzlebustimetableComponent} from './puzzles/puzzlebustimetable/puzzlebustimetable.component';
-import {PuzzlelocationsComponent} from './puzzles/puzzlelocations/puzzlelocations.component';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 import {FormsModule} from "@angular/forms";
-import {BotanicgardensComponent} from './components/botanicgardens/botanicgardens.component';
-import {BotanicstationComponent} from './components/botanicstation/botanicstation.component';
-import {ParktunnelComponent} from './components/parktunnel/parktunnel.component';
 import {CountdownModule} from "ngx-countdown";
+import {MaphilightModule} from "ng-maphilight";
+import { AppComponent } from './app.component';
 import {LandingpageComponent} from './components/landingpage/landingpage.component';
-import {SciencecenterComponent} from './components/sciencecenter/sciencecenter.component';
-import {PuzzlescienceComponent} from './puzzles/puzzlescience/puzzlescience.component';
+import { Puzzle01Component } from './puzzles/puzzle01/puzzle01.component';
+import { Puzzle02Component } from './puzzles/puzzle02/puzzle02.component';
+import { Puzzle03Component } from './puzzles/puzzle03/puzzle03.component';
+import { Puzzle04Component } from './puzzles/puzzle04/puzzle04.component';
+import { Puzzle05Component } from './puzzles/puzzle05/puzzle05.component';
+import { Puzzle06Component } from './puzzles/puzzle06/puzzle06.component';
+import { MapComponent } from './components/map/map.component';
+import { VideoPlayerComponent } from './components/video-player/video-player.component';
 import {EndingComponent} from './components/ending/ending.component';
+import {PagenotfoundComponent} from './pagenotfound/pagenotfound.component';
+import { SqlSolutionComponent } from './puzzles/puzzle01/sql-solution/sql-solution.component';
+import { FindTheSqlInjectionComponent } from './puzzles/puzzle01/find-the-sql-injection/find-the-sql-injection.component';
+import { FindPhishingVulnerabilitiesComponent } from './puzzles/puzzle03/components/find-phishing-vulnerabilities/find-phishing-vulnerabilities.component';
+import { XxxSolutionComponent } from './puzzles/puzzle03/components/xxs-solution/xxs-solution.component';
+import { XxsInputValidationComponent } from './puzzles/puzzle03/components/xxs-inout-validation/xxs-inout-validation.component';
+import { TernminalComponent } from './puzzles/puzzle02/components/terminal/terminal.component';
+import { AnswerComponent } from './puzzles/puzzle02/components/answer/answer.component';
+import { InteractiveTerminalComponent } from './puzzles/puzzle04/components/interactive-terminal/interactive-terminal.component';
+import { CreateNewPasswordComponent } from './puzzles/puzzle05/components/create-new-password/create-new-password.component';
+import { FinKeyspaceComponent} from './puzzles/puzzle05/components/find-new-keyspace/find-new-keyspace.component';
+import { CalculatePasswordCrackomponent} from './puzzles/puzzle05/components/calculate-password-cracker/calculate-password-cracker.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AlhambraComponent,
-    CentralglasgowComponent,
     PagenotfoundComponent,
-    SecrettunnelComponent,
-    CentrallowlevelComponent,
-    StenochundergroundComponent,
-    StenochrouteComponent,
-    HillheadmapComponent,
-    HillheadtunnelComponent,
-    PuzzletaxiComponent,
-    PuzzleapocalypticmapComponent,
-    PuzzlednaComponent,
-    PuzzleplantsComponent,
-    PuzzlebustimetableComponent,
-    PuzzlelocationsComponent,
-    BotanicgardensComponent,
-    BotanicstationComponent,
-    ParktunnelComponent,
+    MapComponent,
+    VideoPlayerComponent,
     LandingpageComponent,
-    SciencecenterComponent,
-    PuzzlescienceComponent,
-    EndingComponent
+    EndingComponent,
+    HttpClientModule,
+    Puzzle01Component,
+    Puzzle02Component,
+    Puzzle03Component,
+    Puzzle04Component,
+    Puzzle05Component,
+    Puzzle06Component,
+    FindTheSqlInjectionComponent,
+    FindPhishingVulnerabilitiesComponent,
+    SqlSolutionComponent,
+    XxxSolutionComponent,
+    XxsInputValidationComponent,
+    TernminalComponent,
+    AnswerComponent,
+    InteractiveTerminalComponent,
+    CreateNewPasswordComponent,
+    FinKeyspaceComponent,
+    CalculatePasswordCrackomponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     MaphilightModule,
     RouterModule.forRoot([
-      {path: 'puzzletaxi', component: PuzzletaxiComponent},
-      {path: 'puzzlemap', component: PuzzleapocalypticmapComponent},
-      {path: 'puzzledna', component: PuzzlednaComponent},
-      {path: 'puzzleplants', component: PuzzleplantsComponent},
-      {path: 'puzzlemap', component: PuzzleapocalypticmapComponent},
-      {path: 'puzzlemap', component: PuzzleapocalypticmapComponent},
-      {path: 'puzzlebus', component: PuzzlebustimetableComponent},
-      {path: 'puzzlelocation', component: PuzzlelocationsComponent},
-      {path: 'puzzlescience', component: PuzzlescienceComponent},
-
-      {path: 'MainOffice', component: AlhambraComponent},
-      {path: 'centralGlasgow', component: CentralglasgowComponent},
-      {path: 'secrettunnel', component: SecrettunnelComponent},
-      {path: 'centrallowlevel', component: CentrallowlevelComponent},
-      {path: 'hillheadtunnel', component: HillheadtunnelComponent},
-      {path: 'HillheadMap', component: HillheadmapComponent},
-      {path: 'stenochtunnel', component: StenochrouteComponent},
-      {path: 'ScienceCentre', component: SciencecenterComponent},
-      {path: 'stenochunderground', component: StenochundergroundComponent},
-      {path: 'BotanicGardens', component: BotanicgardensComponent},
-      {path: 'BotanicStation', component: BotanicstationComponent},
-      {path: 'ParkTunnel', component: ParktunnelComponent},
-
+      {path: 'terminal/:id', component: TernminalComponent},
+      {path: 'puzzle01', component: Puzzle01Component},
+      {path: 'puzzle02', component: Puzzle02Component},
+      {path: 'puzzle03', component: Puzzle03Component},
+      {path: 'puzzle04', component: Puzzle04Component},
+      {path: 'puzzle05', component: Puzzle05Component},
+      {path: 'puzzle06', component: Puzzle06Component},
+      {path: 'towermap', component: MapComponent},
       {path: 'LandingPage', component: LandingpageComponent},
       {path: 'Ending', component: EndingComponent},
       {path: '', redirectTo: '/LandingPage', pathMatch: 'full'},
@@ -90,10 +77,6 @@ import {EndingComponent} from './components/ending/ending.component';
     FormsModule,
     CountdownModule
   ],
-
-  providers: [],
   bootstrap: [AppComponent]
 })
-
-export class AppModule {
-}
+export class AppModule {}

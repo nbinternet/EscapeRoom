@@ -4,29 +4,41 @@ import {Subject} from "rxjs";
 @Injectable({
   providedIn: 'root'
 })
+
 export class TimerControlService {
-  public DO_START: string = "START";
-  public DO_END: string = "END";
+  public isRunning: boolean = false;
+  private _time: number = 0;
 
-  private timeInMillis: number = 0;
-  // Observable string sources
-  private timerController = new Subject<string>();
-  // Observable string streams
-  announcement$ = this.timerController.asObservable();
-
-  constructor() {
+    constructor() {
+      TimerControlService(0, 1000).subscribe(() => {
+        if(this.isRunning){
+          this._time++;
+        }
+      })
   }
 
-  // Service message commands
-  announcement(startText: string) {
-    this.timerController.next(startText);
+  get displayTime() {
+    let hours = Math.floor(this._time / 3600);
+    let minutes = Math.floor(this._time / 60) % 60;
+    let seconds = this._time % 60
+
+    let hourString = hours < 10 ? '0${hours}' : hours;
+    let minutesString = minutes < 10 ? '0${minutes}' : minutes;
+    let secondsString = seconds < 10 ? '0${seconds}' : seconds;
+
+    return '${hourString}:${minutesString}:${secondsString}';
   }
 
-  update(millis: number) {
-    this.timeInMillis = millis;
+  start() {
+    this.isRunning = true;
   }
 
-  getTimeLeft(): number {
-    return this.timeInMillis;
+  stop() {
+    this.isRunning = false;
   }
+
+  reset() {
+    this.start();
+    this._time = 0;
+  }  
 }

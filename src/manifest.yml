@@ -1,0 +1,9 @@
+# manifest.yml
+
+applications:
+  - name: escapetest
+    random-route: false
+    instances: 1
+    memory: 128M
+    path: dist/escaperoom
+    buildpack: staticfile_buildpack

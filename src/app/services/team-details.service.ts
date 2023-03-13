@@ -1,19 +1,18 @@
 import {Injectable} from '@angular/core';
-import {Optional} from "@angular/core";
-import {SkipSelf} from "@angular/core";
 
 @Injectable({
   providedIn: 'root'
 })
 export class TeamDetailsService {
+  teamName: string = '';
+  score: number = 100;
 
-  teamName: String;
+  reset() {
+    this.teamName = '';
+    this.score = 100;
+  }
 
-  constructor(@Optional() @SkipSelf() parent?: TeamDetailsService) {
-    if (parent) {
-      throw Error(`[GuardedSingletonService]: trying to create multiple instances of TeamDetailsService, but this service should be a singleton.`);
-    }
-
-    console.info("initilise LocationTrackerService")
+  public decrementScore() {
+    this.score -= 1
   }
 }

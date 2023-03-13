@@ -1,7 +1,24 @@
-.teamName {
-  width: 600px;
+
+.landing {
+  text-align: center;
+  padding: 20px;
 }
 
-.centerAll {
-  text-align: center;
+.landing__form-group{
+  display: flex;
+  justify-content: center;
+  align-items: 4px;
+}
+
+.landing__form-input{
+  width: 600px;
+  border-radius: 4px;
+}
+
+.landing__form-input:focus{
+  outline: none;
+}
+
+.landing__form-button{
+  margin: 0 4px;
 }
