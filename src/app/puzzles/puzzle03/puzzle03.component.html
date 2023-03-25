@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <h2>The hackers are trying to manipulate the Glasgow Science Centre website</h2>
+    <app-find-phishing-vulnerabilities *ngIf="showPt1"></app-find-phishing-vulnerabilities>
+    <app-xxs-solution *ngIf="showPt2"></app-xxs-solution>
+    <app-xxs-input-validation *ngIf="showPt3"></app-xxs-input-validation>
+    <div
+        *ngIf="complete"
+        class="alert alert-success m-5 fw-bold d-flex flex-column justify-content-center"
+        role="alert"
+    >
+        <h3 class="text-center">Puzzle Complete!</h3>
+        <button 
+            (click)="returnToMapClicked()"
+            class="btn btn-success"
+            routerLink="/towermap"
+        >
+            Return to Main page
+        </button>
+    </div>
+    <div *ngIf="!complete">
+        <button class="btn btn-outline-light mt-3" type="button" routerLink="/towermap"> Cancel and return to Main page</button>
+    </div>
+</div>

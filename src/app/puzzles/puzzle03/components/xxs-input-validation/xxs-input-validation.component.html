@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col-7">
+        <div>{{ description }}</div>
+        <br/>
+        <div>{{ questionLabel }}</div>
+        <br/>
+        <div class="form-group">
+            <label class="form-group">
+                Enter the output of the function:
+            </label>
+            <input class="form-control bg-dark border-ligth"
+            #box
+            />
+            <button
+                class="btn bg-dark btn-outline-light mt-3"
+                (click)="updateAnswer(box.value)"
+            >
+                Submit
+            </button>
+        </div>
+
+        <div 
+        *ngIf="isCorrect"
+        class="rightAnswer mt-3 fw-bold"
+        role="alert"
+        >
+        <i class="fa fa-check"></i>
+        That's the correct answer.
+        <div class="m-1 fw-lighter">
+            {{ correctMessage }}
+        </div>
+        <button (click)="nextClicked()" class="btn btn-success"> Next </button>
+        </div>
+
+        <div *ngIf="isWrong" class="wrongAnswer fw-bold">
+            <i class="fa fa-times-circle"></i>
+            Not quite!
+        </div>
+        <br/>
+        <div class="pad-textarea">
+            <textarea rows="10" cols="80" name="text" placeholder="Scratchpad for team working"></textarea>         
+        </div>
+    </div>
+    <div class="col-5">
+        <img
+        src="../../../../../assets/puzzle03/xxs-encode-function.PNG"
+        class="w-100"
+        alt="encode function">
+    </div>
+</div>

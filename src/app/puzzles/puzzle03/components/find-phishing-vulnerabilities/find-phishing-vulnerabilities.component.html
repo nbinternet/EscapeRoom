@@ -1,0 +1,210 @@
+<div class="row">
+    <div class="col">
+        <div>
+            {{ description }}
+        </div>
+        <br/>
+        <div>
+            {{ emailLabel }}
+        </div>
+        <div class="rightAnswer mt-3 fw-bold" role="alert" *ngIf="signFound.length > 0">
+            <i class="fa fa-check"></i>
+            That's Right!
+            <ul *ngFor="let sign of signsFound">
+                <li>{{ sign.name }}: <span class="fw-lighter">{{ sign.desc }}</span></li>
+            </ul>
+            <div *ngIf="allSignsFound">
+                <span class="fw-bold me-2">You have found all the correct answers!</span>
+                <button (click)="nextClicked()" class="btn btn-success"> Next </button>
+            </div>
+        </div>
+
+        <div class="wrongAnswer fw-bold" *ngIf="isWrong">
+            <i class="fa fa-times-circle"></i>
+            No vulnerability here! Try again.
+        </div>
+        <br/>
+
+
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 960">
+            <image
+            xlink:href="../../../../../assets/puzzle03/phishingemailmockup.PNG"
+            width="1920"
+            height="960"
+            (click)="phishingSignFound('nope')"
+            />
+            <a (click)="phishingSignFound('theRequest')">
+                <image
+                    height="40"
+                    width="570"
+                    x="1070"
+                    y="420"
+                    ></image>
+            </a>
+            <a (click)="phishingSignFound('language')">
+                <image
+                    height="60"
+                    width="200"
+                    x="10"
+                    y="50"
+                    ></image>
+            </a>
+            <a (click)="phishingSignFound('language')">
+                <image
+                    height="40"
+                    width="100"
+                    x="250"
+                    y="420"
+                    ></image>
+            </a>
+            <a (click)="phishingSignFound('language')">
+                <image
+                    height="40"
+                    width="150"
+                    x="805"
+                    y="420"
+                    ></image>
+            </a>
+            <a (click)="phishingSignFound('content')">
+                <image
+                    height="40"
+                    width="200"
+                    x="40"
+                    y="620"
+                    ></image>
+            </a>
+            <a (click)="phishingSignFound('content')">
+                <image
+                    height="40"
+                    width="350"
+                    x="40"
+                    y="690"
+                    ></image>
+            </a>
+            <a (click)="phishingSignFound('content')">
+                <image
+                    height="40"
+                    width="300"
+                    x="550"
+                    y="150"
+                    ></image>
+            </a>
+            <a (click)="phishingSignFound('sender')">
+                <image
+                    height="40"
+                    width="250"
+                    x="850"
+                    y="150"
+                    ></image>
+            </a>
+            <a (click)="phishingSignFound('links')">
+                <image
+                    height="80"
+                    width="470"
+                    x="650"
+                    y="490"
+                    ></image>
+            </a>
+            <a (click)="phishingSignFound('formatting')">
+                <image
+                    height="150"
+                    width="500"
+                    x="40"
+                    y="780"
+                    ></image>
+            </a>
+
+            <!-- checks -->
+            <a *ngIf="phishingSigns.theRequest.found">
+                <image
+                    height="40"
+                    width="40"
+                    x="1350"
+                    y="450"
+                    xlink:href="../../../assets/green_tick.JPG"
+                    ></image>
+            </a>
+            <a *ngIf="phishingSigns.language.found">
+                <image
+                    height="40"
+                    width="40"
+                    x="60"
+                    y="90"
+                    xlink:href="../../../assets/green_tick.JPG"
+                    ></image>
+            </a>
+            <a *ngIf="phishingSigns.language.found">
+                <image
+                    height="40"
+                    width="40"
+                    x="250"
+                    y="450"
+                    xlink:href="../../../assets/green_tick.JPG"
+                    ></image>
+            </a>
+            <a *ngIf="phishingSigns.language.found">
+                <image
+                    height="40"
+                    width="40"
+                    x="805"
+                    y="450"
+                    xlink:href="../../../assets/green_tick.JPG"
+                    ></image>
+            </a>
+            <a *ngIf="phishingSigns.content.found">
+                <image
+                    height="40"
+                    width="40"
+                    x="290"
+                    y="620"
+                    xlink:href="../../../assets/green_tick.JPG"
+                    ></image>
+            </a>
+            <a *ngIf="phishingSigns.content.found">
+                <image
+                    height="40"
+                    width="40"
+                    x="450"
+                    y="690"
+                    xlink:href="../../../assets/green_tick.JPG"
+                    ></image>
+            </a>
+            <a *ngIf="phishingSigns.content.found">
+                <image
+                    height="40"
+                    width="40"
+                    x="550"
+                    y="190"
+                    xlink:href="../../../assets/green_tick.JPG"
+                    ></image>
+            </a>
+            <a *ngIf="phishingSigns.sender.found">
+                <image
+                    height="40"
+                    width="40"
+                    x="900"
+                    y="190"
+                    xlink:href="../../../assets/green_tick.JPG"
+                    ></image>
+            </a>
+            <a *ngIf="phishingSigns.links.found">
+                <image
+                    height="40"
+                    width="40"
+                    x="880"
+                    y="590"
+                    xlink:href="../../../assets/green_tick.JPG"
+                    ></image>
+            </a>
+            <a *ngIf="phishingSigns.formatting.found">
+                <image
+                    height="40"
+                    width="40"
+                    x="300"
+                    y="850"
+                    xlink:href="../../../assets/green_tick.JPG"
+                    ></image>
+            </a>
+        </svg>
+    </div>
+</div>

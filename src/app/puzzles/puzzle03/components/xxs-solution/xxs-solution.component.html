@@ -1,0 +1,44 @@
+<div class="row">
+    <div class="col">
+        <div>
+            A security admin on the Glasgow Science Centre cyber security team received the phishing email. They hovered over the link and saw that it did lead to a genuine Glasgow Science Centre page.
+        </div>
+        <img class="my-2" src="../../../../../assets/puzzle03/xxs-url.PNG">
+        <div>
+            They clicked to see what the security issue was.
+            While the link was genuine, it had some parameters attached to it that reflected a malicious script (loginnow.js) on the webpage which, when it loaded, exposed the security admin's cookies.
+            This included login credentials which were then used to login as a security admin and take advantage of the weather controls.
+        </div>
+        <br/>
+        <div class="mb-2">
+            What are some things the Science Centre could do to prevent an attack like this from happening again? (There are 4 in total):
+        </div>
+    </div>
+
+    <div class="row g-2" *ngFor="let option of puzzleService.xxsPreventionOptions">
+        <button class="col-4 my-0 btn btn-secondary" type="button" (click)="optionClicked(option)"
+        [ngClass]="{'btn-danger' : option.checked && !option.isCorrect, 'btn-success' : option.checked && option.isCorrect}">
+        {{ option.name }}
+    </button>
+
+    <div class="col-8 my-0 fw-bold" *ngIf="option.checked"
+        [ngClass]="{'wrongAnswer' : !option.isCorrect, 'rightAnswer' : option.isCorrect}">
+        <span *ngIf="option.isCorrect">
+            <i class="fa fa-check"></i>
+            Correct:
+        </span>
+        <span *ngIf="!option.isCorrect">
+            <i class="fa fa-times-circle"></i>
+            Incorrect:
+        </span>
+        <span class="fw-lighter">{{ option.desc }}</span>
+    </div>
+    </div>
+    
+    <div *ngIf="allAnswersFound" class="mt-3 rightAnswer">
+        <span class="fw-bold">You have found all the correct answers!</span>
+        <button (click)="nextClicked()" class="ms-2 btn btn-success">
+            Next
+        </button>
+     </div>
+</div>
