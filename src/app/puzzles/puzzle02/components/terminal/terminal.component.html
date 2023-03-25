@@ -1,0 +1,10 @@
+<div class="card bg-dark border-light mb-1">
+    <div class="card-header border-light">{{ machine.machineName }}</div>
+    <div [innerText]="getMachineOutput()" class="card-body bg-dark border-light overflow-auto">
+    </div>
+</div>
+<div class="mb-3">
+    <button [routerLink]="'../../puzzle02'" type="button" class="btn bg-dark btn-outline-light">
+        Back to Network Diagram
+    </button>
+</div>

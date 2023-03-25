@@ -1,0 +1,97 @@
+<div>
+    <h1>Recover the Lift Operations</h1>
+    
+    
+    <ng-container>
+        <p>
+            {{ introduction }}
+        </p>
+        <div class="text-center">
+            <svg
+                version="1.1"
+                xmls="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 1920 1000"
+            >
+                <image 
+                    xlink:href="../../../../../assets/network.JPG"
+                    width="1920"
+                    height="960" 
+                />
+                <a [routerLink]="['/terminal', 1]">
+                    <rect height="200" width="220" x="360" y="80" opacity="0"></rect>
+                </a>
+                <a [routerLink]="['/terminal', 2]">
+                    <rect height="200" width="220" x="980" y="40" opacity="0"></rect>
+                </a>
+                <a [routerLink]="['/terminal', 3]">
+                    <rect height="200" width="220" x="1350" y="410" opacity="0"></rect>
+                </a>
+                <a [routerLink]="['/terminal', 4]">
+                    <rect height="200" width="220" x="980" y="690" opacity="0"></rect>
+                </a>
+                <a [routerLink]="['/terminal', 5]">
+                    <rect height="200" width="220" x="360" y="740" opacity="0"></rect>
+                </a>
+            </svg>
+
+            <p>Ntework Diagram</p>
+        </div>
+        
+        <div class="container">
+            <app-answer
+                *ngIf="!machineDone"
+                label="Identify the vulnerability within one of the machines on the network. Enter the number of the machine with the vulnerability."
+                (answer)="answerMachine($event)">
+            </app-answer>
+            <app-answer
+                *ngIf="machineDone"
+                label="Enter the action that needs to be taken to fix the vulnerable machine"
+                (answer)="answerFeature($event)">
+            </app-answer>         
+           <div
+            *ngIf="machineDone"
+            class="rightAnswer fw-bold fade show"
+            role="alert"
+            >
+                <i class="fa fa-check"></i>
+                Correct!
+                <div class="m-1 fw-ligther">
+                    Now you need to ensure you have identified the correct issue
+                    within the machine. Enter the course of action that needs to be taken to fix the vulnerable machine in the input box above.
+                </div>
+            </div>
+            <div
+                *ngIf="featureDone"
+                class="rightAnswer fw-bold fade show"
+                role="alert"
+                >
+                <i class="fa fa-check"></i>
+                Correct!
+                <div class="m-1 fw-ligther">
+                    You have identifies that the OS on this machine was an older version. 
+                    Updating firmware and software frequently is an important step in defending against a cyber-attack. See the Handbook for more information about patching software.
+                </div>
+                <button
+                    (click)="returnToMapClicked()"
+                    class="btn btn-success"
+                    routerLink="/towermap"
+                    >
+                    Return to Main page
+                </button>
+            </div>
+            <div 
+                *ngIf="errors.length > 0"
+                class="wrongAnswer fw-bold fade show"
+                role="alert"
+            >
+                <i class="fa fa-times-circle"></i>
+                Incorrect!
+                <li *ngFor="let error of errors" class="fw-ligther">{{ error }}</li>
+            </div>
+        </div>
+        <div>
+            <button class="btn btn-outline-light mt-3" type="button" routerLink="/towermap">Cancel and Return to Main page</button>
+        </div>
+    </ng-container>
+</div>
