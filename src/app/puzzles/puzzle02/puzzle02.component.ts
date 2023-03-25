@@ -60,7 +60,7 @@ export class Puzzle02Component {
     }
 
     returnToMapClicked(){
-        this._locationTracker.currentStatus.set(locationNames.Puzzle02, true)
+        this._locationTracker.currentStatus.set(locationNames.Puzzle02, true);
     }
 }
     
