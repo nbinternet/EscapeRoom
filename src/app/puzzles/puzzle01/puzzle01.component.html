@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <h2>Restore the Tower Access Controls</h2>
+    <app-find-the-sql-injection *ngIf="showPt1"></app-find-the-sql-injection>
+    <app-sql-solution *ngIf="showPt2"></app-sql-solution>
+    <div
+        *ngIf="complete"
+        class="alert alter-success m-5 fw-bold d-flex flex-column justify-content-center"
+        role="alert"
+        >
+        <h3 class="text-center">Puzzle Complete!</h3>
+        <button
+        (click)="returnToMapClicked()"
+        class="btn btn-success"
+        routerLink="/towermap"
+        >
+            Return to Main page
+        </button>
+    </div>
+    <div *ngIf="!complete">
+        <button class="btn btn-outline-light mt-3" type="button" routerLink="/towermap">Cancel and return to Main page</button>    
+    </div>
+</div>

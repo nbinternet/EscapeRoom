@@ -1,0 +1,52 @@
+<div class="row">
+    <div>{{ description }}</div>
+    <br>
+    <br>
+    <label>Vulnerable PHP code: </label>
+    <img
+        src="../../../../../assets/puzzle01/sql-injection-vulnerable-code.png"
+        class="img-fluid"
+        alt="Code"
+    />
+    <label>Prepared statement to replace it: </label>
+    <img
+        src="../../../../../assets/puzzle01/sql-injection-prepared-statement.png"
+        class="img-fluid"
+        alt="Code"
+    />
+    <br/>
+    <div>{{ preparedStatementExplanation }}</div>
+
+    <div class="form-group mb-3 mt-3">
+        <label class="form-label">Enter the correct SQL that would go on line 31 to complete the prepared statement (remember to use the Handbook if you need to):</label>
+            <input
+                class="form-control bg-dark border-light"
+                #answer
+            />
+            <button
+                class="btn bg-dark btn-outline-light mt-3"
+                (click)="updateAnswer{answer/value}"
+            >
+                Submit
+            </button>
+    </div>
+
+    <div class="'wrongAnswer fw-bold" *ngIf="isWrong">
+            <i class="fa fa-times-circle"></i>
+            That's not the right answer!
+    </div>
+
+    <div class="rightAnswer fw-bold" *ngIf="isCorrect">
+        <I class="fa fa-check"></I>
+        Well done, that's the correct answer.
+        <div class="m1 fw-ligther">
+            {{ correctMessage }}
+        </div>
+        <button
+                (click)="nextClicked()"
+                class="btn btn-success"
+                >
+            Next
+        </button>
+    </div>
+</div>

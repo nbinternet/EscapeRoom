@@ -1,0 +1,60 @@
+<div class="row">
+    <div class="col-4">
+        <div>
+            The hackers have logged in as an admin user and have hijacked the Glasgow Tower's Access Controls by finding a SQL Injection vulnerability in the Glasgow Science Centre codebase. <br>
+            The PHP code on the right shows Glasgow Science Centre's admin login page.<br>
+            Can you identify the vulnerability in the code? <br>
+            Use the Handbook to help you.<br>
+        </div>
+        <div class="form-group">
+            <label class="form-label">
+                <br/>
+                Enter the line of code that contains the vulnerability: (careful, wrong answers will make you lose points) 
+            </label>
+            <input
+                class="form-control bg-dark border-light"
+                placeholder="e.g. 13"
+                #box
+                />
+                <button
+                class="btn bg-dark btn-outline-light mt-3"
+                (click)="updateAnswer(box.value)"
+                >
+                Submit
+            </button>
+        </div>
+
+        <div
+            class="rightAnswer mt-3 fw-bold"
+            role="alert"
+            *ngIf="isCorrect"
+            >
+            <i class="fa fa-check"></i>
+            That is the correct answer.
+            <div class="m-1 fw-ligther">
+                Glasgow Science Centre has left their code vulnerable to SQL injection, 
+                meaning the hackers can gain admin access by just entering an email that will
+                be interpreted as AQL and evaluate the WHERE condition to true.<br>
+                e.g. they enter: 'email = x OR 1=1;'<br>
+                See the Handbook for further details.
+            </div>
+            <Button (click)="nextClicked()" class="btn btn-success"> next </Button>          
+        </div>
+
+        <div class="wrongAnswer fw-bold" *ngIf="isWrong">
+            <i class="fa fa-times-circle"></i>
+            Nope!
+            <div class="m-1 fw-ligther">
+                {{ wrongMessage }}
+            </div>
+        </div>
+    </div>
+
+    <div class="col-8">
+        <img
+        src="../../../../../assets/puzzle01/sql-injection-code-full.png"
+        class="img-fluid"
+        alt="Code"
+        />
+    </div>
+</div>
