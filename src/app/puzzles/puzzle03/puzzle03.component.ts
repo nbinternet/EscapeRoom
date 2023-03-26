@@ -50,5 +50,3 @@ export class Puzzle03Component {
         this._locationTracker.currentStatus.set(locationNames.Puzzle03, true)
     }
 }
-
-}
