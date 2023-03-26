@@ -1,0 +1,66 @@
+<div class="container-fluid">
+    <h2>Identify the Vulnerability in the Machine</h2>
+
+
+    <div class="row">
+        <p>
+            Welcome to the interactive command line shell
+        </p>
+        <p>
+            You must find the vulnerability in the machine shown. You will interact with this machine using its command line.
+            You will need to navigate the file system and identify the file(s) that have been comproised.
+        </p>
+    </div>
+    <div class="row">
+        <div class="col-9">
+            <app-interactive-terminal></app-interactive-terminal>
+        </div>
+        <div class="col-3">
+            <dvi class="card bg-dark border-light mb-1">
+                <div class="card-header border-light font-monospace">Legend</div>
+                <div class="card-body bg-dark border-light font monospace">
+                    Commands :<br/><br/>ls [params] - list files/folders <br/>
+                    (valid param is -lart)<br/> e.g. ls -lart<br/><br/>
+                    cd [dicrectory] - change directory<br/> e.g. cd assets (use cd .. to go back up one directory)
+                </div>
+            </dvi>
+        </div>
+        <div class="row">
+            <app-answer
+            label="Which file or folder has been made vulnerable by the hackers:"
+            (answer)="update($event)"
+            ></app-answer>
+            <div
+                *ngIf="incorrect"
+                class="wrongAnswer fw-bold"
+                role="alert"
+                >
+                <i class="fa fa-times-circle"></i>
+                That's not the correct file/folder 
+                </div>
+                <div 
+                    *ngIf="correctAnswer && !incorrect"
+                    class="rightAnswer fw-bold fade show"
+                    role="alert"
+                >
+                    <i class="fa fa-check"></i>
+                    Correct!
+                    <div class="fw-lighter">
+                        Congratulations, you have identified the vulnerability!
+                        The hackers raised the access on the password file so they could read, write and execute at will.
+                        On Linux machines you can view the permissions using the -I flag command.
+                    </div>
+                    <button 
+                        type="button"
+                        class="btn btn-success"
+                        routerLink="/towermap"
+                        (click)="puzzleComplete()"
+                        >
+                        Return to Main page
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div><button class="btn btn-outline-light mt-3" type="button" routerLink="/towermap">Cancel and return to Main page</button></div>
+    </div>
+</div>
