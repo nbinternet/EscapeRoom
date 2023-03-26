@@ -1,0 +1,95 @@
+<div class="container-fluid">
+    <h2>Restore the Tower climate controls</h2>
+    
+    
+    <div class="column">
+        The hackers have taken over the climate controls for the Tower, meaning they can change the temperature, making it hotter or colder for the people at the top of the Tower.
+        <countdown [config]="config" (event)="handleEvent($event)"></countdown>
+        <div class="hint" *ngIf="showHint">
+            <i class="fa fa-info-circle"></i>
+            Hint!
+            <p>This looks like code for a Caesar Cipher!<br/>
+            If the code here was used to encrypt by moving forward in the alphabet, maybe decrypting will involve moving backwards in the alphabet.<br/>
+            Where in the code are we moving forward? And how do you think we would reverse that to move backwards?</p>
+        </div>
+
+        <p><br/>We can see they have encrypted the system using the password: <strong>nvri vkyv yrtb vijr eupf ltre efkt irtb kyzj tfuv</strong></p>
+        <p>We have managed to recover the code they used to encrypt this password. Can you write more code to reverse the encryption and expose the password?</p>
+        <div class="puzzlebox">
+            <p><strong>Recovered Code</strong></p>
+            <pre>
+                <code>
+                    task - input('Do you want to encrypt (e) a message?')<br/>
+
+                    while task == 'e'<br/>
+
+                    alphabet = 'abcdefghijklmnopqrstuvwxyz'<br/>
+                    newMessage = '' <br/>
+                    message = input('Please enter a message: ')<br/>
+
+
+                    if task == 'e': <br/>
+                        key = input('Please enter a key - this will be a number between 1 and 25: ')<br/>
+                        for letter in message: <br/>
+                            if letter in alphabet: <br/>
+                                position = alphabet.find(letter)<br/>
+                                newPosition = (int(position) + int(key)) % 26<br/>
+                                newLetter = alphabet[newPosition]<br/>
+                                newMessage += newLetter<br/>
+                            else:
+                                newMessage += letter<br/>
+                        print('Your message is now: '+ newMessage)<br/>
+                        task = input('Do you want to encrypt (e) or decrypt (d) a message? ')<br/>
+                    elif task == 'q':<br/>
+                        print('Thank you! Goodbye')<br/>
+                        break<br/>
+                </code>
+            </pre>
+        </div>
+        <br/>
+        <p>Remember, we need to write more code to decrypt the message. What is the decoded password?</p>
+        <strong>Hint!</strong>
+        <br/>
+        <p>Use <a target="_blank" href="https://www.trinket.io/">Trinket.io</a> to write and run your code and see if it works.</p>
+        <br/>
+        <div class="form-group mb-3">
+            <label for password class="form-label">Type your answer here:</label>
+            <input class="bg-dark border-light form-control"
+                #box
+            />
+            <button 
+                class="btn bg-dark btn-outline-light mt-3"
+                (click)="update(box.value)"
+            >
+            Submit
+        </button>
+        </div>
+        <div class="rightAnswer" *ngIf="correctAnswer">
+            <i class="fa fa-check"></i>
+            <span class="fw-bold">
+                That's the correct answer
+            </span>
+            <br/><br/>
+            <p>
+                Using strong passwords and encryption to secure data in important not just when transferring data across a network or the internet ('Encryption in transit'), but also while the data is stored in databases or files ('Encryption at rest').
+                Encrypting data keeps sensitive information secure and it's one of the most important aspects for cyber engineering.
+            </p>
+            <button (click)="onSelect()" class="btn btn-success" routerLink="/towermap">
+                Return to Main page
+            </button>
+        </div>
+
+        <div class="wrongAnswer fw-bold" *ngIf="incorrect">
+            <i class="fa fa-times-circle"></i>
+            That's not the correct answer.
+        </div> 
+
+    </div>
+    <div class="column">
+        <br/>
+        <div class="pad-textarea">
+            <textarea rows="10" cols="70" name="text" placeholder="Scratchpad for writing code...but don't forget to run it in Trinket.io!"></textarea>
+        </div>
+    </div>
+    <div *ngIf="!complete"><button class="btn btn-outline-light mt-3" type="button" routerLink="/towermap">Cancel and return to the Main page</button></div>
+</div>
