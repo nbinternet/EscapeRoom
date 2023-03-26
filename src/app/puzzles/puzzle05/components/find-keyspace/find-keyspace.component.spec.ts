@@ -1,20 +1,20 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {Puzzle05Component} from './puzzle05.component';
+import { FindkeyspaceComponent } from './find-keyspace.component';
 
-describe('PuzzlplantsComponent', () => {
-  let component: Puzzle05Component;
-  let fixture: ComponentFixture<Puzzle05Component>;
+describe('FindkeyspaceComponent', () => {
+  let component: FindkeyspaceComponent;
+  let fixture: ComponentFixture<FindkeyspaceComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Puzzle05Component ]
+      declarations: [ FindkeyspaceComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Puzzle05Component);
+    fixture = TestBed.createComponent(FindkeyspaceComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

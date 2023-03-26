@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <h2>Recover the Tower Brakes</h2>
+    <app-create-new-password *ngIf="showPt1"></app-create-new-password>
+    <app-find-keyspace *ngIf="showPt2"></app-find-keyspace>
+    <app-calculate-password-cracker *ngIf="showPt3"></app-calculate-password-cracker>
+    <div 
+        *ngIf="complete"
+        class="alert alert-success m-5 fw-bold d-flex flex-column justify-content-center"
+        role="alert"
+    >
+        <h3 class="text-center">Puzzle Complete!</h3>
+        <button 
+            (click)="returnToMapClicked()"
+            class="btn btn-success"
+            routerLink="/towermap"
+            >
+            Return to Main page
+        </button>
+    </div>
+    <div *ngIf="!complete">
+        <button class="btn btn-outline-light mt-3" type="button" routerLink="/towermap">Cancel and return to Main page</button>
+    </div>
+</div>

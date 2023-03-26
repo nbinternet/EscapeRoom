@@ -1,0 +1,79 @@
+<div>
+    <div>
+        Hackers can attack passwords easily if the keyspace is too small. The bigger the keyspace, the harder it is to crack.
+        Calculate the keyspace for the original password and for the stronger password.
+        <br>
+        <br>
+        The weak password was <strong>cloud</strong>, can you calculate its keyspace?
+        <br>
+        <div class="form-group mb-3">
+            <label for password class="form-label">Input keyspace here:</label>
+            <input class="bg-dark border-light form-control" #oldKeyspace/>
+            <button
+                class="btn btn-outline-light bg-dark mt-3"
+                (click)="oldKeyspaceValue(oldKeyspace.value)"
+                >
+                Submit
+            </button>
+        </div>
+        <div class="rightAnswer fw-bold"
+            role="alert"
+            *ngIf="oldKeyspaceCorrect"
+            >
+            <i class="fa fa-check"></i>
+            That's correct!
+            <div class="m-1 fw-lighter">
+                That's the correct keyspace for password: <strong>cloud</strong>. Well done!
+            </div>
+        </div>
+        <div class="wrongAnswer fw-bold"
+            role="alert"
+            *ngIf="oldKeyspaceIncorrect"
+            >
+            <i class="fa fa-times-circle"></i>
+            That's not quite right...
+            <div class="m-1 fw-lighter">
+                Remember, to calculate the keyspace use K^n.
+            </div>
+        </div>
+        <br>
+        An example of a strong password is <strong>Cloud123@#456aAfe</strong>, are you able to find its keyspace?
+        <br>
+        <div class="form-group mb-3">
+            <label for password class="form-label">Input keyspace here:</label>
+            <input class="bg-dark border-light form-control" #newKeyspace/>
+            <button
+                class="btn btn-outline-light bg-dark mt-3"
+                (click)="strongKeyspaceValue(newKeyspace.value)"
+                >
+                Submit
+            </button>
+        </div>
+        <div class="rightAnswer fw-bold"
+            role="alert"
+            *ngIf="strongKeyspaceCorrect"
+            >
+            <i class="fa fa-check"></i>
+            That's right!
+            <div class="m-1 fw-lighter">
+                That's the correct keyspace for password: <strong>Cloud123@#456aAfe</strong>. Well done!
+            </div>
+            <div ngIf="complete">
+                Good work! You were able to calculate both keyspaces correctly. Lets move on to the next part.
+                <br>
+                <button (click)="nextClicked()" class="btn btn-success">Next</button>
+            </div>
+        </div>
+        <div 
+            class="wrongAnswer fw-bold"
+            role="alert"
+            *ngIf="strongKeyspaceIncorrect"
+            >
+            <i class="fa fa-times-circle"></i>
+            That's not quite right... 
+            <div class="m-1 fw-lighter">
+                Remember, to calculate the keyspace use K^n.
+            </div>
+        </div>
+    </div>
+</div>
