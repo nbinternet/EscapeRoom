@@ -7,7 +7,7 @@ import { LocationTrackerService } from "src/app/services/location-tracker.servic
     templateUrl: './xxs-input-validation.component.html',
     styleUrls: ['./xxs-input-validation.component.css']
 })
-export class XxsInputValildationComponent {
+export class XxsInputValidationComponent {
     public isCorrect = false;
     public isWrong = false;
 

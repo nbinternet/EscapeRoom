@@ -1,20 +1,20 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { XxsInputValildationComponent } from './xxs-input-validation.component';
+import { XxsInputValidationComponent } from './xxs-input-validation.component';
 
-describe('XxsInputValildationComponent', () => {
-  let component: XxsInputValildationComponent;
-  let fixture: ComponentFixture<XxsInputValildationComponent>;
+describe('XxsInputValidationComponent', () => {
+  let component: XxsInputValidationComponent;
+  let fixture: ComponentFixture<XxsInputValidationComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ XxsInputValildationComponent ]
+      declarations: [ XxsInputValidationComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(XxsInputValildationComponent);
+    fixture = TestBed.createComponent(XxsInputValidationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

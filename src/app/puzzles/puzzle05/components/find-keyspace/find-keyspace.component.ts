@@ -7,7 +7,7 @@ import { locationNames } from "src/app/models/locationNames";
     templateUrl: './find-keyspace.component.html',
     styleUrls: ['./find-keyspace.component.css']
 })
-export class FindkeyspaceComponent {
+export class FindKeyspaceComponent {
     public oldKeyspaceNumber: number = 11881376;
     public strongPasswordKeyspace: number = 18215225100020464195180876374789;
     public strongPasswordKeyspaceScientificNotation: number = 1.8215225100020465+31;
