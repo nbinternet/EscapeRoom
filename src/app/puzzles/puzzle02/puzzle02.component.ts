@@ -1,8 +1,8 @@
-import { Component } from "@angular/core";
-import { CountdownEvent } from "ngx-CountdownEvent";
-import { locationNames } from "src/app/models/locationNames";
-import { LocationTrackerService } from "src/app/services/location-tracker.service";
-import { TeamDetailsService } from "src/app/services/team-details.service";
+import { Component } from '@angular/core';
+import { CountdownEvent } from 'ngx-CountdownEvent';
+import { locationNames } from 'src/app/models/locationNames';
+import { LocationTrackerService } from 'src/app/services/location-tracker.service';
+import { TeamDetailsService } from 'src/app/services/team-details.service';
 
 @Component({
     selector: 'app-puzzle02',
@@ -35,7 +35,7 @@ export class Puzzle02Component {
     }
 
     handleEvent(event: CountdownEvent) {
-        if (event.action == 'done') {
+        if (event.action === 'done') {
             this.showHint = true;
         }
     }

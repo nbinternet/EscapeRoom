@@ -1,7 +1,7 @@
-import { Component, OnInit } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
-import { MachineInstance } from "src/app/models/MachineInstance";
-import { TerminalService } from "src/app/services/terminal.service";
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { MachineInstance } from 'src/app/models/MachineInstance';
+import { TerminalService } from 'src/app/services/terminal.service';
 
 @Component({
     selector: 'app-terminal',

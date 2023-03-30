@@ -1,7 +1,7 @@
-import { Component } from "@angular/core";
-import { locationNames } from "src/app/models/locationNames";
-import { LocationTrackerService } from "src/app/services/location-tracker.service";
-import { TeamDetailsService } from "src/app/services/team-details.service";
+import { Component } from '@angular/core';
+import { locationNames } from 'src/app/models/locationNames';
+import { LocationTrackerService } from 'src/app/services/location-tracker.service';
+import { TeamDetailsService } from 'src/app/services/team-details.service';
 
 @Component({
     selector: 'app-find-the-sql-injection',
@@ -29,12 +29,12 @@ export class FindTheSqlInjectionComponent {
             this.teamDetailsService.decrementScore();
             this.isCorrect = false;
             this.isWrong = true;
-            if (value == '5' || value == '6'){
+            if (value === '5' || value === '6'){
                 this.wrongMessage = 
-                    `Hardcoding database login credentials is really bad practive,
+                    `Hardcoding database login credentials is really bad practice,
                     but this is not how the hackers gained access.`;
             }
-            else if (value == '35') {
+            else if (value === '35') {
                 this.wrongMessage = 
                     `Not encrypting passwords in a database is not very secure,
                     but this is not how the hackers gained access.`;

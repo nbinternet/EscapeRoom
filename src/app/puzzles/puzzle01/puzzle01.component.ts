@@ -1,6 +1,6 @@
-import { Component } from "@angular/core";
-import { locationNames } from "src/app/models/locationNames";
-import { LocationTrackerService } from "src/app/services/location-tracker.service";
+import { Component } from '@angular/core';
+import { locationNames } from 'src/app/models/locationNames';
+import { LocationTrackerService } from 'src/app/services/location-tracker.service';
 
 @Component({
     selector: 'app-puzzle01',

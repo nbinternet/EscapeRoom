@@ -13,7 +13,7 @@ export class SqlSolutionComponent {
     public isWrong: boolean = false;
 
     public description: string = 
-    `Vulnerability detected! Now we need your help to prevent it. The Glasgow Science Centre team have replaced the vulnerable SQL query with the following prepared statement.`
+    `Vulnerability detected! Now we need your help to prevent it. The Glasgow Science Centre team have replaced the vulnerable SQL query with the following prepared statement.`;
 
     public preparedStatementExplanation: string = 
     `The prepared statement will bind the email input to the SQL as a string, stripping it from any malicious code that could be run on the server.`;
@@ -30,7 +30,7 @@ export class SqlSolutionComponent {
     ){}
 
     nextClicked() {
-        this._locationTracker.currentStatus.set(locationNames.Puzzle01Part2, true)
+        this._locationTracker.currentStatus.set(locationNames.Puzzle01Part2, true);
     }
 
     updateAnswer(value: string): void {

@@ -25,7 +25,7 @@
             />
             <button
                 class="btn bg-dark btn-outline-light mt-3"
-                (click)="updateAnswer{answer/value}"
+                (click)="updateAnswer{answer: value}"
             >
                 Submit
             </button>
@@ -39,7 +39,7 @@
     <div class="rightAnswer fw-bold" *ngIf="isCorrect">
         <I class="fa fa-check"></I>
         Well done, that's the correct answer.
-        <div class="m1 fw-ligther">
+        <div class="m1 fw-lighter">
             {{ correctMessage }}
         </div>
         <button

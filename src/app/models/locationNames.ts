@@ -13,6 +13,6 @@ export enum locationNames {
   Puzzle05Part1 = 'Puzzle05Part1',
   Puzzle05Part2 = 'Puzzle05Part2',
   Puzzle05Part3 = 'Puzzle05Part3',
-  Puzzle06  = 'Puzzle06 ',
+  Puzzle06  = 'Puzzle06',
 }
 

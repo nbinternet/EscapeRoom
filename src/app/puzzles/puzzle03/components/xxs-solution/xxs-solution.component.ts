@@ -1,20 +1,20 @@
-import { Component } from "@angular/core";
-import { locationNames } from "src/app/models/locationNames";
-import { LocationTrackerService } from "src/app/services/location-tracker.service";
-import { TeamDetailsService } from "src/app/services/team-details.service";
-import { Puzzle03Service } from "../../puzzle03.service";
+import { Component } from '@angular/core';
+import { locationNames } from 'src/app/models/locationNames';
+import { LocationTrackerService } from 'src/app/services/location-tracker.service';
+import { TeamDetailsService } from 'src/app/services/team-details.service';
+import { Puzzle03Service } from '../../puzzle03.service';
 
 @Component({
-    selector: 'app-xxs-solutuion',
+    selector: 'app-xxs-solution',
     templateUrl: './xss-solution.component.html',
     styles: ['./xxs-solution.component.css']
 })
 export class XxsSolutionComponent {
     get allAnswersFound(): boolean {
         let answersFound = this.puzzleService.xxsPreventionOptions.filter((option) => {
-            return option.checked && option.isCorrect
+            return option.checked && option.isCorrect;
         })
-        return answersFound.length == 4;
+        return answersFound.length === 4;
     }
 
     constructor(public puzzleService: Puzzle03Service, private _teamDetailsService: TeamDetailsService, private _locationTracker: LocationTrackerService){ }

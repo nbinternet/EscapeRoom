@@ -1,6 +1,6 @@
-import { Component, EventEmitter, Output } from "@angular/core";
-import { locationNames } from "src/app/models/locationNames";
-import { LocationTrackerService } from "src/app/services/location-tracker.service";
+import { Component, EventEmitter, Output } from '@angular/core';
+import { locationNames } from 'src/app/models/locationNames';
+import { LocationTrackerService } from 'src/app/services/location-tracker.service';
 
 @Component({
     selector: 'app-xxs-input-validation',
@@ -12,10 +12,10 @@ export class XxsInputValidationComponent {
     public isWrong = false;
 
     public description: string = 
-    `To protect from furture attacks like this, Glasgow Science Centre has created the function show on the right.
+    `To protect from future attacks like this, Glasgow Science Centre has created the function show on the right.
     This will encode all query parameters that get passed along with URLs`;
 
-    public questionLable: string = 
+    public questionLabel: string = 
     `Can you figure out what the encoded string would be if the function is run with the hackers' malicious script parameter:
     <script src='loginnow.js'</script>`;
 
@@ -35,7 +35,7 @@ export class XxsInputValidationComponent {
     constructor(private _locationTracker: LocationTrackerService){}
 
     updateAnswer(option: any) {
-        if(option.trim() == this.encodedParam){
+        if(option.trim() === this.encodedParam){
             this.isCorrect = true;
             this.isWrong = false;
         }else {

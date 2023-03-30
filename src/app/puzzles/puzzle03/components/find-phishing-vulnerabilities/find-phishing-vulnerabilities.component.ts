@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { locationNames } from "src/app/models/locationNames";
 import { LocationTrackerService } from "src/app/services/location-tracker.service";
 import { PhishingSignsEnum } from "../../constants/phishing-signs.enums";
-import { Puzzle03Service } from "../../puzzles03.service";
+import { Puzzle03Service } from "../../puzzle03.service";
 @Component({
     selector: 'app-find-phishing-vulnerabilities',
     templateUrl: './find-phishing-vulnerabilities.component.html',
@@ -19,9 +19,9 @@ export class FindPhishingVulnerabilitiesComponent implements OnInit {
     Can you help then team at the Glasgow Science Centre identify some warning signs in the phishing email?`;
 
     public emailLabel: string =
-    'Click on different parts of the email to identify phishingwarning signs (there are 6 in total';
+    'Click on different parts of the email to identify phishing warning signs (there are 6 in total';
     
-    public malicousLink: string = `https://www.glasgow-science-centre.com/glasgowsecurity/loginnow/status?message=<script src="loginnow.js"></script>`;
+    public maliciousLink: string = `https://www.glasgow-science-centre.com/glasgowsecurity/loginnow/status?message=<script src="loginnow.js"></script>`;
 
     get allSignsFound(): boolean {
         return this.signsFound.length == 6;

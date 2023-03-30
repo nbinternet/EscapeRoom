@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { TeamDetailsService } from "../../services/team-details.service";
-import { TimerControlService } from "../../services/timer-control.service";
+import { TeamDetailsService } from '../../services/team-details.service';
+import { TimerControlService } from '../../services/timer-control.service';
 
 @Component({
   selector: 'app-landingpage',
@@ -10,7 +10,7 @@ import { TimerControlService } from "../../services/timer-control.service";
 })
 export class LandingpageComponent {
   constructor(
-    public teamDetailsService: TeamDetailsService, 
+    public teamDetailsService: TeamDetailsService,
     public timerControlService: TimerControlService,
     public router: Router
     ) {
@@ -19,7 +19,7 @@ export class LandingpageComponent {
   }
   
   start(value: string) {
-    if(value){
+    if (value) {
       this.teamDetailsService.teamName = value;
       this.router.navigate(['/towermap']);
       this.timerControlService.start();
