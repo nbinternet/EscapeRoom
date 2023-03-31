@@ -124,5 +124,8 @@
         }
       }
     }},
-  "defaultProject": "escaperoom"
+  "defaultProject": "escaperoom",
+  "cli": {
+    "analytics": false
+  }
 }

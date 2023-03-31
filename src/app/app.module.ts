@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from "@angular/forms";
 import { CountdownModule } from "ngx-countdown";
@@ -34,7 +33,6 @@ import { CalculatePasswordCrackerComponent} from './puzzles/puzzle05/components/
     MapComponent,
     LandingpageComponent,
     EndingComponent,
-    HttpClientModule,
     Puzzle01Component,
     Puzzle02Component,
     Puzzle03Component,
@@ -55,7 +53,6 @@ import { CalculatePasswordCrackerComponent} from './puzzles/puzzle05/components/
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
     RouterModule.forRoot([
       {path: 'terminal/:id', component: TerminalComponent},
       {path: 'puzzle01', component: Puzzle01Component},

@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { LocationTrackerService} from ''../../services/location-tracker.service';
+import { LocationTrackerService} from '../../services/location-tracker.service';
 
 @Component({
     selector: 'app-map',
-    templateUrl: '.map.component.html',
+    templateUrl: './map.component.html',
     styleUrls: ['./map.component.css']
 })
 export class MapComponent {
     constructor(public locationTracker: LocationTrackerService){}
 
-    inCompleted(puzzle: string): boolean {
+    isCompleted(puzzle: string): boolean {
         return this.locationTracker.currentStatus.get(puzzle);
     }
 

@@ -1,7 +1,7 @@
-import { Component } from "@angular/core";
-import { TeamDetailsService } from "src/app/services/team-details.service";
-import { LocationTrackerService } from "src/app/services/location-tracker.service";
-import { locationNames } from "src/app/models/locationNames";
+import { Component } from '@angular/core';
+import { TeamDetailsService } from 'src/app/services/team-details.service';
+import { LocationTrackerService } from 'src/app/services/location-tracker.service';
+import { locationNames } from 'src/app/models/locationNames';
 
 @Component({
     selector: 'app-create-new-password',
@@ -15,7 +15,7 @@ export class CreateNewPasswordComponent {
     password: string;
     completeRegex: boolean = false;
     lowercaseRegex: RegExp = /[a-z]/;
-    capRegex: RegExp = /[A-Z]/
+    capRegex: RegExp = /[A-Z]/;
     specialCharRegex: RegExp = /[!"£$%^&*()@~#'?=-_]/;
     numberRegex: RegExp = /[0-9]/;
     incorrect: boolean = true;
@@ -64,7 +64,7 @@ export class CreateNewPasswordComponent {
             this.lowercaseLetter = true;
             this.incorrect = false;
         }
-        if (this.capLetter == true && this.specialChar == true && this.number == true && this.lowercaseLetter == true && this.length == true) {
+        if (this.capLetter === true && this.specialChar === true && this.number === true && this.lowercaseLetter === true && this.length === true) {
             this.complete = true;
             this.incorrect = false;
         }

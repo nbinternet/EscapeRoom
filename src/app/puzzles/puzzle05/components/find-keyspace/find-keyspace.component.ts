@@ -1,6 +1,6 @@
-import { Component } from "@angular/core";
-import { LocationTrackerService } from "src/app/services/location-tracker.service";
-import { locationNames } from "src/app/models/locationNames";
+import { Component } from '@angular/core';
+import { LocationTrackerService } from 'src/app/services/location-tracker.service';
+import { locationNames } from 'src/app/models/locationNames';
 
 @Component({
     selector: 'app-find-keyspace',
@@ -13,9 +13,9 @@ export class FindKeyspaceComponent {
     public strongPasswordKeyspaceScientificNotation: number = 1.8215225100020465+31;
     public stringPassword: string;
     oldKeyspaceCorrect: boolean = false;
-    oldKeyspaceInCorrect: boolean = false;
+    oldKeyspaceIncorrect: boolean = false;
     strongKeyspaceCorrect: boolean = false;
-    strongKeyspaceInCorrect: boolean = false;
+    strongKeyspaceIncorrect: boolean = false;
     complete: boolean = false;
     length: number; 
     
@@ -28,31 +28,31 @@ export class FindKeyspaceComponent {
     }
 
     oldKeyspaceValue(keyspace: number): void {
-        if(keyspace == this.oldKeyspaceNumber) {
+        if(keyspace === this.oldKeyspaceNumber) {
             this.oldKeyspaceCorrect = true;
-            this.oldKeyspaceInCorrect = false;
+            this.oldKeyspaceIncorrect = false;
             this.isComplete();
         }
         else {
             this.oldKeyspaceCorrect = false;
-            this.oldKeyspaceInCorrect = true;
+            this.oldKeyspaceIncorrect = true;
         }
     }
 
 
     strongKeyspaceValue(keyspace: number): void {
-        if(keyspace == this.strongPasswordKeyspace || keyspace == this.strongPasswordKeyspaceScientificNotation) {
+        if(keyspace === this.strongPasswordKeyspace || keyspace === this.strongPasswordKeyspaceScientificNotation) {
             this.strongKeyspaceCorrect = true;
-            this.strongKeyspaceInCorrect = false;
+            this.strongKeyspaceIncorrect = false;
             this.isComplete();
         }
         else {
             this.strongKeyspaceCorrect = false;
-            this.strongKeyspaceInCorrect = true;
+            this.strongKeyspaceIncorrect = true;
         }
     }
 
-    isComplete() : void {
-        this.complete = this.strongKeyspaceCorrect == true && this.oldKeyspaceCorrect ==true;
+    isComplete(): void {
+        this.complete = (this.strongKeyspaceCorrect === true && this.oldKeyspaceCorrect === true);
     }
 }

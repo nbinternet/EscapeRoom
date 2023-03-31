@@ -9,7 +9,7 @@ import { locationNames } from "src/app/models/locationNames";
 })
 export class Puzzle05Component {
     public password: string;
-    public keyspace: number;  
+    public keyspace: number;
     
     constructor(
         private _locationTracker: LocationTrackerService

@@ -28,7 +28,7 @@ export class TerminalComponent implements OnInit {
         });
     }
 
-    getMachinesOutput(): string {
+    getMachineOutput(): string {
         let output: string = this.machine.toString();
         return this.prefix + output;
     }

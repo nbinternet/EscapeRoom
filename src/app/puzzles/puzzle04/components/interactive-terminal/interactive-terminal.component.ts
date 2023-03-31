@@ -1,6 +1,6 @@
-import { Component, OnInit } from "@angular/core";
-import { File } from "src/app/models/file";
-import { FileService } from "src/app/services/file.service";
+import { Component, OnInit } from '@angular/core';
+import { File } from 'src/app/models/file';
+import { FileService } from 'src/app/services/file.service'
 
 @Component({
     selector: 'app-interactive-terminal',
@@ -33,35 +33,35 @@ export class InteractiveTerminalComponent implements OnInit {
                 this.currentOutput = 'Invalid Input';
             }
             let command: string = inputSplit[0];
-            let param: string = inputSplit.length == 2 ? inputSplit[1] : null;
+            let param: string = inputSplit.length === 2 ? inputSplit[1] : null;
 
-            if (command == "cd") {
+            if (command === "cd") {
                 this.changeDirectory(param);
-            } else if (command == 'ls') {
-                if (param != null && param != "-lart") {
+            } else if (command === 'ls') {
+                if (param != null && param !== '-lart') {
                     this.currentOutput = 
-                    "Unrecognized parameter passed for ls command, did you mean -lart?";
+                    'Unrecognized parameter passed for ls command, did you mean -lart?';
                 } else {
-                    this.getListDir(param != null);
+                    this.getListDir(param !== null);
                 }
             } else {
-                this.currentOutput = "Invalid input";
+                this.currentOutput = 'Invalid input';
             }
         } else {
-            this.currentOutput = "Invalid input";
+            this.currentOutput = 'Invalid input';
         }
     }
 
     changeDirectory(param: string) {
         //No param passed, gets current directory
-        if (param == null) {
+        if (param === null) {
             this.currentOutput = this.getCurrentDirectory();
             return;
         }
         // cd .. passed, navigate to parent directory
-        if (param == "..") {
+        if (param === "..") {
             if (this.currentFile.parent == null) {
-                this.currentOutput = "No parent directory exists";
+                this.currentOutput = 'No parent directory exists';
                 return;
             } else {
                 this.currentFile = this.currentFile.parent;
@@ -70,18 +70,18 @@ export class InteractiveTerminalComponent implements OnInit {
         }
         // cd <folder> passed, navigate to folder
         for (const file of this.currentFile.subFiles) {
-            if (file.name == param) {
-                if (file.name == "folder") {
+            if (file.name === param) {
+                if (file.name === "folder") {
                     this.currentFile = file;
                     this.currentOutput = '';
                     return;
                 } else {
-                    this.currentOutput = "Cannot change directory to a file";
+                    this.currentOutput = 'Cannot change directory to a file';
                     return;
                 }
             }
         }
-        this.currentOutput = "Directory not found";
+        this.currentOutput = 'Directory not found';
     }
 
     getListDir(lart: boolean): void {

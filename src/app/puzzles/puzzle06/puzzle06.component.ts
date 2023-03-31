@@ -1,7 +1,7 @@
-import { Component } from "@angular/core";
-import { CountdownEvent } from "ngx-CountdownEvent";
-import { LocationTrackerService } from "src/app/services/location-tracker.service";
-import { locationNames } from "src/app/models/locationNames";
+import { Component } from '@angular/core';
+import { CountdownEvent } from 'ngx-Countdown';
+import { LocationTrackerService } from 'src/app/services/location-tracker.service';
+import { locationNames } from 'src/app/models/locationNames';
 
 @Component({
     selector: 'app-puzzle06',
@@ -32,7 +32,7 @@ export class Puzzle06Component {
 
     update(value: string) {
         this.answer = value;
-        if(/^we are hackers and you cannot crack this code$/.test(this.answer.trim().toLowerCase())){
+        if (/^we are hackers and you cannot crack this code$/.test(this.answer.trim().toLowerCase())) {
             this.correctAnswer = true;
             this.incorrect = false;
             this.showHint = false;

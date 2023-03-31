@@ -7,7 +7,7 @@ import { File } from '../models/file';
 export class FileService {
     generateMockFiles(): File {
     //Base File
-    let base: File = new File('I:\', null, 'folder', "");
+    let base: File = new File('I:/', null, 'folder', '');
     //Creating 3 top level folders
     let config: File = new File('config', base, 'folder', 'rw-r--r--');
     let scripts: File = new File('scripts', base, 'folder', 'rwr-xr--');

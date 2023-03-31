@@ -1,5 +1,5 @@
-import {Injectable} from '@angular/core';
-import {Subject} from "rxjs";
+import { Injectable } from '@angular/core';
+import { timer } from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -10,11 +10,11 @@ export class TimerControlService {
   private _time: number = 0;
 
     constructor() {
-      TimerControlService(0, 1000).subscribe(() => {
-        if(this.isRunning){
+      timer(0, 1000).subscribe(() => {
+        if (this.isRunning){
           this._time++;
         }
-      })
+      });
   }
 
   get displayTime() {

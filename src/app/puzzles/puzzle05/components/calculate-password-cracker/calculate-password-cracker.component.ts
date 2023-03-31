@@ -1,6 +1,6 @@
-import { Component } from "@angular/core";
-import { LocationTrackerService } from "src/app/services/location-tracker.service";
-import { locationNames } from "src/app/models/locationNames";
+import { Component } from '@angular/core';
+import { LocationTrackerService } from 'src/app/services/location-tracker.service';
+import { locationNames } from 'src/app/models/locationNames';
 
 @Component({
     selector: 'app-calculate-password-cracker',
@@ -13,7 +13,7 @@ export class CalculatePasswordCrackerComponent {
     strongPasswordCrackerCorrect: boolean = false;
     strongPasswordCrackerInCorrect: boolean = false;
     weakPasswordCrackerCorrect: boolean = false;
-    weakPasswordCrackerInCorrect: boolean = false;
+    weakPasswordCrackerIncorrect: boolean = false;
     complete: boolean = false;
 
     constructor(private _locationTracker: LocationTrackerService){}
@@ -22,8 +22,8 @@ export class CalculatePasswordCrackerComponent {
         this._locationTracker.currentStatus.set(locationNames.Puzzle05Part3, true);
     }
 
-    strongPasswordCrackerValue(strongHours: number) : void {
-        if(strongHours == this.strongHoursToCrack){
+    strongPasswordCrackerValue(strongHours: number): void {
+        if (strongHours === this.strongHoursToCrack){
             this.strongPasswordCrackerCorrect = true;
             this.strongPasswordCrackerInCorrect = false;
             this.isComplete();
@@ -34,20 +34,20 @@ export class CalculatePasswordCrackerComponent {
         }
     }
 
-    weakPasswordCrackerValue(weakHours: number) : void {
-        if(weakHours == this.weakHoursToCrack){
+    weakPasswordCrackerValue(weakHours: number): void {
+        if (weakHours === this.weakHoursToCrack){
             this.weakPasswordCrackerCorrect = true;
-            this.weakPasswordCrackerInCorrect = false;
+            this.weakPasswordCrackerIncorrect = false;
             this.isComplete();
         }
         else {
             this.weakPasswordCrackerCorrect = false;
-            this.weakPasswordCrackerInCorrect = true;
+            this.weakPasswordCrackerIncorrect = true;
         }
     }
 
     isComplete(): void {
-        if(this.strongPasswordCrackerCorrect == true && this.weakPasswordCrackerCorrect == true) {
+        if (this.strongPasswordCrackerCorrect === true && this.weakPasswordCrackerCorrect === true) {
             this.complete = true;
         }
     }

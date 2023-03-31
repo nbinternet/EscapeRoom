@@ -24,7 +24,7 @@ export class FindPhishingVulnerabilitiesComponent implements OnInit {
     public maliciousLink: string = `https://www.glasgow-science-centre.com/glasgowsecurity/loginnow/status?message=<script src="loginnow.js"></script>`;
 
     get allSignsFound(): boolean {
-        return this.signsFound.length == 6;
+        return this.signsFound.length === 6;
     }
 
     constructor(
