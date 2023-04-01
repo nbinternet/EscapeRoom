@@ -59,7 +59,7 @@ export class InteractiveTerminalComponent implements OnInit {
             return;
         }
         // cd .. passed, navigate to parent directory
-        if (param === "..") {
+        if (param === '..') {
             if (this.currentFile.parent == null) {
                 this.currentOutput = 'No parent directory exists';
                 return;
@@ -71,7 +71,7 @@ export class InteractiveTerminalComponent implements OnInit {
         // cd <folder> passed, navigate to folder
         for (const file of this.currentFile.subFiles) {
             if (file.name === param) {
-                if (file.name === "folder") {
+                if (file.type === 'folder') {
                     this.currentFile = file;
                     this.currentOutput = '';
                     return;

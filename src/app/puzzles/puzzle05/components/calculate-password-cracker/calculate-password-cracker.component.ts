@@ -8,8 +8,8 @@ import { locationNames } from 'src/app/models/locationNames';
     styleUrls: ['./calculate-password-cracker.component.css']
 })
 export class CalculatePasswordCrackerComponent {
-    strongHoursToCrack: number = 505978475000568449866135;
-    weakHoursToCrack: number = 0.33;
+    strongHoursToCrack: string = '505978475000568449866135';
+    weakHoursToCrack: string = '0.33';
     strongPasswordCrackerCorrect: boolean = false;
     strongPasswordCrackerInCorrect: boolean = false;
     weakPasswordCrackerCorrect: boolean = false;
@@ -22,7 +22,7 @@ export class CalculatePasswordCrackerComponent {
         this._locationTracker.currentStatus.set(locationNames.Puzzle05Part3, true);
     }
 
-    strongPasswordCrackerValue(strongHours: number): void {
+    strongPasswordCrackerValue(strongHours: string): void {
         if (strongHours === this.strongHoursToCrack){
             this.strongPasswordCrackerCorrect = true;
             this.strongPasswordCrackerInCorrect = false;
@@ -34,7 +34,7 @@ export class CalculatePasswordCrackerComponent {
         }
     }
 
-    weakPasswordCrackerValue(weakHours: number): void {
+    weakPasswordCrackerValue(weakHours: string): void {
         if (weakHours === this.weakHoursToCrack){
             this.weakPasswordCrackerCorrect = true;
             this.weakPasswordCrackerIncorrect = false;

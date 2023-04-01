@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {locationNames} from "../models/locationNames";
+import {locationNames} from '../models/locationNames';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +9,7 @@ export class LocationTrackerService {
   public checkpointMap = new Map();
 
     constructor() {
-       console.info("initilise LocationTrackerService")
+      console.info('initilise LocationTrackerService');
       this.currentStatus.set(locationNames.Puzzle01, false);
       this.currentStatus.set(locationNames.Puzzle02, false);
       this.currentStatus.set(locationNames.Puzzle03, false);
@@ -28,14 +28,14 @@ export class LocationTrackerService {
 
   getPuzzleCheckpointIfApplicable(puzzleName: locationNames): number {
     let checkpoint: number = this.checkpointMap.get(puzzleName);
-    if(checkpoint) {
+    if (checkpoint) {
       return checkpoint;
     } else {
       return -1;
     }
   }
 
-  registerCheckpointForPuzzle(puzzleName: locationNames, checkpoint: number) : void {
+  registerCheckpointForPuzzle(puzzleName: locationNames, checkpoint: number): void {
     this.checkpointMap.set(puzzleName, checkpoint);
   }
 }

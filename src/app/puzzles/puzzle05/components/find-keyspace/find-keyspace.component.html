@@ -37,7 +37,7 @@
             </div>
         </div>
         <br>
-        An example of a strong password is <strong>Cloud123@#456aAfe</strong>, are you able to find its keyspace?
+        An example of a strong password is <strong>Cloud123@#456sAfe</strong>, are you able to find its keyspace?
         <br>
         <div class="form-group mb-3">
             <label for password class="form-label">Input keyspace here:</label>
@@ -56,9 +56,9 @@
             <i class="fa fa-check"></i>
             That's right!
             <div class="m-1 fw-lighter">
-                That's the correct keyspace for password: <strong>Cloud123@#456aAfe</strong>. Well done!
+                That's the correct keyspace for password: <strong>Cloud123@#456sAfe</strong>. Well done!
             </div>
-            <div ngIf="complete">
+            <div *ngIf="complete">
                 Good work! You were able to calculate both keyspaces correctly. Lets move on to the next part.
                 <br>
                 <button (click)="nextClicked()" class="btn btn-success">Next</button>
