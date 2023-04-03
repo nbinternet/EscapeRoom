@@ -1,5 +1,5 @@
 export enum PhishingSignsEnum {
-    theRequest = 'TheRequest',
+    theRequest = 'theRequest',
     language = 'language',
     content = 'content',
     sender = 'sender',

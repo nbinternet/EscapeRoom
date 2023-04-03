@@ -34,8 +34,8 @@ export class XxsInputValidationComponent {
 
     constructor(private _locationTracker: LocationTrackerService){}
 
-    updateAnswer(option: any) {
-        if(option.trim() === this.encodedParam){
+    updateAnswer (option: any) {
+        if (option.trim() === this.encodedParam) {
             this.isCorrect = true;
             this.isWrong = false;
         }else {
@@ -44,7 +44,7 @@ export class XxsInputValidationComponent {
         }
     } 
 
-    nextClicked(){
+    nextClicked (){
         this._locationTracker.currentStatus.set(locationNames.Puzzle03Part3, true);
     }
 }

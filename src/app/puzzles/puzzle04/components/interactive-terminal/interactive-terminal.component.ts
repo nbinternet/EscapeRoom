@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { File } from 'src/app/models/file';
-import { FileService } from 'src/app/services/file.service'
+import { FileService } from 'src/app/services/file.service';
 
 @Component({
     selector: 'app-interactive-terminal',
@@ -60,7 +60,7 @@ export class InteractiveTerminalComponent implements OnInit {
         }
         // cd .. passed, navigate to parent directory
         if (param === '..') {
-            if (this.currentFile.parent == null) {
+            if (this.currentFile.parent === null) {
                 this.currentOutput = 'No parent directory exists';
                 return;
             } else {

@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
-import { TermnialService } from './terminal.service';
+import { TerminalService } from './terminal.service';
 
 describe('TerminalService', () => {
-    let service: TermnialService;
+    let service: TerminalService;
 
-    beforeEach((() => {
+    beforeEach(() => {
         TestBed.configureTestingModule({});
-        service = TestBed.inject(TermnialService);
+        service = TestBed.inject(TerminalService);
     });
 
     it('should be created', () => {

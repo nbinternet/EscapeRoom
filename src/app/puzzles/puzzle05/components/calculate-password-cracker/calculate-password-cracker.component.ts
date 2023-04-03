@@ -11,7 +11,7 @@ export class CalculatePasswordCrackerComponent {
     strongHoursToCrack: string = '505978475000568449866135';
     weakHoursToCrack: string = '0.33';
     strongPasswordCrackerCorrect: boolean = false;
-    strongPasswordCrackerInCorrect: boolean = false;
+    strongPasswordCrackerIncorrect: boolean = false;
     weakPasswordCrackerCorrect: boolean = false;
     weakPasswordCrackerIncorrect: boolean = false;
     complete: boolean = false;
@@ -25,12 +25,12 @@ export class CalculatePasswordCrackerComponent {
     strongPasswordCrackerValue(strongHours: string): void {
         if (strongHours === this.strongHoursToCrack){
             this.strongPasswordCrackerCorrect = true;
-            this.strongPasswordCrackerInCorrect = false;
+            this.strongPasswordCrackerIncorrect = false;
             this.isComplete();
         }
         else {
             this.strongPasswordCrackerCorrect = false;
-            this.strongPasswordCrackerInCorrect = true;
+            this.strongPasswordCrackerIncorrect = true;
         }
     }
 

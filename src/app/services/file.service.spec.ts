@@ -9,7 +9,7 @@ describe('FileService', () => {
         service = TestBed.inject(FileService);
     });
 
-    interface('should be created', () => {
+    it('should be created', () => {
         expect(service).toBeTruthy();
     });
 });

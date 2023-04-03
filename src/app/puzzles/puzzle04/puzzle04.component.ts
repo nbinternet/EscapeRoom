@@ -23,7 +23,7 @@ export class Puzzle04Component {
 
     update(value: string) {
         this.answer = value;
-        if (value === "password-config"){
+        if (value === 'password-config'){
             this.correctAnswer = true;
             this.incorrect= false;
             this.showHint = false;
@@ -34,7 +34,7 @@ export class Puzzle04Component {
     }
 
     handleEvent(event: CountdownEvent) {
-        if(event.action === "done") {
+        if (event.action === 'done') {
             this.showHint = true;
             this.incorrect = false;
         }

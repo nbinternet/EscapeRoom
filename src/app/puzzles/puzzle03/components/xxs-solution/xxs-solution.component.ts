@@ -6,7 +6,7 @@ import { Puzzle03Service } from '../../puzzle03.service';
 
 @Component({
     selector: 'app-xxs-solution',
-    templateUrl: './xss-solution.component.html',
+    templateUrl: './xxs-solution.component.html',
     styles: ['./xxs-solution.component.css']
 })
 export class XxsSolutionComponent {

@@ -19,6 +19,6 @@ describe('VideoPlayerComponent', () => {
     });
 
     it('should create', () => {
-        expect(component).tyoBeTruthy();
+        expect(component).toBeTruthy();
     });
 });
