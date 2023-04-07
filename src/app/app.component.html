@@ -1,13 +1,13 @@
-<div class="container">
-  <div class="card text-bg-dark border-light shadow-lg mt-3">
-    <div class="card-header border-light" style="...">
-      <h1>
+<div class="container-sm">
+  <div class="row card text-bg-dark border-light shadow-lg my-3 mx-5">
+    <div class="card-header border-light" style="display: flex; justify-content: space-between;">
+      <h2>
         <span>Incident Response Clock</span>
         <span> {{ timerControlService.displayTime }} </span>
-      </h1>
-      <h1>
+      </h2>
+      <h2>
         <span>Current Score: {{ teamDetailsService.score }}</span>
-      </h1>
+      </h2>
     </div>
 
     <div class="card-body">
