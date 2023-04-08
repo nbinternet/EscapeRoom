@@ -8,34 +8,34 @@
     margin: auto;
 }
 
-.towermap__button {
+.towermap__icon {
     width: 70px;
     height: 70px;
 }
 
-.towermap__button:focus {
+.towermap__icon:focus {
     outline: none;
 }
 
-.towermap__button__puzzle01 {
+.towermap__icon__puzzle01 {
     transform: translate(965px, 1750px)
 }
 
-.towermap__button__puzzle02 {
+.towermap__icon__puzzle02 {
     transform: translate(980px, 400px);
 }
 
-.towermap__button__puzzle03 {
+.towermap__icon__puzzle03 {
     transform: translate(1140px, 300px);
 }
 
-.towermap__button__puzzle04 {
+.towermap__icon__puzzle04 {
     transform: translate(970px, 1300px);
 }
 
-.towermap__button__puzzle05 {
+.towermap__icon__puzzle05 {
     transform: translate(1030px, 1650px);
 }
-.towermap__button__puzzle06 {
+.towermap__icon__puzzle06 {
     transform: translate(1040px, 900px);
 }
