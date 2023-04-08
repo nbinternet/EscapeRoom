@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LocationTrackerService} from '../../services/location-tracker.service';
+import { puzzleConfig } from 'src/app/constants/puzzle.config';
 
 @Component({
     selector: 'app-map',
@@ -7,6 +8,8 @@ import { LocationTrackerService} from '../../services/location-tracker.service';
     styleUrls: ['./map.component.css']
 })
 export class MapComponent {
+    public config = puzzleConfig
+
     constructor(public locationTracker: LocationTrackerService){}
 
     isCompleted(puzzle: string): boolean {

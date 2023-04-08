@@ -10,13 +10,13 @@ import { TimerControlService } from "./services/timer-control.service";
 })
 
 export class AppComponent {
-   constructor(
-    public timerControlService: TimerControlService,
-    public teamDetailsService: TeamDetailsService,
-    public router: Router
-   ){}
+  constructor(
+  public timerControlService: TimerControlService,
+  public teamDetailsService: TeamDetailsService,
+  public router: Router
+  ){}
 
-   ngOnInit(){
-    this.router.navigate([''])
-   }
+  ngOnInit() {
+  this.router.navigate([''])
+  }
 }

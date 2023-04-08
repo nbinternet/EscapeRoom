@@ -19,37 +19,21 @@
                 height="2200"
                 href="../../assets/Glasgow_Tower.jpg"
             ></image>
-            
-            <!--Access Controls-->
-            <image *ngIf="!isCompleted('Puzzle01')" routerLink="/puzzle01" height="60" width="60" x="965" y="1750" href="../../../assets/danger.png"
-                xlink:title="Access Controls"></image>
-            <image *ngIf="isCompleted('Puzzle01')" routerLink="/puzzle01" height="60" width="60" x="965" y="1750" href="../../../assets/green_tick.JPG"
-                xlink:title="Access Controls"></image>
-            <!--Lift Operations-->
-            <image *ngIf="!isCompleted('Puzzle02')" routerLink="/puzzle02" height="60" width="60" x="980" y="400" href="../../../assets/danger.png"
-                xlink:title="Access Controls"></image>
-            <image *ngIf="isCompleted('Puzzle02')" routerLink="/puzzle02" height="60" width="60" x="980" y="400" href="../../../assets/green_tick.JPG"
-                xlink:title="Access Controls"></image>    
-            <!--Weather Controls - Vulnerable Website-->
-            <image *ngIf="!isCompleted('Puzzle03')" routerLink="/puzzle03" height="60" width="60" x="1140" y="300" href="../../../assets/danger.png"
-                xlink:title="Access Controls"></image>
-            <image *ngIf="isCompleted('Puzzle03')" routerLink="/puzzle03" height="60" width="60" x="1140" y="300" href="../../../assets/green_tick.JPG"
-                xlink:title="Access Controls"></image>    
-            <!--Weather Controls - Vulnerable Machine-->
-            <image *ngIf="!isCompleted('Puzzle04')" routerLink="/puzzle04" height="60" width="60" x="970" y="1300" href="../../../assets/danger.png"
-                xlink:title="Access Controls"></image>
-            <image *ngIf="isCompleted('Puzzle04')" routerLink="/puzzle04" height="60" width="60" x="970" y="1300" href="../../../assets/green_tick.JPG"
-                xlink:title="Access Controls"></image> 
-            <!--Tower Brakes/Alignment-->
-            <image *ngIf="!isCompleted('Puzzle05')" routerLink="/puzzle05" height="60" width="60" x="1030" y="1650" href="../../../assets/danger.png"
-                xlink:title="Access Controls"></image>
-            <image *ngIf="isCompleted('Puzzle05')" routerLink="/puzzle05" height="60" width="60" x="1030" y="1650" href="../../../assets/green_tick.JPG"
-                xlink:title="Access Controls"></image>   
-            <!--Climate Control-->
-            <image *ngIf="!isCompleted('Puzzle06')" routerLink="/puzzle06" height="60" width="60" x="1040" y="900" href="../../../assets/danger.png"
-                xlink:title="Access Controls"></image>
-            <image *ngIf="isCompleted('Puzzle06')" routerLink="/puzzle06" height="60" width="60" x="1040" y="900" href="../../../assets/green_tick.JPG"
-                xlink:title="Access Controls"></image>                                                                          
+                
+            <g *ngFor="let item of config">
+                <g  *ngIf="!isCompleted(item.name)" [routerLink]="item.route" class="towermap__button towermap__button__{{item.name}}">
+                    <path d="M38.0822 5.7717L38.083 5.77318L65.7685 59.6794L65.7693 59.681C66.4832 61.0668 66.4853 62.8031 65.7873 64.1963C65.0976 65.573 63.8738 66.3125 62.6808 66.3125H7.30972C6.11676 66.3125 4.89296 65.573 4.20319 64.1963C3.50741 62.8075 3.51742 61.0551 4.22279 59.678L31.9076 5.77318L31.9083 5.7717C32.6091 4.40359 33.81 3.6875 34.9953 3.6875C36.1805 3.6875 37.3815 4.4036 38.0822 5.7717Z" fill="#F2BC00" stroke="#302C2D" stroke-width="3"/>
+                    <path d="M34.7266 20.7813C32.9022 20.7813 31.6504 22.3486 31.6504 24.2969V40.7031C31.6504 42.6514 33.0219 44.2187 34.7266 44.2187C36.4313 44.2187 37.8027 42.6514 37.8027 40.7031V24.2969C37.8027 22.3486 36.5509 20.7812 34.7266 20.7813ZM38.8281 53.5938C38.8281 52.3505 38.396 51.1583 37.6268 50.2792C36.8576 49.4001 36.7088 48.9062 34.7266 48.9062C33.6388 48.9062 32.5955 49.4001 31.8263 50.2792C31.0571 51.1583 30.625 52.3505 30.625 53.5938C30.625 54.837 31.0571 56.0292 31.8263 56.9083C32.5955 57.7874 33.6388 58.2812 34.7266 58.2812C35.8144 58.2812 36.8576 57.7874 37.6268 56.9083C38.396 56.0292 38.8281 54.837 38.8281 53.5938Z" fill="#302C2D"/>
+                    <path d="M34.7266 20.7813C32.9022 20.7813 31.6504 22.3486 31.6504 24.2969V40.7031C31.6504 42.6514 33.0219 44.2187 34.7266 44.2187C36.4313 44.2187 37.8027 42.6514 37.8027 40.7031V24.2969C37.8027 22.3486 36.5509 20.7812 34.7266 20.7813Z" fill="#302C2D"/>
+                    <path d="M38.8281 53.5938C38.8281 52.3505 38.396 51.1583 37.6268 50.2792C36.8576 49.4001 36.7088 48.9062 34.7266 48.9062C33.6388 48.9062 32.5955 49.4001 31.8263 50.2792C31.0571 51.1583 30.625 52.3505 30.625 53.5938C30.625 54.837 31.0571 56.0292 31.8263 56.9083C32.5955 57.7874 33.6388 58.2812 34.7266 58.2812C35.8144 58.2812 36.8576 57.7874 37.6268 56.9083C38.396 56.0292 38.8281 54.837 38.8281 53.5938Z" fill="#302C2D"/>
+                    <path d="M34.7266 20.7813C32.9022 20.7813 31.6504 22.3486 31.6504 24.2969V40.7031C31.6504 42.6514 33.0219 44.2187 34.7266 44.2187C36.4313 44.2187 37.8027 42.6514 37.8027 40.7031V24.2969C37.8027 22.3486 36.5509 20.7812 34.7266 20.7813ZM38.8281 53.5938C38.8281 52.3505 38.396 51.1583 37.6268 50.2792C36.8576 49.4001 36.7088 48.9062 34.7266 48.9062C33.6388 48.9062 32.5955 49.4001 31.8263 50.2792C31.0571 51.1583 30.625 52.3505 30.625 53.5938C30.625 54.837 31.0571 56.0292 31.8263 56.9083C32.5955 57.7874 33.6388 58.2812 34.7266 58.2812C35.8144 58.2812 36.8576 57.7874 37.6268 56.9083C38.396 56.0292 38.8281 54.837 38.8281 53.5938Z" stroke="black"/>
+                </g>
+                    
+                <g *ngIf="isCompleted(item.name)" class="towermap__button towermap__button__{{item.name}}">
+                    <path d="M35 69.2308C44.0539 69.2308 52.7371 65.5838 59.1392 59.0922C65.5413 52.6005 69.1379 43.796 69.1379 34.6154C69.1379 25.4348 65.5413 16.6303 59.1392 10.1386C52.7371 3.64697 44.0539 0 35 0C25.9461 0 17.2629 3.64697 10.8608 10.1386C4.45873 16.6303 0.862061 25.4348 0.862061 34.6154C0.862061 43.796 4.45873 52.6005 10.8608 59.0922C17.2629 65.5838 25.9461 69.2308 35 69.2308Z" fill="#219653"/>
+                    <path d="M50.3745 28.0506L33.3055 45.3583C32.052 46.6294 30.0251 46.6294 28.7849 45.3583L24.5177 41.0314L20.2504 36.7045C18.9969 35.4334 18.9969 33.3782 20.2504 32.1206C21.5039 30.8631 23.5309 30.8496 24.771 32.1206L31.0385 38.4758L45.8405 23.4533C47.094 22.1822 49.121 22.1822 50.3612 23.4533C51.6013 24.7243 51.6147 26.7796 50.3612 28.0371L50.3745 28.0506Z" fill="white"/>
+                </g>
+            </g>                                                       
         </svg>
         <p>Image Credit: Stephen Breslin</p>
     </div>

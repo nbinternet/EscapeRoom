@@ -8,16 +8,16 @@ Players are challenged under timed conditions to identify and resolve various cy
 
 ## Getting Started Instructions
 
-### 1. Install Nodejs v14 from [this link](https://nodejs.org/en/blog/release/v14.21.3) 
+### 1. Install Nodejs v14 from [nodejs.org](https://nodejs.org/en/blog/release/v14.21.3) 
 
 Make sure to choose the correct installer for your machine
 recommended:
 
-    For Windows: Windows 32-bit Installer: https://nodejs.org/dist/v14.21.3/node-v14.21.3-x86.msi
-    For macOs: macOS 64-bit Installer: https://nodejs.org/dist/v14.21.3/node-v14.21.3.pkg
-    For Linux: Linux 64-bit Binary: https://nodejs.org/dist/v14.21.3/node-v14.21.3-linux-x64.tar.xz
+> For Windows: Windows 32-bit Installer: https://nodejs.org/dist/v14.21.3/node-v14.21.3-x86.msi </br>
+> For macOs: macOS 64-bit Installer: https://nodejs.org/dist/v14.21.3/node-v14.21.3.pkg</br>
+> For Linux: Linux 64-bit Binary: https://nodejs.org/dist/v14.21.3/node-v14.21.3-linux-x64.tar.xz</br>
 
-### 3. Install VS Code from from [this link](https://code.visualstudio.com/download)
+### 3. Install VS Code from [code.visualstudio.com](https://code.visualstudio.com/download)
 
 Again make sure to choose the correct installer for your machine
 
@@ -51,7 +51,7 @@ Open the terminal (see first part of step 5)
 
 Type into the prompt: `npm run start`
 
-Once compiled, navigate to [http://localhost:4200/](http://localhost:4200/)
+Once compiled, navigate to http://localhost:4200/
 
  
 
