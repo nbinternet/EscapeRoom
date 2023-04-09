@@ -8,9 +8,9 @@ import { locationNames } from 'src/app/models/locationNames';
     styleUrls: ['./find-keyspace.component.css']
 })
 export class FindKeyspaceComponent {
-    public oldKeyspace: string = '11881376';
-    public strongPasswordKeyspace: string = '18215225100020464195180876374789';
-    public strongPasswordKeyspaceScientificNotation: string = '1.8215225100020465+31';
+    public oldKeyspace: number = 11881376;
+    public strongPasswordKeyspace: number = 8672268670119743003325615242037000;
+    public strongPasswordKeyspaceScientificNotation: number = 8.672268670119743003325615242037e+34;
     public stringPassword: string;
     oldKeyspaceCorrect: boolean = false;
     oldKeyspaceIncorrect: boolean = false;
@@ -28,7 +28,7 @@ export class FindKeyspaceComponent {
     }
 
     oldKeyspaceValue(keyspace: string): void {
-        if(keyspace === this.oldKeyspace) {
+        if(+keyspace === this.oldKeyspace) {
             this.oldKeyspaceCorrect = true;
             this.oldKeyspaceIncorrect = false;
             this.isComplete();
@@ -41,7 +41,7 @@ export class FindKeyspaceComponent {
 
 
     strongKeyspaceValue(keyspace: string): void {
-        if(keyspace === this.strongPasswordKeyspace || keyspace === this.strongPasswordKeyspaceScientificNotation) {
+        if(+keyspace === this.strongPasswordKeyspace || +keyspace === this.strongPasswordKeyspaceScientificNotation) {
             this.strongKeyspaceCorrect = true;
             this.strongKeyspaceIncorrect = false;
             this.isComplete();

@@ -6,7 +6,16 @@ Designed for students with base level knowledge of cyber and computer systems.
 
 Players are challenged under timed conditions to identify and resolve various cyber threats based in the Glasgow Tower. Players must be cautios as valuable points get deducted for incorrect answers.
 
-## Getting Started Instructions
+## Building the App
+
+Run `ng build` to build the project while in teh base folder. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build. These can then be hosted in your web server.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+## Development - Getting Started Instructions
 
 ### 1. Install Nodejs v14 from [this link](https://nodejs.org/en/blog/release/v14.21.3) 
 
@@ -43,7 +52,7 @@ In the prompt that comes up at the bottom of the screen: `npm install`
 
 This will install all the dependencies needed for the project
 
-## Running the App
+## Running the App in VS Code
 
 Open the project in VS Code (if not already opened)
 
@@ -53,6 +62,17 @@ Type into the prompt: `npm run start`
 
 Once compiled, navigate to [http://localhost:4200/](http://localhost:4200/)
 
- 
+ ## Running the App as a Dev server
+
+ Go to the project directory and launch the server.
+
+`cd my-app`
+
+`ng serve --open`
+
+The `ng serve` command launches the server, watches your files, and rebuilds the app as you make changes to those files.
+
+Using the `--open` (or just `-o`) option will automatically open your browser on `http://localhost:4200/`.
+
 
 

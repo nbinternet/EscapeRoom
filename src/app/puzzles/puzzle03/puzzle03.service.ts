@@ -86,7 +86,7 @@ export class Puzzle03Service {
         },
         {
             name: 'Use modern up-to-date web frameworks, such as Angular or React with built in methods to handle server requests',
-            desc: 'Most modern frameworks have well maintained and thoroughtly tested functions that sanitize parameters to prevent them from being interpreted. These are usally more reliable than writing your own custom ones.',
+            desc: 'Most modern frameworks have well maintained and thoroughly tested functions that sanitize parameters to prevent them from being interpreted. These are usually more reliable than writing your own custom ones.',
             isCorrect: true,
             checked: false,
         },
@@ -97,7 +97,7 @@ export class Puzzle03Service {
             checked: false,
         },
         {
-            name: 'Block all external URLs from the GSC nSetwork',
+            name: 'Block all external URLs from the GSC network',
             desc: 'This would have no effect on this type of attack because the hacker changed an internal URL to contain a malicious script.',
             isCorrect: false,
             checked: false,

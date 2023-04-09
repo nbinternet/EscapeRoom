@@ -19,7 +19,7 @@ export class FindPhishingVulnerabilitiesComponent implements OnInit {
     Can you help then team at the Glasgow Science Centre identify some warning signs in the phishing email?`;
 
     public emailLabel: string =
-    'Click on different parts of the email to identify phishing warning signs (there are 6 in total';
+    'Click on different parts of the email to identify phishing warning signs (there are 6 in total).';
     
     public maliciousLink: string = `https://www.glasgow-science-centre.com/glasgowsecurity/loginnow/status?message=<script src="loginnow.js"></script>`;
 
