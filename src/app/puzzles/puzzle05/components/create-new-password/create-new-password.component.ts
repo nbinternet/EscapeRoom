@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { TeamDetailsService } from 'src/app/services/team-details.service';
 import { LocationTrackerService } from 'src/app/services/location-tracker.service';
 import { locationNames } from 'src/app/models/locationNames';
+import {CountdownEvent} from "ngx-countdown";
 
 @Component({
     selector: 'app-create-new-password',
@@ -25,8 +26,13 @@ export class CreateNewPasswordComponent {
     lowercaseLetter: boolean = false;
     complete: boolean = false;
     length: boolean = false;
-    
-    constructor(
+    showHint: boolean = false;
+    config = {
+      leftTime: 120, //2 mins
+      format: ''
+    };
+
+  constructor(
         private _locationTracker: LocationTrackerService,
     ) {}
 
@@ -69,4 +75,11 @@ export class CreateNewPasswordComponent {
             this.incorrect = false;
         }
     }
+
+  handleEvent(event: CountdownEvent) {
+    if (event.action === 'done'){
+      this.showHint = true;
+      this.incorrect = false;
+    }
+  }
 }

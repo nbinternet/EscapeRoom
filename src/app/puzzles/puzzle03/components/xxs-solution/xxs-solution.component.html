@@ -3,6 +3,12 @@
         <div>
             A security admin on the Glasgow Science Centre cyber security team received the phishing email. They hovered over the link and saw that it did lead to a genuine Glasgow Science Centre page.
         </div>
+      <countdown [config]="config" (event)="handleEvent($event)"></countdown>
+      <div class="hint" *ngIf="showHint">
+        <i class="fa fa-info-circle"></i>
+        Hint!
+        <p>This is a hint.</p>
+      </div>
         <img class="my-2" src="../../../../../assets/puzzle03/xxs-url.PNG">
         <div>
             They clicked to see what the security issue was.
@@ -34,7 +40,7 @@
         <span class="fw-lighter">{{ option.desc }}</span>
     </div>
     </div>
-    
+
     <div *ngIf="allAnswersFound" class="mt-3 rightAnswer">
         <span class="fw-bold">You have found all the correct answers!</span>
         <button (click)="nextClicked()" class="ms-2 btn btn-success">

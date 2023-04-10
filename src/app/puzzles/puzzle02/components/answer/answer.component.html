@@ -1,7 +1,12 @@
 <div class="form-group mb-3">
+  <countdown [config]="config" (event)="handleEvent($event)"></countdown>
+  <div class="hint" *ngIf="showHint">
+    <i class="fa fa-info-circle"></i>
+    Hint!
+  </div>
     <label for sql-answer class="form-label">{{ label }}</label>
     <input #answer class="form-control bg-dark border-light"/>
-    <button 
+    <button
         class="btn btn-outline-light bg-dark mt-3"
         (click)="updateAnswer(answer.value)"
     >

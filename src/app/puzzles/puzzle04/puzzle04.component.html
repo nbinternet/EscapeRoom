@@ -10,6 +10,12 @@
             You must find the vulnerability in the machine shown. You will interact with this machine using its command line.
             You will need to navigate the file system and identify the file(s) that have been comproised.
         </p>
+      <countdown [config]="config" (event)="handleEvent($event)"></countdown>
+      <div class="hint" *ngIf="showHint">
+        <i class="fa fa-info-circle"></i>
+        Hint!
+        <p>This is a hint.</p>
+      </div>
     </div>
     <div class="row">
         <div class="col-9">
@@ -36,9 +42,9 @@
                 role="alert"
                 >
                 <i class="fa fa-times-circle"></i>
-                That's not the correct file/folder 
+                That's not the correct file/folder
                 </div>
-                <div 
+                <div
                     *ngIf="correctAnswer && !incorrect"
                     class="rightAnswer fw-bold fade show"
                     role="alert"
@@ -50,7 +56,7 @@
                         The hackers raised the access on the password file so they could read, write and execute at will.
                         On Linux machines you can view the permissions using the -I flag command.
                     </div>
-                    <button 
+                    <button
                         type="button"
                         class="btn btn-success"
                         routerLink="/towermap"

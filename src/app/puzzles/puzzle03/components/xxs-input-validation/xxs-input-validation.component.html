@@ -1,5 +1,11 @@
 <div class="row">
     <div class="col-7">
+      <countdown [config]="config" (event)="handleEvent($event)"></countdown>
+      <div class="hint" *ngIf="showHint">
+        <i class="fa fa-info-circle"></i>
+        Hint!
+        <p>This is a hint.</p>
+      </div>
         <div>{{ description }}</div>
         <br/>
         <div>{{ questionLabel }}</div>
@@ -19,7 +25,7 @@
             </button>
         </div>
 
-        <div 
+        <div
         *ngIf="isCorrect"
         class="rightAnswer mt-3 fw-bold"
         role="alert"
@@ -38,7 +44,7 @@
         </div>
         <br/>
         <div class="pad-textarea">
-            <textarea rows="10" cols="80" name="text" placeholder="Scratchpad for team working"></textarea>         
+            <textarea rows="10" cols="80" name="text" placeholder="Scratchpad for team working"></textarea>
         </div>
     </div>
     <div class="col-5">

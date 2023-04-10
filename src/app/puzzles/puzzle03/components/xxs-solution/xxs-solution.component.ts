@@ -3,6 +3,7 @@ import { locationNames } from 'src/app/models/locationNames';
 import { LocationTrackerService } from 'src/app/services/location-tracker.service';
 import { TeamDetailsService } from 'src/app/services/team-details.service';
 import { Puzzle03Service } from '../../puzzle03.service';
+import {CountdownEvent} from "ngx-countdown";
 
 @Component({
     selector: 'app-xxs-solution',
@@ -10,7 +11,13 @@ import { Puzzle03Service } from '../../puzzle03.service';
     styles: ['./xxs-solution.component.css']
 })
 export class XxsSolutionComponent {
-    get allAnswersFound(): boolean {
+  showHint: boolean = false;
+  config = {
+    leftTime: 120, //2 mins
+    format: ''
+  };
+
+  get allAnswersFound(): boolean {
         let answersFound = this.puzzleService.xxsPreventionOptions.filter((option) => {
             return option.checked && option.isCorrect;
         })
@@ -32,4 +39,11 @@ export class XxsSolutionComponent {
     nextClicked(){
         this._locationTracker.currentStatus.set(locationNames.Puzzle03Part2, true);
     }
+
+  handleEvent(event: CountdownEvent) {
+    if (event.action === 'done'){
+      this.showHint = true;
+    }
+  }
+
 }

@@ -3,6 +3,12 @@
         Hackers can attack passwords easily if the keyspace is too small. The bigger the keyspace, the harder it is to crack.
         Calculate the keyspace for the original password and for the stronger password.
         <br>
+        <countdown [config]="config" (event)="handleEvent($event)"></countdown>
+        <div class="hint" *ngIf="showHint">
+          <i class="fa fa-info-circle"></i>
+          Hint!
+          <p>This is a hint.</p>
+        </div>
         <br>
         The weak password was <strong>cloud</strong>, can you calculate its keyspace?
         <br>
@@ -64,13 +70,13 @@
                 <button (click)="nextClicked()" class="btn btn-success">Next</button>
             </div>
         </div>
-        <div 
+        <div
             class="wrongAnswer fw-bold"
             role="alert"
             *ngIf="strongKeyspaceIncorrect"
             >
             <i class="fa fa-times-circle"></i>
-            That's not quite right... 
+            That's not quite right...
             <div class="m-1 fw-lighter">
                 Remember, to calculate the keyspace use K^n.
             </div>
