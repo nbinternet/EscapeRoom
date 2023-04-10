@@ -4,14 +4,15 @@
     <app-sql-solution *ngIf="showPt2"></app-sql-solution>
     <div
         *ngIf="complete"
-        class="alert alter-success m-5 fw-bold d-flex flex-column justify-content-center"
+        class="alert alert-success m-5 fw-bold d-flex flex-column justify-content-center"
         role="alert"
         >
         <h3 class="text-center">Puzzle Complete!</h3>
+        <img src="../../../assets/tick.svg" class="complete__icon" alt="puzzle complete icon"/>
         <button
-        (click)="returnToMapClicked()"
-        class="btn btn-success"
-        routerLink="/towermap"
+            (click)="returnToMapClicked()"
+            class="btn btn-success"
+            routerLink="/towermap"
         >
             Return to Main page
         </button>
