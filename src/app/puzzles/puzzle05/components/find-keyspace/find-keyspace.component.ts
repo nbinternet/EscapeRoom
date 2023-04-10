@@ -9,8 +9,8 @@ import { locationNames } from 'src/app/models/locationNames';
 })
 export class FindKeyspaceComponent {
     public oldKeyspace: number = 11881376;
-    public strongPasswordKeyspace: number = 8672268670119743003325615242037000;
-    public strongPasswordKeyspaceScientificNotation: number = 8.672268670119743003325615242037e+34;
+    public strongPasswordKeyspace: number =  93718924163640272905211111487177;
+    public strongPasswordKeyspaceScientificNotation: number = 9.3718924163640272905211111487177e+32; //87^17  (26 (lowercase letters) + 26 (uppercase letters) + 10 (digits) + 25 (special charcters)) ^ 17 (password length) 
     public stringPassword: string;
     oldKeyspaceCorrect: boolean = false;
     oldKeyspaceIncorrect: boolean = false;

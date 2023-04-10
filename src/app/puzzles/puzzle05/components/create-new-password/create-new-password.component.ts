@@ -16,7 +16,7 @@ export class CreateNewPasswordComponent {
     completeRegex: boolean = false;
     lowercaseRegex: RegExp = /[a-z]/;
     capRegex: RegExp = /[A-Z]/;
-    specialCharRegex: RegExp = /[!"£$%^&*()@~#+'?=-_]/;
+    specialCharRegex: RegExp = /[|<>{}!"£$%^&*()@~#+'?=-_]/;
     numberRegex: RegExp = /[0-9]/;
     incorrect: boolean = true;
     capLetter: boolean = false;
