@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { LocationTrackerService } from 'src/app/services/location-tracker.service';
 import { locationNames } from 'src/app/models/locationNames';
+import {CountdownEvent} from "ngx-countdown";
 
 @Component({
     selector: 'app-calculate-password-cracker',
@@ -15,8 +16,13 @@ export class CalculatePasswordCrackerComponent {
     weakPasswordCrackerCorrect: boolean = false;
     weakPasswordCrackerIncorrect: boolean = false;
     complete: boolean = false;
+    showHint: boolean = false;
+    config = {
+      leftTime: 120, //2 mins
+      format: ''
+    };
 
-    constructor(private _locationTracker: LocationTrackerService){}
+  constructor(private _locationTracker: LocationTrackerService){}
 
     nextClicked(){
         this._locationTracker.currentStatus.set(locationNames.Puzzle05Part3, true);
@@ -51,4 +57,11 @@ export class CalculatePasswordCrackerComponent {
             this.complete = true;
         }
     }
+
+  handleEvent(event: CountdownEvent) {
+    if (event.action === 'done'){
+      this.showHint = true;
+    }
+  }
+
 }

@@ -13,6 +13,10 @@ export class Puzzle04Component {
     correctAnswer: boolean = false;
     showHint: boolean = false;
     incorrect: boolean = false;
+    config = {
+      leftTime: 120, //2 mins
+      format: ''
+    };
 
     constructor(private _teamDetailsService: TeamDetailsService, private _locationTracker: LocationTrackerService){
     }
@@ -26,7 +30,6 @@ export class Puzzle04Component {
         if (value === 'password-config'){
             this.correctAnswer = true;
             this.incorrect= false;
-            this.showHint = false;
         } else {
             this._teamDetailsService.decrementScore();
             this.incorrect = true;

@@ -2,6 +2,12 @@
     <div>{{ description }}</div>
     <br>
     <br>
+  <countdown [config]="config" (event)="handleEvent($event)"></countdown>
+  <div class="hint" *ngIf="showHint">
+    <i class="fa fa-info-circle"></i>
+    Hint!
+    <p>This is a hint.</p>
+  </div>
     <label>Vulnerable PHP code: </label>
     <img
         src="../../../../../assets/puzzle01/sql-injection-vulnerable-code.png"

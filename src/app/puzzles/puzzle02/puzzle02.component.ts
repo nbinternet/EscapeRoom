@@ -11,6 +11,10 @@ import { TeamDetailsService } from 'src/app/services/team-details.service';
 })
 export class Puzzle02Component {
     showHint: boolean = false;
+    config = {
+      leftTime: 120, //2 mins
+      format: ''
+    };
     correctMachine: string = '4';
     correctFeatureRegexOne: RegExp = /(update|patch|upgrade)(.*)os(|\s*|\w*)/;
     correctFeatureRegexTwo: RegExp = /(|\s*|\w*)os(|\s*|\w*)(update|patch|upgrade)(|\s*|\w*)/;
@@ -63,4 +67,3 @@ export class Puzzle02Component {
         this._locationTracker.currentStatus.set(locationNames.Puzzle02, true);
     }
 }
-    

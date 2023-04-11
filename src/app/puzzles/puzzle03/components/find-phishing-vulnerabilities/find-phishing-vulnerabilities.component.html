@@ -1,5 +1,11 @@
 <div class="row">
     <div class="col">
+      <countdown [config]="config" (event)="handleEvent($event)"></countdown>
+      <div class="hint" *ngIf="showHint">
+        <i class="fa fa-info-circle"></i>
+        Hint!
+        <p>This is a hint.</p>
+        </div>
         <div>
             {{ description }}
         </div>

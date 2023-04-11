@@ -6,10 +6,16 @@
             Can you identify the vulnerability in the code? <br>
             Use the Handbook to help you.<br>
         </div>
+      <countdown [config]="config" (event)="handleEvent($event)"></countdown>
+      <div class="hint" *ngIf="showHint">
+        <i class="fa fa-info-circle"></i>
+        Hint!
+        <p>This is a hint.</p>
+      </div>
         <div class="form-group">
             <label class="form-label">
                 <br/>
-                Enter the line of code that contains the vulnerability: (careful, wrong answers will make you lose points) 
+                Enter the line of code that contains the vulnerability: (careful, wrong answers will make you lose points)
             </label>
             <input
                 class="form-control bg-dark border-light"
@@ -32,13 +38,13 @@
             <i class="fa fa-check"></i>
             That's the correct answer.
             <div class="m-1 fw-lighter">
-                Glasgow Science Centre has left their code vulnerable to SQL injection, 
+                Glasgow Science Centre has left their code vulnerable to SQL injection,
                 meaning the hackers can gain admin access by just entering an email that will
                 be interpreted as SQL and evaluate the WHERE condition to true.<br>
                 e.g. they enter: 'email = x OR 1=1;'<br>
                 See the Handbook for further details.
             </div>
-            <Button (click)="nextClicked()" class="btn btn-success"> Next </Button>          
+            <Button (click)="nextClicked()" class="btn btn-success"> Next </Button>
         </div>
 
         <div class="wrongAnswer fw-bold" *ngIf="isWrong">

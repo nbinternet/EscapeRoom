@@ -13,6 +13,7 @@ export class TerminalComponent implements OnInit {
     currentTerminalId: number;
     machine: MachineInstance;
 
+
     constructor(private terminalService: TerminalService, private route: ActivatedRoute){}
 
     ngOnInit(): void {

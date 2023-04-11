@@ -8,8 +8,8 @@ import { LocationTrackerService } from 'src/app/services/location-tracker.servic
     styleUrls: ['./puzzle01.component.css']
 })
 export class Puzzle01Component {
-    
-    constructor (
+
+  constructor (
         private _locationTracker: LocationTrackerService
     ){ }
 
@@ -26,7 +26,7 @@ export class Puzzle01Component {
             !this._locationTracker.currentStatus.get(locationNames.Puzzle01Part2)
         );
     }
-    
+
     get complete(): boolean {
         return (
             this._locationTracker.currentStatus.get(locationNames.Puzzle01Part1) &&

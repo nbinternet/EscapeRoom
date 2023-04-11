@@ -1,21 +1,27 @@
 <div>
     <h1>Recover the Lift Operations</h1>
-    
-    
+
+
     <ng-container>
         <p>
             {{ introduction }}
         </p>
+      <countdown [config]="config" (event)="handleEvent($event)"></countdown>
+      <div class="hint" *ngIf="showHint">
+        <i class="fa fa-info-circle"></i>
+        Hint!
+        <p>This is a hint.</p>
+      </div>
         <div class="text-center">
             <svg
                 xmls="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 viewBox="0 0 1920 1000"
             >
-                <image 
+                <image
                     xlink:href="../../../../../assets/network.JPG"
                     width="1920"
-                    height="960" 
+                    height="960"
                 />
                 <a [routerLink]="['/terminal', 1]">
                     <rect height="200" width="220" x="360" y="80" opacity="0"></rect>
@@ -36,7 +42,7 @@
 
             <p>Network Diagram</p>
         </div>
-        
+
         <div class="container">
             <app-answer
                 *ngIf="!machineDone"
@@ -47,7 +53,7 @@
                 *ngIf="machineDone"
                 label="Enter the action that needs to be taken to fix the vulnerable machine"
                 (answer)="answerFeature($event)">
-            </app-answer>         
+            </app-answer>
            <div
             *ngIf="machineDone"
             class="rightAnswer fw-bold fade show"
@@ -68,7 +74,7 @@
                 <i class="fa fa-check"></i>
                 Correct!
                 <div class="m-1 fw-lighter">
-                    You have identified that the OS on this machine was an older version. 
+                    You have identified that the OS on this machine was an older version.
                     Updating firmware and software frequently is an important step in defending against a cyber-attack. See the Handbook for more information about patching software.
                 </div>
                 <button
@@ -79,7 +85,7 @@
                     Return to Main page
                 </button>
             </div>
-            <div 
+            <div
                 *ngIf="errors.length > 0"
                 class="wrongAnswer fw-bold fade show"
                 role="alert"
