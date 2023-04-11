@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <h2>Restore the Tower climate controls</h2>
-    
-    
+
+
     <div class="column">
         The hackers have taken over the climate controls for the Tower, meaning they can change the temperature, making it hotter or colder for the people at the top of the Tower.
         <countdown [config]="config" (event)="handleEvent($event)"></countdown>
@@ -17,47 +17,20 @@
         <p>We have managed to recover the code they used to encrypt this password. Can you write more code to reverse the encryption and expose the password?</p>
         <div class="puzzlebox">
             <p><strong>Recovered Code</strong></p>
-            <pre>
-                <code>
-                    task - input('Do you want to encrypt (e) a message?')<br/>
-
-                    while task == 'e'<br/>
-
-                    alphabet = 'abcdefghijklmnopqrstuvwxyz'<br/>
-                    newMessage = '' <br/>
-                    message = input('Please enter a message: ')<br/>
-
-
-                    if task == 'e': <br/>
-                        key = input('Please enter a key - this will be a number between 1 and 25: ')<br/>
-                        for letter in message: <br/>
-                            if letter in alphabet: <br/>
-                                position = alphabet.find(letter)<br/>
-                                newPosition = (int(position) + int(key)) % 26<br/>
-                                newLetter = alphabet[newPosition]<br/>
-                                newMessage += newLetter<br/>
-                            else:
-                                newMessage += letter<br/>
-                        print('Your message is now: '+ newMessage)<br/>
-                        task = input('Do you want to encrypt (e) or decrypt (d) a message? ')<br/>
-                    elif task == 'q':<br/>
-                        print('Thank you! Goodbye')<br/>
-                        break<br/>
-                </code>
-            </pre>
+          <iframe src="https://trinket.io/embed/python3/6817a9b3d9" width="100%" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+          <div class="form-group mb-3">
         </div>
         <br/>
         <p>Remember, we need to write more code to decrypt the message. What is the decoded password?</p>
         <strong>Hint!</strong>
         <br/>
-        <p>Use <a target="_blank" href="https://www.trinket.io/">Trinket.io</a> to write and run your code and see if it works.</p>
+        <p>We have printed the code out in a handy editor for you. Use the editor above to write and test your code!</p>
         <br/>
-        <div class="form-group mb-3">
             <label for password class="form-label">Type your answer here:</label>
             <input class="bg-dark border-light form-control"
                 #box
             />
-            <button 
+            <button
                 class="btn bg-dark btn-outline-light mt-3"
                 (click)="update(box.value)"
             >
@@ -82,13 +55,13 @@
         <div class="wrongAnswer fw-bold" *ngIf="incorrect">
             <i class="fa fa-times-circle"></i>
             That's not the correct answer.
-        </div> 
+        </div>
 
     </div>
     <div class="column">
         <br/>
         <div class="pad-textarea">
-            <textarea rows="10" cols="70" name="text" placeholder="Scratchpad for writing code...but don't forget to run it in Trinket.io!"></textarea>
+            <textarea rows="10" cols="70" name="text" placeholder="Scratchpad for writing code...but don't forget to run it in the Trinket.io editor!"></textarea>
         </div>
     </div>
     <div *ngIf="!complete"><button class="btn btn-outline-light mt-3" type="button" routerLink="/towermap">Cancel and return to the Main page</button></div>
