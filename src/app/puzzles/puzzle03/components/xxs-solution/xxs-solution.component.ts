@@ -3,7 +3,7 @@ import { locationNames } from 'src/app/models/locationNames';
 import { LocationTrackerService } from 'src/app/services/location-tracker.service';
 import { TeamDetailsService } from 'src/app/services/team-details.service';
 import { Puzzle03Service } from '../../puzzle03.service';
-import {CountdownEvent} from "ngx-countdown";
+import {CountdownEvent} from 'ngx-countdown';
 
 @Component({
     selector: 'app-xxs-solution',

@@ -23,7 +23,7 @@ export class XxsInputValidationComponent {
 
     public questionLabel: string =
     `Can you figure out what the encoded string would be if the function is run with the hackers' malicious script parameter:
-    <script src='loginnow.js'</script>`;
+    <script src="loginnow.js"</script>`;
 
     public correctMessage =
     `Using a function like this for all URL query parameters means that the parameters will be transformed so that the compiler won't interpret them as
