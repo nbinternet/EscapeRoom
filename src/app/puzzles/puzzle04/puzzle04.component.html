@@ -8,13 +8,13 @@
         </p>
         <p>
             You must find the vulnerability in the machine shown. You will interact with this machine using its command line.
-            You will need to navigate the file system and identify the file(s) that have been comproised.
+            You will need to navigate the file system and identify the file(s) that have been compromised.
         </p>
       <countdown [config]="config" (event)="handleEvent($event)"></countdown>
       <div class="hint" *ngIf="showHint">
         <i class="fa fa-info-circle"></i>
         Hint!
-        <p>This respresents a Linux command line interface. In Linux the characters before each folder/file names means something, what? (Check the Handbook). </p>
+        <p>This respresents a Linux command line interface. In Linux the characters before each folder/file name means something, what? (Check the Handbook). </p>
         <p>Look at the names of the files, do you think whatever the charcters mean is correct given the name of the folder/file?</p>
         </div>
     </div>

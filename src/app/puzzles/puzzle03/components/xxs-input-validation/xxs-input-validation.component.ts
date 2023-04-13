@@ -18,7 +18,7 @@ export class XxsInputValidationComponent {
     };
 
   public description: string =
-    `To protect from future attacks like this, Glasgow Science Centre has created the function show on the right.
+    `To protect from future attacks like this, Glasgow Science Centre has created the function shown on the right.
     This will encode all query parameters that get passed along with URLs`;
 
     public questionLabel: string =
@@ -29,7 +29,7 @@ export class XxsInputValidationComponent {
     `Using a function like this for all URL query parameters means that the parameters will be transformed so that the compiler won't interpret them as
     commands and run the malicious code.
     However, many languages have their own inbuilt encoding functions that do this for you and are often more reliable than a user-written function
-    (e.g. encodeURL()) in javascript or URLEncoder.encode() in java).
+    (e.g. encodeURL() in javascript or URLEncoder.encode() in java).
     See the Handbook for more details.`;
 
     public encodedParam: string =

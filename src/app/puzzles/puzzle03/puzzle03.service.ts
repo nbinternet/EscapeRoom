@@ -8,22 +8,22 @@ export class Puzzle03Service {
     public phishingSigns = {
         theRequest: {
             name: 'The Request',
-            desc: 'Unsolicited and asks for information or for you to perform an action, e.g. click a link that is unusual for your role or the sender',
+            desc: 'Unsolicited and asks for information or for you to perform an action, e.g. click a link that is unusual for your role or the sender.',
             found: false
         },
         language: {
             name: 'Language',
-            desc: 'Urgent, authoritative, scary, exciting or tempting',
+            desc: 'Urgent, authoritative, scary, exciting or tempting.',
             found: false
         },
         content: {
             name: 'Content',
-            desc: 'Grammer and spelling mistakes - e.g. "reply me back" and "international"',
+            desc: 'Grammer and spelling mistakes - e.g. "reply me back" and "international".',
             found: false
         },
         sender: {
             name: 'Sender',
-            desc: 'Name or email address is generic, has typos (e.g. "@gloogle.com"), has no internet / Intranet search results, or name and email address don\'t match',
+            desc: 'Name or email address is generic, has typos (e.g. "@gloogle.com"), has no internet / Intranet search results, or name and email address don\'t match.',
             found: false
         },
         links: {
@@ -33,7 +33,7 @@ export class Puzzle03Service {
         },
         formatting: {
             name: 'Formatting',
-            desc: 'Unprofessional or inconsistent; fake branding or logos',
+            desc: 'Unprofessional or inconsistent; fake branding or logos.',
             found: false
         },
     };
@@ -62,7 +62,7 @@ export class Puzzle03Service {
         },
         {
             name: 'Use HTTPS or SSL protocols to transfer private information',
-            desc: 'HTTPS and SSL protocols help keep data secure in transit. It will not prevent this kind of attack as the malicious date was part of the request that was sent to the server. Also, if you look closely, this URL already uses the HTTPS protocol.',
+            desc: 'HTTPS and SSL protocols help keep data secure in transit. It will not prevent this kind of attack as the malicious data was part of the request that was sent to the server. Also, if you look closely, this URL already uses the HTTPS protocol.',
             isCorrect: false,
             checked: false,
         },
