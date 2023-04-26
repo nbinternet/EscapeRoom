@@ -1,4 +1,24 @@
 .ending {
   text-align: center;
   padding: 20px;
+  
 }
+a:link {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+

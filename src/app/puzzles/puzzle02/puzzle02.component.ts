@@ -16,8 +16,8 @@ export class Puzzle02Component {
       format: ''
     };
     correctMachine: string = '4';
-    correctFeatureRegexOne: RegExp = /(update|patch|upgrade)(.*)os(|\s*|\w*)/;
-    correctFeatureRegexTwo: RegExp = /(|\s*|\w*)os(|\s*|\w*)(update|patch|upgrade)(|\s*|\w*)/;
+    correctFeatureRegexOne: RegExp = /(update|patch|upgrade|updating|patching)(.*)(os|operating system|OS)(|\s*|\w*)/;
+    correctFeatureRegexTwo: RegExp = /(|\s*|\w*)(os|operating system)(|\s*|\w*)(update|patch|upgrade|updating|patching)(|\s*|\w*)/;
     errors: string[] = [];
     introduction: string = `Hackers have taken control of the lift which means the people at the top of the Tower cannot get down.
     The Science Centre's lift operation is controlled by a server on the network.

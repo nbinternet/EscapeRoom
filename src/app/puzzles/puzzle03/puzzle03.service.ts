@@ -18,7 +18,7 @@ export class Puzzle03Service {
         },
         content: {
             name: 'Content',
-            desc: 'Grammer and spelling mistakes - e.g. "reply me back" and "international".',
+            desc: 'Grammar and spelling mistakes - e.g. "reply me back" and "interntional".',
             found: false
         },
         sender: {
@@ -28,7 +28,7 @@ export class Puzzle03Service {
         },
         links: {
             name: 'Links',
-            desc: 'The URL destination (which you can see by hovering oever the link) looks suspicious, e.g. random characters and spelling mistakes.',
+            desc: 'The URL destination (which you can see by hovering over the link) looks suspicious, e.g. random characters and spelling mistakes.',
             found: false
         },
         formatting: {
@@ -50,7 +50,7 @@ export class Puzzle03Service {
         },
         {
             name: 'Filter all request parameters before they hit the server',
-            desc: 'When parameters are passed through request headers like this, they should always be filtered for malicious code. This can be done by using prepared statements, comparing them to expected values, and stripping any unexpected characters which coudl be interpreted as code.',
+            desc: 'When parameters are passed through request headers like this, they should always be filtered for malicious code. This can be done by using prepared statements, comparing them to expected values, and stripping any unexpected characters which could be interpreted as code.',
             isCorrect: true,
             checked: false,
         },
@@ -92,7 +92,7 @@ export class Puzzle03Service {
         },
         {
             name: 'Patch the software to remove vulnerabilities',
-            desc: 'You should always patch software versions as soon as new comes out, so that you are not leaving your code vulnerable. However, this kind of attack can still occur even if all software it up to date.',
+            desc: 'You should always patch software versions as soon as a new comes out, so that you are not leaving your code vulnerable. However, this kind of attack can still occur even if all software it up to date.',
             isCorrect: false,
             checked: false,
         },

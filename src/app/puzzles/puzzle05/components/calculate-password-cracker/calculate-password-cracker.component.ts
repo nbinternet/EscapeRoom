@@ -10,6 +10,7 @@ import {CountdownEvent} from "ngx-countdown";
 })
 export class CalculatePasswordCrackerComponent {
     strongHoursToCrack: number = 2603303448990007580700309; // Keyspace = 937189241636402729052111114877
+    strongHoursToCrackSciNotation = 2.6033034e+25;
     weakHoursToCrack: number = 0.33;
     strongPasswordCrackerCorrect: boolean = false;
     strongPasswordCrackerIncorrect: boolean = false;
@@ -29,7 +30,7 @@ export class CalculatePasswordCrackerComponent {
     }
 
     strongPasswordCrackerValue(strongHours: string): void {
-        if (+strongHours === this.strongHoursToCrack){
+        if (+strongHours === this.strongHoursToCrack || +strongHours === this.strongHoursToCrackSciNotation){
             this.strongPasswordCrackerCorrect = true;
             this.strongPasswordCrackerIncorrect = false;
             this.isComplete();
