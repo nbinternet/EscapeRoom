@@ -92,7 +92,7 @@ export class Puzzle03Service {
         },
         {
             name: 'Patch the software to remove vulnerabilities',
-            desc: 'You should always patch software versions as soon as a new comes out, so that you are not leaving your code vulnerable. However, this kind of attack can still occur even if all software it up to date.',
+            desc: 'You should always patch software versions as soon as a new comes out, so that you are not leaving your code vulnerable. However, this kind of attack can still occur even if all software is up to date.',
             isCorrect: false,
             checked: false,
         },

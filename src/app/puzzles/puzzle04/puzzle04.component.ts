@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CountdownEvent } from 'ngx-Countdown';
+import { CountdownEvent } from 'ngx-countdown';
 import { locationNames } from 'src/app/models/locationNames';
 import { LocationTrackerService } from 'src/app/services/location-tracker.service';
 import { TeamDetailsService } from 'src/app/services/team-details.service';

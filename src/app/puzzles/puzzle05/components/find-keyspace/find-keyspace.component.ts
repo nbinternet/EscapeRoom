@@ -13,6 +13,7 @@ export class FindKeyspaceComponent {
     public strongPasswordKeyspace: number =  93718924163640272905211111487177;
     public strongPasswordKeyspaceScientificNotation: number = 9.3718924163640272905211111487177e+32; //87^17  (26 (lowercase letters) + 26 (uppercase letters) + 10 (digits) + 25 (special charcters)) ^ 17 (password length) 
     public strongPasswordKeyspaceScientificNotation1: number = 9.3718924e+32;
+    public strongPasswordKeyspaceScientificNotation2: number = 9.371892416e32;
     public stringPassword: string;
     oldKeyspaceCorrect: boolean = false;
     oldKeyspaceIncorrect: boolean = false;
@@ -48,7 +49,7 @@ export class FindKeyspaceComponent {
 
 
     strongKeyspaceValue(keyspace: string): void {
-        if(+keyspace === this.strongPasswordKeyspace || +keyspace === this.strongPasswordKeyspaceScientificNotation || +keyspace === this.strongPasswordKeyspaceScientificNotation1) {
+        if(+keyspace === this.strongPasswordKeyspace || +keyspace === this.strongPasswordKeyspaceScientificNotation || +keyspace === this.strongPasswordKeyspaceScientificNotation1 || +keyspace === this.strongPasswordKeyspaceScientificNotation2) {
             this.strongKeyspaceCorrect = true;
             this.strongKeyspaceIncorrect = false;
             this.isComplete();

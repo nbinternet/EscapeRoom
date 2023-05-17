@@ -18,12 +18,11 @@ export class XxsInputValidationComponent {
     };
 
   public description: string =
-    `To protect from future attacks like this, Glasgow Science Centre has created the function shown on the right.
+    `To protect from future cross site scripting attacks like this, Glasgow Science Centre has created the function shown on the right.
     This will encode all query parameters that get passed along with URLs`;
 
     public questionLabel: string =
-    `Can you figure out what the encoded string would be if the function is run with the hackers' malicious script parameter:
-    <script src="loginnow.js"</script>`;
+    `Can you figure out what the encoded string would be if the function is run with the hackers' malicious script parameter: <script src=”loginnow.js”></script>`;
 
     public correctMessage =
     `Using a function like this for all URL query parameters means that the parameters will be transformed so that the compiler won't interpret them as

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CountdownEvent } from 'ngx-Countdown';
+import { CountdownEvent } from 'ngx-countdown';
 import { locationNames } from 'src/app/models/locationNames';
 import { LocationTrackerService } from 'src/app/services/location-tracker.service';
 import { TeamDetailsService } from 'src/app/services/team-details.service';
@@ -22,7 +22,7 @@ export class Puzzle02Component {
     introduction: string = `Hackers have taken control of the lift which means the people at the top of the Tower cannot get down.
     The Science Centre's lift operation is controlled by a server on the network.
     The diagram below shows the nodes that are connected to this network. One of these nodes contains the controls to the lifts.
-    A hacker has managed to access one of the nodes on the network by exploiting a vulnerability.\n\n
+    A hacker has managed to access one of the nodes on the network by exploiting a vulnerability in the software.\n\n
     Find the machine with the vulnerability and the solution. You can open the terminal of a machine by clicking on the server in the diagram.`;
 
     constructor(
